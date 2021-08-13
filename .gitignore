@@ -24,6 +24,6 @@ yarn-error.log*
 */db.js
 src/data/db.js
 
-.vscode/*
-
+/.vscode
+/_boilerPlate
 note.txt
