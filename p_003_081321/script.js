@@ -1,17 +1,26 @@
-const loadText = document.querySelector('.loading-text');
-const bg = document.querySelector('.bg');
-const scale = (num, in_min, in_max, out_min, out_max) => {
-    return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
-}
+const sliderContainer = document.querySelector('.container');
+const slideLeft = document.querySelector('.left-slide');
+const slideRight = document.querySelector('.right-slide');
+const upButton = document.querySelector('.up-button');
+const downButton = document.querySelector('.down-button');
+const totalSlides = slideRight.querySelectorAll('div').length;
 
-let load = 0;
-let int = setInterval(blurring, 30);
-function blurring() {
-    load++;
-    loadText.innerText = `${load}%`;
-    loadText.style.opacity = (100 - load) / 100;
-    bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
-    if (load > 99) clearInterval(int);
-    // console.log(load);
-}
+let activeSlideIndex = 0;
+slideLeft.style.top = `-${(totalSlides - 1)*100}vh`;
 
+upButton.addEventListener('click', (e)=>{e.preventDefault();changeSlide('up')});
+downButton.addEventListener('click', (e)=>{e.preventDefault();changeSlide('down')});
+
+const changeSlide = (direction) => {
+    const sliderHeight = sliderContainer.clientHeight;
+    console.log("sliderHeight? " + sliderHeight)
+    if (direction === 'up') {
+        activeSlideIndex++;
+        if (activeSlideIndex > (totalSlides -1)) activeSlideIndex = 0;
+        slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`;
+    } else if (direction === 'down') {
+        activeSlideIndex--;
+        if (activeSlideIndex < 0) activeSlideIndex = totalSlides -1;
+        slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`;
+    }
+}

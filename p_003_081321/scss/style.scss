@@ -1,107 +1,94 @@
 @import "config";
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 10;
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
-body {
-  font-family: $font-stack;
-  font-size: 10px;
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+
+  > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+  }
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+
+  > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.action-buttons {
+  button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+  }
+
+  .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+
+  :hover {
+    color: #222;
+  }
+
+  :focus {
+    outline: none;
+  }
 }
 
 a {
   text-decoration: none;
 }
 
-.container {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Start #hero Section */
-#hero {
-  background-image: url(../img/hero-bg.png);
-  background-size: cover;
-  background-position: top center;
-  position: relative;
-  z-index: 1;
-
-  h1 {
-    display: block;
-    font-size: 4rem;
-    width: fit-content;
-    position: relative;
-    color: transparent;
-    animation: text_reveal 0.5s ease forwards;
-    animation-delay: 1.5s;
-    span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 0; //***//
-      background-color: crimson;
-      animation: text_reveal_box 1s ease;
-      animation-delay: 1s;
-    }
-  }
-
-  h1:nth-child(1) {
-    animation-delay: 1.5s;
-    span {
-      animation-delay: 1s;
-    }
-  }
-  h1:nth-child(2) {
-    animation-delay: 2.5s;
-    span {
-      animation-delay: 2s;
-    }
-  }
-  h1:nth-child(3) {
-    animation-delay: 3.5s;
-    span {
-      animation-delay: 3s;
-    }
-  }
-
-  .cta {
-    display: inline-block;
-    padding: 10px 30px;
-    color: crimson;
-    background-color: transparent;
-    font-size: 2rem;
-    border: 2px solid crimson;
-    margin-top: 30px;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    transition: 0.3s ease;
-    transition-property: background-color, color;
-  }
-
-  .cta:hover {
-    color: white;
-    background-color: crimson;
-  }
-}
-
-#hero::after {
-  //-- overlay
-  content: ""; //*****//
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  opacity: 0.7;
-  z-index: -1; //for not covering text
-}
-/* End #hero Section */
-
-@import "mobile";
+// @import "mobile";

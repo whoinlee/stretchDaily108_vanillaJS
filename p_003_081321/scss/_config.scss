@@ -1,3 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
-$font-stack: "Montserrat", sans-serif;
+$font-stack: "Open Sans", sans-serif;
+
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  height: 100vh;
+}
