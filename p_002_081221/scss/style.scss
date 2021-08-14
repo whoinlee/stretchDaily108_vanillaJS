@@ -15,6 +15,21 @@ a {
   text-decoration: none;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+p {
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+
 .container {
   min-height: 100vh;
   width: 100%;
@@ -111,5 +126,116 @@ a {
   z-index: -1; //for not covering text
 }
 /* End #hero Section */
+
+/* Start #servicesSection */
+#services {
+  .service {
+    //-- overwrite .container style
+    flex-direction: column; //-- service-top & service-column
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+
+  .section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+
+    span {
+      color: crimson;
+    }
+  }
+
+  .service-top p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+  }
+
+  .service-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    .service-item {
+      flex-basis: 80%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 30px;
+      border-radius: 10px;
+      background-image: url(../img/img-1.png);
+      background-size: cover;
+      margin: 10px 5%;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      .icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: white;
+        text-align: left;
+      }
+    } //.service-item
+  } //.service-bottom
+
+  .service-item::after {
+    //-- overlay
+    content: ""; //*****//
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    // background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+  }
+}
+
+//   .cta {
+//     display: inline-block;
+//     padding: 10px 30px;
+//     color: crimson;
+//     background-color: transparent;
+//     font-size: 2rem;
+//     border: 2px solid crimson;
+//     margin-top: 30px;
+//     letter-spacing: 0.1rem;
+//     text-transform: uppercase;
+//     transition: 0.3s ease;
+//     transition-property: background-color, color;
+//   }
+
+//   .cta:hover {
+//     color: white;
+//     background-color: crimson;
+//   }
+// }
+
+/* End #services Section */
 
 @import "mobile";
