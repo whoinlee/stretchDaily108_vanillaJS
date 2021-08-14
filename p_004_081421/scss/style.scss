@@ -80,19 +80,13 @@ body {
         font-size: 12px;
       }
     }
-
-    .hide {
-      display: none;
-    }
   }
 
   li:not(:last-of-type) {
     border-bottom: 1px solid #eee;
   }
+
+  li.hide {
+    display: none;
+  }
 }
-
-// a {
-//   text-decoration: none;
-// }
-
-// @import "mobile";
