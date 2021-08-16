@@ -1,18 +1,23 @@
-@import "config";
-
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 body {
-  font-family: $font-stack;
+  font-family: "Muli", sans-serif;
   background-color: #2b88f0;
-  //
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -52,6 +57,3 @@ h3 {
 .tag.highlight {
   background-color: #273c75;
 }
-
-
-// @import "mobile";

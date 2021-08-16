@@ -1,17 +1,59 @@
-const loadText = document.querySelector('.loading-text');
-const bg = document.querySelector('.bg');
-const scale = (num, in_min, in_max, out_min, out_max) => {
-    return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+const tagsElement = document.getElementById('tags');
+const textarea = document.getElementById('textarea');
+textarea.focus();
+
+textarea.addEventListener('keyup', (e) => {
+    createTags(e.target.value);
+
+    if (e.key === 'Enter') {
+        console.log("====== ENTER ======");
+        setTimeout(() => {
+            e.target.value = '';
+        }, 10);
+        randomSelect();
+    }
+})
+
+function createTags(input) {
+    // console.log(input);
+    const tags = input.split(',').filter(tag => (
+        tag.trim() !== '')).map(tag => tag.trim());
+    // console.log(tags);
+    tagsElement.innerHTML = '';//reset
+    tags.forEach(item => {
+        const tagEl = document.createElement('span');
+        tagEl.classList.add('tag');
+        tagEl.innerText = item;
+        tagsElement.appendChild(tagEl);
+    })
 }
 
-let load = 0;
-let int = setInterval(blurring, 30);
-function blurring() {
-    load++;
-    loadText.innerText = `${load}%`;
-    loadText.style.opacity = (100 - load) / 100;
-    bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
-    if (load > 99) clearInterval(int);
-    // console.log(load);
+function randomSelect() {
+    const times = 30;
+    const intervalID = setInterval(() => {
+        const randomTag = pickRandomTag();
+        highlightTag(randomTag);
+        setTimeout(() => {
+            unhighlightTag(randomTag);
+        }, 100);
+    }, 100);
+
+    setTimeout(() => {
+        clearInterval(intervalID);
+        const randomTag = pickRandomTag();
+        highlightTag(randomTag);
+    }, times * 100)
 }
 
+function pickRandomTag() {
+    const tags = document.querySelectorAll('.tag');
+    return tags[Math.floor(Math.random() * tags.length)];
+}
+
+function highlightTag(tag) {
+    tag.classList.add('highlight');
+}
+
+function unhighlightTag(tag) {
+    tag.classList.remove('highlight');
+}
