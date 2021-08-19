@@ -2,35 +2,119 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 body {
   font-family: $font-stack;
-  font-size: 10px;
-  background-color: #f8f9fd;
+  margin: 0;
+  //
+  background-color: #eafbff;
+  background-image: linear-gradient(
+    to bottom,
+    #eafbff 0%,
+    #eafbff 50%,
+    #5290f9 50%,
+    #5290f9 100%
+  );
+  //
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
 }
 
-.container {
-  min-height: 100vh;
-  width: 100%;
+nav {
+  background-color: #fff;
+  padding: 20px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.6s linear;
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 0; //***
+    transition: width 0.6s linear;
+
+    li {
+      transform: rotateY(0deg);
+      opacity: 0;
+      transition: transform 0.6s linear, opacity 0.6s linear;
+      overflow-x: hidden;
+    }
+
+    a {
+      position: relative;
+      color: #000;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    a:hover {
+      color: #5290f9;
+    }
+  }
+
+  .icon {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+
+    .line {
+      background-color: #0344b4;
+      height: 2px;
+      width: 20px;
+      position: absolute;
+      top: 10px;
+      left: 5px;
+      transition: transform 0.6s linear;
+    }
+
+    .line1 {
+      top: 11px;
+      bottom: auto;
+    }
+
+    .line2 {
+      top: auto;
+      bottom: 10px;
+    }
+  }
+
+  .icon:focus {
+    outline: 0;
+  }
 }
 
-a {
-  text-decoration: none;
+nav.active {
+  width: 350px;
+
+  ul {
+    width: 100%;
+
+    li {
+      opacity: 1;
+      transform: rotateY(360deg);
+    }
+  }
+
+  .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+  }
+
+  .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+  }
 }
-
-/* Start #hero Section */
-
-/* End #hero Section */
 
 // @import "mobile";
