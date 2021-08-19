@@ -807,11 +807,11 @@ p {
     border: 10px solid crimson;
   }
   #about .col-right {
-    text-align: left;
+    text-align: center;
     padding: 30px;
   }
   #about .col-right h1 {
-    text-align: left;
+    text-align: center;
   }
   /* End about */
   /* contact  */
