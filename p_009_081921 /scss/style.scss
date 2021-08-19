@@ -1,0 +1,63 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  //
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  position: relative;
+  height: 50px;
+
+  .input {
+    // background-color: #f00; //for test
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    //****, grows from the initial 50px to 200px
+    transition: width 0.3s ease;
+  }
+
+  .btn {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px; //-- magnifying glass size
+    position: absolute; //*
+    top: 0; //*
+    left: 0; //*
+    height: 50px;
+    width: 50px;
+    //****, x location changes from 0 to198px
+    transition: transform 0.3s ease;
+  }
+
+  .btn:focus,
+  .input:focus {
+    outline: none;
+  }
+}
+
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translateX(198px);
+}
+
+// @import "mobile";
