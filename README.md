@@ -12,3 +12,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 8. Progress Steps
 9. Hidden Search Widget
 10. Animated Navigation
+11. Split Landing Page
