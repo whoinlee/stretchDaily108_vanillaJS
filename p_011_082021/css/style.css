@@ -101,10 +101,37 @@ h1 {
   background-color: rgba(43, 43, 43, 0.8);
 }
 
-.split.right,
-.split.left,
-.split.right::before,
-.split.left::before {
+.right,
+.left,
+.right::before,
+.left::before {
   -webkit-transition: all 1000ms ease-in-out;
   transition: all 1000ms ease-in-out;
+}
+
+.hover-left .left {
+  width: 75%;
+}
+
+.hover-left .right {
+  width: 25%;
+}
+
+.hover-right .right {
+  width: 75%;
+}
+
+.hover-right .left {
+  width: 25%;
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+  .btn {
+    padding: 1.2rem;
+    width: 12rem;
+  }
 }

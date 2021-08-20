@@ -98,10 +98,10 @@ h1 {
   background-color: $right-bg-color;
 }
 
-.split.right,
-.split.left,
-.split.right::before,
-.split.left::before {
+.right,
+.left,
+.right::before,
+.left::before {
   transition: all $speed ease-in-out;
 }
 
