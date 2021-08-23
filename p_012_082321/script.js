@@ -1,13 +1,18 @@
-const left = document.querySelector('.left')
-const right = document.querySelector('.right')
-const container = document.querySelector('.container')
+const boxes = document.querySelectorAll('.box')
 
-left.addEventListener('mouseenter', () => {
-    container.classList.add('hover-left');
-})
-left.addEventListener('mouseleave', () => container.classList.remove('hover-left'))
+function checkBoxes() {
+    const triggerBottom = window.innerHeight / 5 * 4
 
-right.addEventListener('mouseenter', () => {
-    container.classList.add('hover-right');
-})
-right.addEventListener('mouseleave', () => container.classList.remove('hover-right'))
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+
+        if(boxTop < triggerBottom) {
+            box.classList.add('show')
+        } else {
+            box.classList.remove('show')
+        }
+    })
+}
+
+window.addEventListener('scroll', checkBoxes)
+checkBoxes()
