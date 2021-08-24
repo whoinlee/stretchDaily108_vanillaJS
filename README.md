@@ -2,9 +2,12 @@
 
 Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and JavaScript Skills.
 
-p001. Blurry Loading
-p002. Responsive Single Page Web
+# p001. Blurry Loading
+
+# p002. Responsive Single Page Web
+
 p003. Vertical Slider
+
 p004. Live User Filter
 p005. Content Place Holder
 p006. Random Choice Picker
