@@ -1,18 +1,24 @@
-const boxes = document.querySelectorAll('.box')
+const buttons = document.querySelectorAll('.ripple')
 
-function checkBoxes() {
-    const triggerBottom = window.innerHeight / 5 * 4
+buttons.forEach(button => {
+    button.addEventListener('click', function (e) {
+        //-- ripple effect starts from the click point
+        const x = e.clientX;    
+        const y = e.clientY;
 
-    boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top
+        const buttonTop = e.target.offsetTop;
+        const buttonLeft = e.target.offsetLeft;
 
-        if(boxTop < triggerBottom) {
-            box.classList.add('show')
-        } else {
-            box.classList.remove('show')
-        }
+        const xInside = x - buttonLeft;
+        const yInside = y - buttonTop;
+
+        const circle = document.createElement('span')
+        circle.classList.add('circle')
+        circle.style.top = yInside + 'px'
+        circle.style.left = xInside + 'px'
+
+        this.appendChild(circle)
+
+        setTimeout(() => circle.remove(), 500)
     })
-}
-
-window.addEventListener('scroll', checkBoxes)
-checkBoxes()
+})
