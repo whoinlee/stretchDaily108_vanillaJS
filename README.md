@@ -14,3 +14,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 10. Animated Navigation
 11. Split Landing Page
 12. Scroll Animation
+13. Button Ripple Effect

@@ -1,0 +1,20 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  margin: 0;
+  //
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //
+  background-color: #efedd6;
+  overflow-x: hidden;
+}
+
+@import "motion";
