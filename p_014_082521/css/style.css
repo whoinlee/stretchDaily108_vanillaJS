@@ -1,19 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -25,47 +19,36 @@ body {
   height: 100vh;
 }
 
-button {
-  background-color: purple;
-  color: #fff;
-  border: 1px purple solid;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 20px 30px;
-  overflow: hidden;
-  margin: 10px 0;
-  position: relative;
+.empty {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border: solid 3px blue;
+  background: white;
 }
 
-button:focus {
-  outline: none;
+.fill {
+  background-image: url("https://source.unsplash.com/random/150x150");
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
 }
 
-button .circle {
-  position: absolute;
-  background-color: #fff;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-          transform: translate(-50%, -50%) scale(0);
-  -webkit-animation: scale 0.5s ease-out;
-          animation: scale 0.5s ease-out;
+.hold {
+  border: solid 5px #ccc;
 }
 
-@-webkit-keyframes scale {
-  to {
-    -webkit-transform: translate(-50%, -50%) scale(3);
-            transform: translate(-50%, -50%) scale(3);
-    opacity: 0;
-  }
+.hovered {
+  background-color: #333;
+  border-color: white;
+  border-style: dashed;
 }
 
-@keyframes scale {
-  to {
-    -webkit-transform: translate(-50%, -50%) scale(3);
-            transform: translate(-50%, -50%) scale(3);
-    opacity: 0;
+@media (max-width: 800px) {
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
