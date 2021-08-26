@@ -13,7 +13,7 @@ body {
   justify-content: center;
   //
   background-color: #f5f5f5;
-  overflow: hidden; //*****
+  // overflow: hidden; //*****
   color: #444;
   height: 100vh;
 }
@@ -53,8 +53,8 @@ form {
 
 .todos {
   background-color: #fff;
-  padding: 0;
-  margin: 0;
+  padding: 0; //**
+  margin: 0; //**
   list-style-type: none;
 }
 

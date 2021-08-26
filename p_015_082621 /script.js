@@ -3,49 +3,41 @@ const input = document.getElementById('input')
 const todosUL = document.getElementById('todos')
 
 const todos = JSON.parse(localStorage.getItem('todos'));    //******/
+console.log("localStorage.getItem('todos')", localStorage.getItem('todos'))
 
-if(todos) {
-    todos.forEach(todo => addTodo(todo))
+if (todos) {
+    todos.forEach(todo => addTodo(todo));
 }
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault()
-
-    addTodo()
+    e.preventDefault();
+    addTodo();
 })
 
 function addTodo(todo) {
-    let todoText = input.value
+    let todoText = input.value;
 
-    if(todo) {
-        todoText = todo.text
-    }
-
-    if(todoText) {
-        const todoEl = document.createElement('li');//
-        if(todo && todo.completed) {
-            todoEl.classList.add('completed')
-        }
-
-        todoEl.innerText = todoText
-
-        todoEl.addEventListener('click', () => {
-            todoEl.classList.toggle('completed')
+    if (todo) { todoText = todo.text }
+    if (todoText) {
+        const todoLI = document.createElement('li');//
+        if (todo && todo.completed) {
+            todoLI.classList.add('completed')
+        };
+        todoLI.innerText = todoText
+        todoLI.addEventListener('click', () => {
+            todoLI.classList.toggle('completed')
             updateLS()
-        }) 
-
-        todoEl.addEventListener('contextmenu', (e) => {
+        });
+        //-- right click
+        todoLI.addEventListener('contextmenu', (e) => {
             e.preventDefault()
-
-            todoEl.remove()
+            todoLI.remove()
             updateLS()
         }) 
+        todosUL.appendChild(todoLI);
 
-        todosUL.appendChild(todoEl)
-
-        input.value = ''
-
-        updateLS()
+        input.value = '';   //-- reset
+        updateLS();
     }
 }
 
@@ -54,12 +46,12 @@ function updateLS() {
 
     const todos = []
 
-    todosEl.forEach(todoEl => {
+    todosEl.forEach(todoLI => {
         todos.push({
-            text: todoEl.innerText,
-            completed: todoEl.classList.contains('completed')
+            text: todoLI.innerText,
+            completed: todoLI.classList.contains('completed')
         })
     })
 
-    localStorage.setItem('todos', JSON.stringify(todos))
+    localStorage.setItem('todos', JSON.stringify(todos));   //-- save to the local storage
 }
