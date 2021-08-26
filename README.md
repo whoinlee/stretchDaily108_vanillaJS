@@ -29,3 +29,6 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **13.** Button Ripple Effect
 
 **14.** Drag and Drop
+
+**15.** ToDo List
+
