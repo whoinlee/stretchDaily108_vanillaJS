@@ -1,0 +1,154 @@
+/* Media Query For Tablet: 1024px */
+//-- Low Resolution Tablets and ipads max-width: 767px
+@media only screen and (min-width: 768px) {
+  .cta {
+    font-size: 2.5rem;
+    padding: 20px 60px;
+  }
+
+  h1.section-title {
+    font-size: 6rem;
+  }
+
+  /* hero */
+  #hero h1 {
+    font-size: 7rem;
+  }
+
+  /* services */
+  #services .service-bottom .service-item {
+    flex-basis: 45%; //45% + 2.5%*2 = 50% (2 columns)
+    margin: 2.5%; //10px 5% --> 2.5%
+  }
+
+  /* project */
+  #projects {
+    .project-item {
+      flex-direction: row; //***//
+      height: 400px;
+      margin: 0;
+      width: 100%;
+      border-radius: 0;
+    }
+
+    .project-item:nth-child(even) {
+      //-- 0 based
+      flex-direction: row-reverse;
+    }
+
+    .all-projects .project-info {
+      height: 100%;
+    }
+
+    .all-projects .project-img {
+      height: 100%;
+    }
+  }
+  /* End project */
+
+  /* about */
+  #about {
+    .about {
+      flex-direction: row;
+    }
+
+    .col-left {
+      width: 600px;
+      height: 400px;
+      padding-left: 60px;
+
+      .about-img::after {
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid crimson;
+      }
+    }
+
+    .col-right {
+      // text-align: left;  //updated by WhoIN
+      text-align: center;
+      padding: 30px;
+
+      h1 {
+        // text-align: left;  //updated by WhoIN
+        text-align: center;
+      }
+    }
+  }
+  /* End about */
+
+  /* contact  */
+  #contact {
+    .contact {
+      flex-direction: column;
+      padding: 100px 0;
+      align-items: center;
+      justify-content: center;
+      min-height: 20vh;
+    }
+
+    .contact-items {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0;
+    }
+
+    .contact-item {
+      width: 30%;
+      margin: 0;
+      flex-direction: row;
+
+      .icon {
+        height: 100px;
+        width: 100px;
+
+        img {
+          object-fit: contain;
+        }
+      }
+
+      .contact-info {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+      }
+    }
+  }
+  /* End contact  */
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+  /* header */
+  #header .hamburger {
+    display: none;
+  }
+  #header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+  }
+  #header .nav-list ul li {
+    display: inline-block;
+  }
+  #header .nav-list ul li a {
+    font-size: 1.8rem;
+  }
+  #header .nav-list ul a:after {
+    display: none;
+  }
+  /* End header */
+
+  #services .service-bottom .service-item {
+    flex-basis: 22%; //4 columns (22 + 3 = 25)
+    margin: 1.5%; //1.5*2 = 3%
+  }
+}
+/* End  Media Query For Desktop */
