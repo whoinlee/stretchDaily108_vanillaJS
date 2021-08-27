@@ -5,11 +5,11 @@
 }
 
 html {
-  @include set-background($white-color);
+  @include set-background-text($white-color);
   transition: all 0.5s ease-in;
 
   &.dark {
-    @include set-background($dark-grey-color);
+    @include set-background-text($dark-grey-color);
   }
 }
 
@@ -30,7 +30,7 @@ button.toggle {
   padding: 8px 12px;
   position: absolute;
   top: 100px;
-  @include set-background($black-color);
+  @include set-background-text($black-color);
 
   &.light {
     background-color: $white-color;
@@ -65,7 +65,7 @@ button.toggle {
     text-transform: uppercase;
 
     .circle {
-      @include set-background($black-color);
+      @include set-background-text($black-color);
       border-radius: 50%;
       height: 20px;
       width: 20px;
@@ -79,7 +79,7 @@ button.toggle {
     }
 
     .circle.light {
-      @include set-background($dark-grey-color);
+      @include set-background-text($white-color);
     }
   }
 }

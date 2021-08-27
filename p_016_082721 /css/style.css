@@ -13,7 +13,7 @@ html {
 
 html.dark {
   background-color: #111;
-  color: #000;
+  color: #fff;
 }
 
 body {
@@ -109,7 +109,7 @@ button.toggle:focus {
 }
 
 .clock-container .date .circle.light {
-  background-color: #111;
+  background-color: #fff;
   color: #000;
 }
 
