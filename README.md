@@ -32,3 +32,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **15.** ToDo List
 
+**16.** Theme Clock
