@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:300&display=swap");
+
+$font-stack: "Heebo", sans-serif;
+$black-color: #000; //black
+$white-color: #fff; //white
+$dark-grey-color: #111;
+$red-color: #e74c3c;
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@function set-text-color($color) {
+  @if ($color == ($black-color or $dark-grey-color)) {
+    @return $white-color;
+  } @else {
+    @return $black-color;
+  }
+}
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
