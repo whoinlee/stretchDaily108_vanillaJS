@@ -5,6 +5,8 @@
 }
 
 html {
+  background-color: #fff;
+  color: #000;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
@@ -32,13 +34,18 @@ body {
 
 button.toggle {
   cursor: pointer;
-  background-color: #000;
-  color: #fff;
   border: 0;
   border-radius: 4px;
   padding: 8px 12px;
   position: absolute;
   top: 100px;
+  background-color: #000;
+  color: #fff;
+}
+
+button.toggle.light {
+  background-color: #fff;
+  color: #373737;
 }
 
 button.toggle:focus {
@@ -61,76 +68,24 @@ button.toggle:focus {
           align-items: center;
 }
 
-.clock {
+.clock-container .clock {
   position: relative;
   width: 200px;
   height: 200px;
 }
 
-.needle {
-  background-color: #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 65px;
-  width: 3px;
-  -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-
-.needle.hour, .needle.minute, .needle.second {
-  -webkit-transform: translate(-50%, -100%) rotate(0deg);
-  transform: translate(-50%, -100%) rotate(0deg);
-}
-
-.needle.minute {
-  height: 100px;
-}
-
-.needle.second {
-  height: 100px;
-  background-color: #e74c3c;
-}
-
-.center-point {
-  background-color: #e74c3c;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-
-.center-point::after {
-  content: "";
-  background-color: #000;
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-
-.time {
+.clock-container .time {
   font-size: 60px;
 }
 
-.date {
+.clock-container .date {
   color: #aaa;
   font-size: 14px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
 
-.date .circle {
+.clock-container .date .circle {
   background-color: #000;
   color: #fff;
   border-radius: 50%;
@@ -149,4 +104,64 @@ button.toggle:focus {
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   font-size: 12px;
+}
+
+.needle.hour, .needle.minute, .needle.second {
+  -webkit-transform: translate(-50%, -100%) rotate(0deg);
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle {
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.needle.hour.light {
+  background-color: #fff;
+}
+
+.needle.minute {
+  height: 100px;
+}
+
+.needle.minute.light {
+  background-color: #fff;
+}
+
+.needle.second {
+  height: 100px;
+  background-color: #e74c3c;
+}
+
+.center-point {
+  background-color: #e74c3c;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-point:after {
+  content: "";
+  background-color: #000;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
