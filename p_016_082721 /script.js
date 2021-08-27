@@ -14,25 +14,25 @@ toggleBtn.addEventListener('click', (e) => {
     // console.log("onClick");
     const circleEl = document.querySelector('.circle');
     if (html.classList.contains('dark')) {
-        html.classList.remove('dark');
+        theme = 'light';
         e.target.innerHTML = 'Dark Mode';
+        html.classList.remove('dark');
         toggleBtn.classList.remove('light');   
         hourEl.classList.remove('light');
         minuteEl.classList.remove('light');
         if (circleEl) {
             circleEl.classList.remove('light');
         }
-        theme = 'light';
     } else {
-        html.classList.add('dark');
+        theme = 'dark';
         e.target.innerHTML = 'Light Mode';
+        html.classList.add('dark');
         toggleBtn.classList.add('light');
         hourEl.classList.add('light'); 
         minuteEl.classList.add('light');
         if (circleEl) {
             circleEl.classList.add('light');
         }
-        theme = 'dark';
     }
 });
 
