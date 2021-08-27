@@ -11,7 +11,7 @@ html {
 
 html.dark {
   background-color: #111;
-  color: #000;
+  color: #fff;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
   margin: 0;
 }
 
-.toggle {
+button.toggle {
   cursor: pointer;
   background-color: #000;
   color: #fff;
@@ -41,7 +41,7 @@ body {
   top: 100px;
 }
 
-.toggle:focus {
+button.toggle:focus {
   outline: none;
 }
 
@@ -80,20 +80,16 @@ body {
   transition: all 0.5s ease-in;
 }
 
-.needle.hour {
+.needle.hour, .needle.minute, .needle.second {
   -webkit-transform: translate(-50%, -100%) rotate(0deg);
   transform: translate(-50%, -100%) rotate(0deg);
 }
 
 .needle.minute {
-  -webkit-transform: translate(-50%, -100%) rotate(0deg);
-  transform: translate(-50%, -100%) rotate(0deg);
   height: 100px;
 }
 
 .needle.second {
-  -webkit-transform: translate(-50%, -100%) rotate(0deg);
-  transform: translate(-50%, -100%) rotate(0deg);
   height: 100px;
   background-color: #e74c3c;
 }

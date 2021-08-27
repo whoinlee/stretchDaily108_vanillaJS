@@ -1,4 +1,8 @@
 @import "config";
+
+$primary-color: #000;
+$secondary-color: #fff;
+
 * {
   box-sizing: border-box;
 }
@@ -10,15 +14,12 @@ html {
 html.dark {
   $primary-color: #fff;
   $secondary-color: #333;
-}
-
-html.dark {
   background-color: #111;
   color: $primary-color;
 }
 
 body {
-  font-family: "Heebo", sans-serif;
+  font-family: $font-stack;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +28,7 @@ body {
   margin: 0;
 }
 
-.toggle {
+button.toggle {
   cursor: pointer;
   background-color: $primary-color;
   color: $secondary-color;
@@ -38,7 +39,7 @@ body {
   top: 100px;
 }
 
-.toggle:focus {
+button.toggle:focus {
   outline: none;
 }
 
@@ -66,20 +67,21 @@ body {
   transition: all 0.5s ease-in;
 }
 
-.needle.hour {
+%needle-shared-transition {
   // transform: translate(-50%, -100%) rotate(0deg);
   @include transform(translate(-50%, -100%) rotate(0deg));
 }
+.needle.hour {
+  @extend %needle-shared-transition;
+}
 
 .needle.minute {
-  // transform: translate(-50%, -100%) rotate(0deg);
-  @include transform(translate(-50%, -100%) rotate(0deg));
+  @extend %needle-shared-transition;
   height: 100px;
 }
 
 .needle.second {
-  // transform: translate(-50%, -100%) rotate(0deg);
-  @include transform(translate(-50%, -100%) rotate(0deg));
+  @extend %needle-shared-transition;
   height: 100px;
   background-color: #e74c3c;
 }
@@ -91,7 +93,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  // transform: translate(-50%, -50%);
   @include transform(translate(-50%, -50%));
   border-radius: 50%;
 }
@@ -104,7 +105,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  // transform: translate(-50%, -50%);
   @include transform(translate(-50%, -50%));
   border-radius: 50%;
 }
