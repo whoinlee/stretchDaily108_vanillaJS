@@ -5,13 +5,11 @@
 }
 
 html {
-  background-color: $secondary-color;
-  color: $primary-color;
+  @include set-background($white-color);
   transition: all 0.5s ease-in;
 
   &.dark {
-    background-color: $light-secondary-color;
-    color: $light-primary-color;
+    @include set-background($dark-grey-color);
   }
 }
 
@@ -32,12 +30,11 @@ button.toggle {
   padding: 8px 12px;
   position: absolute;
   top: 100px;
-  background-color: $primary-color;
-  color: $secondary-color;
+  @include set-background($black-color);
 
   &.light {
-    background-color: $light-primary-color;
-    color: lighten($light-secondary-color, 15%);
+    background-color: $white-color;
+    color: lighten($dark-grey-color, 15%);
   }
 
   &:focus {
@@ -68,17 +65,21 @@ button.toggle {
     text-transform: uppercase;
 
     .circle {
-      background-color: $primary-color;
-      color: $secondary-color;
+      @include set-background($black-color);
       border-radius: 50%;
-      height: 18px;
-      width: 18px;
+      height: 20px;
+      width: 20px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       line-height: 18px;
       transition: all 0.5s ease-in;
       font-size: 12px;
+      transform: translateY(-1px);
+    }
+
+    .circle.light {
+      @include set-background($dark-grey-color);
     }
   }
 }
@@ -88,7 +89,7 @@ button.toggle {
   @include transform(translate(-50%, -100%) rotate(0deg));
 }
 .needle {
-  background-color: $primary-color;
+  background-color: $black-color;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -100,7 +101,7 @@ button.toggle {
   &.hour {
     @extend %needle-shared-transition;
     &.light {
-      background-color: $light-primary-color;
+      background-color: $white-color;
     }
   }
 
@@ -108,19 +109,19 @@ button.toggle {
     @extend %needle-shared-transition;
     height: 100px;
     &.light {
-      background-color: $light-primary-color;
+      background-color: $white-color;
     }
   }
 
   &.second {
     @extend %needle-shared-transition;
     height: 100px;
-    background-color: #e74c3c;
+    background-color: $red-color;
   }
 }
 
 .center-point {
-  background-color: #e74c3c;
+  background-color: $red-color;
   width: 10px;
   height: 10px;
   position: absolute;
@@ -131,7 +132,7 @@ button.toggle {
 
   &:after {
     content: "";
-    background-color: $primary-color;
+    background-color: $black-color;
     width: 5px;
     height: 5px;
     position: absolute;
