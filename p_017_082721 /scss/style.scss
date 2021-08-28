@@ -38,6 +38,7 @@ body {
     left: 50%;
     position: absolute;
     @include transform(translateX(-50%) translateY(-50%));
+    z-index: 12;
   }
 
   .num {
@@ -72,6 +73,38 @@ body {
       div {
         @include transform(rotate(#{$hour * -30}deg));
       }
+    }
+  }
+
+  .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transform-origin: bottom;
+    @include transform(translate(-50%) rotate(calc(var(--rotation) * 1deg)));
+    z-index: 10;
+    background-color: black;
+
+    &.second {
+      width: 5px;
+      height: 45%;
+      background-color: red;
+    }
+
+    &.minute {
+      width: 7px;
+      height: 40%;
+      background-color: black;
+    }
+
+    &.hour {
+      width: 10px;
+      height: 30%;
+      background-color: black;
     }
   }
 }
