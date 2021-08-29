@@ -39,6 +39,7 @@ button.toggle {
   padding: 8px 12px;
   position: absolute;
   top: 100px;
+  z-index: 10;
   background-color: #000;
   color: #fff;
 }
@@ -70,12 +71,76 @@ button.toggle:focus {
 
 .clock-container .clock {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(200, 200, 200, 0.1);
+  border-radius: 50%;
+}
+
+.clock-container .clock .needle {
+  --rotation: 0;
+  background-color: #000;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 4px;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+  transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock-container .clock .needle.hour {
+  height: 65px;
+}
+
+.clock-container .clock .needle.hour.light {
+  background-color: #fff;
+}
+
+.clock-container .clock .needle.minute {
+  width: 3px;
+  height: 100px;
+}
+
+.clock-container .clock .needle.minute.light {
+  background-color: #fff;
+}
+
+.clock-container .clock .needle.second {
+  width: 2px;
+  height: 100px;
+  background-color: #e74c3c;
+}
+
+.clock-container .clock .center-point {
+  background-color: #e74c3c;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.clock-container .clock .center-point:after {
+  content: "";
+  background-color: #000;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .clock-container .time {
   font-size: 60px;
+  margin-top: 20px;
 }
 
 .clock-container .date {
@@ -111,64 +176,4 @@ button.toggle:focus {
 .clock-container .date .circle.light {
   background-color: #fff;
   color: #000;
-}
-
-.needle.hour, .needle.minute, .needle.second {
-  -webkit-transform: translate(-50%, -100%) rotate(0deg);
-  transform: translate(-50%, -100%) rotate(0deg);
-}
-
-.needle {
-  background-color: #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 65px;
-  width: 3px;
-  -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-
-.needle.hour.light {
-  background-color: #fff;
-}
-
-.needle.minute {
-  height: 100px;
-}
-
-.needle.minute.light {
-  background-color: #fff;
-}
-
-.needle.second {
-  height: 100px;
-  background-color: #e74c3c;
-}
-
-.center-point {
-  background-color: #e74c3c;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.center-point:after {
-  content: "";
-  background-color: #000;
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }

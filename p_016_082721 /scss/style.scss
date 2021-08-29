@@ -30,6 +30,7 @@ button.toggle {
   padding: 8px 12px;
   position: absolute;
   top: 100px;
+  z-index: 10;
   @include set-background-text($black-color);
 
   &.light {
@@ -50,12 +51,72 @@ button.toggle {
 
   .clock {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(200, 200, 200, 0.1);
+    border-radius: 50%;
+
+    .needle {
+      --rotation: 0;
+      background-color: $black-color;
+      position: absolute;
+      //-- center of the clock
+      bottom: 50%;
+      left: 50%;
+      width: 4px;
+      transform-origin: bottom center;
+      // transition: all 0.5s ease-in;  //-- causes an error near the 360 deg
+      @include transform(translate(-50%) rotate(calc(var(--rotation) * 1deg)));
+
+      &.hour {
+        height: 65px;
+        &.light {
+          background-color: $white-color;
+        }
+      }
+
+      &.minute {
+        width: 3px;
+        height: 100px;
+        &.light {
+          background-color: $white-color;
+        }
+      }
+
+      &.second {
+        width: 2px;
+        height: 100px;
+        background-color: $red-color;
+      }
+    }
+
+    .center-point {
+      background-color: $red-color;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      @include transform(translate(-50%, -50%));
+
+      &:after {
+        content: "";
+        background-color: $black-color;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        @include transform(translate(-50%, -50%));
+      }
+    }
   }
 
   .time {
     font-size: 60px;
+    margin-top: 20px;
   }
 
   .date {
@@ -84,61 +145,7 @@ button.toggle {
   }
 }
 
+// @extend %needle-shared-transition;
 %needle-shared-transition {
-  // transform: translate(-50%, -100%) rotate(0deg);
   @include transform(translate(-50%, -100%) rotate(0deg));
-}
-.needle {
-  background-color: $black-color;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 65px;
-  width: 3px;
-  transform-origin: bottom center;
-  transition: all 0.5s ease-in;
-
-  &.hour {
-    @extend %needle-shared-transition;
-    &.light {
-      background-color: $white-color;
-    }
-  }
-
-  &.minute {
-    @extend %needle-shared-transition;
-    height: 100px;
-    &.light {
-      background-color: $white-color;
-    }
-  }
-
-  &.second {
-    @extend %needle-shared-transition;
-    height: 100px;
-    background-color: $red-color;
-  }
-}
-
-.center-point {
-  background-color: $red-color;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  @include transform(translate(-50%, -50%));
-
-  &:after {
-    content: "";
-    background-color: $black-color;
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    @include transform(translate(-50%, -50%));
-  }
 }

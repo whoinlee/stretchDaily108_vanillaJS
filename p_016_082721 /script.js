@@ -47,20 +47,27 @@ function setTime() {
     const seconds = time.getSeconds();
     const ampm = hours >= 12 ? 'PM' : 'AM';
 
-    hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 12, 0, 360)}deg)`
-    minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(minutes, 0, 60, 0, 360)}deg)`
-    secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 60, 0, 360)}deg)`
+    const secondDeg = seconds/60; 
+    const minuteDeg = (secondDeg + minutes)/60;
+    const hourDeg = (minuteDeg + hours)/12;
+
+    hourEl.style.setProperty('--rotation', hourDeg * 360);
+    minuteEl.style.setProperty('--rotation', minuteDeg * 360);
+    secondEl.style.setProperty('--rotation', secondDeg * 360);
+
+    // hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 12, 0, 360)}deg)`
+    // minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(minutes, 0, 60, 0, 360)}deg)`
+    // secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 60, 0, 360)}deg)`
 
     timeEl.innerHTML = `${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds} ${ampm}`;
-    
     dateEl.innerHTML = (theme == 'light') ? 
                         `${days[day]}, ${months[month]} <span class="circle">${date}</span>`:
                         `${days[day]}, ${months[month]} <span class="circle light">${date}</span>`;
 }
 
-const scale = (num, in_min, in_max, out_min, out_max) => {
-    return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
+// const scale = (num, in_min, in_max, out_min, out_max) => {
+//     return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+// }
 
 setTime();
 setInterval(setTime, 1000);

@@ -7,8 +7,7 @@ const secondHand = document.getElementById('second-hand');
 
 function setTime() {
     const time = new Date();
-    // console.log("time?", time)
-    const secondDeg = time.getSeconds()/60;
+    const secondDeg = time.getSeconds()/60; 
     const minuteDeg = (secondDeg + time.getMinutes())/60;
     const hourDeg = (minuteDeg + time.getHours())/12;
 

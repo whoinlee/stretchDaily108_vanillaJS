@@ -35,11 +35,11 @@ body {
   content: "";
   height: 20px;
   width: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   border-radius: 50%;
+  position: absolute;
   top: 50%;
   left: 50%;
-  position: absolute;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   z-index: 12;
@@ -170,14 +170,14 @@ body {
 
 .clock .hand {
   --rotation: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   position: absolute;
   bottom: 50%;
   left: 50%;
-  border: 1px solid white;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
   -webkit-transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
   transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
   z-index: 10;
