@@ -18,14 +18,25 @@ clearBtn.addEventListener("click", clearItems);
 
 
 
-
+//-- reset
 function setBackToDefault() {
-    console.log("setBackToDefault");
+    // console.log("setBackToDefault :: reset");
+    grocery.value = "";
+    editFlag = false;
+    editID = "";
+    submitBtn.textContent = "submit";
 }
 
-
+//-- alert
 function displayAlert(text, action) {
-    console.log("displayAlert");
+    // console.log("displayAlert, action? " + action);
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
+    //-- remove alert after 1 sec
+    setTimeout(() => {
+        alert.textContent = "";
+        alert.classList.remove(`alert-${action}`);
+    }, 2000);
 }
 
 ////////////////////////////////
@@ -45,30 +56,31 @@ function setupItems(e) {
 }
 
 function addItem(e) {
-    console.log("addItem");
+    // console.log("submit, addItem");
     e.preventDefault();
 
     const value = grocery.value;
     const id = new Date().getTime().toString(); //-- timeStamp set as id
-
+    
     if (value !== "" && !editFlag) {
-        const element = document.createElement("article");
+        //-- succss
+        // console.log("grocery value exists and not editing");
+        const element = document.createElement("article");  //***/
         let attr = document.createAttribute("data-id"); //<article data-id="id">
         attr.value = id;
-        element.setAttributeNode(attr);
+        element.setAttributeNode(attr); //***/
         element.classList.add("grocery-item");  //<article data-id="id" class="grocery-item">
         element.innerHTML = `<p class="title">${value}</p>
                 <div class="btn-container">
-                    <!-- edit -->
                     <button type="button" class="edit-btn">
                         <i class="fas fa-edit"></i>
                     </button>
-                    <!-- delete -->
                     <button type="button" class="delete-btn">
                         <i class="fas fa-trash"></i>
                     </button>
                 </div>
             `;
+
         //-- add event listeners to both buttons;
         const deleteBtn = element.querySelector(".delete-btn");
         const editBtn = element.querySelector(".edit-btn");
@@ -76,16 +88,20 @@ function addItem(e) {
         editBtn.addEventListener("click", editItem);
 
         list.appendChild(element);
-        displayAlert("item added to the list", "success");
         container.classList.add("show-container");
+        displayAlert("item added to the list", "success");
         addToLocalStorage(id, value);
         setBackToDefault();
     } else if (value !== "" && editFlag) {
+        //-- success
+        // console.log("grocery value exists and editing");
         editElement.innerHTML = value;
         displayAlert("value changed", "success");
         editLocalStorage(editID, value);
         setBackToDefault();
     } else {
+        //-- danger
+        // console.log("no grocery value");
         displayAlert("please enter value", "danger");
     }
 };
@@ -99,8 +115,18 @@ function editItem(e) {
 }
 
 function clearItems(e) {
-    console.log("clearItems");
+    // console.log("clearItems");
     e.preventDefault();
+
+    const items = document.querySelectorAll(".grocery-item");
+    if (items.length > 0) {
+        items.forEach((item) => list.removeChild(item));
+    }
+
+    container.classList.remove("show-container");
+    displayAlert("empty list", "danger");
+    setBackToDefault();
+    localStorage.removeItem("list");
 };
 
 ////////////////////////////////

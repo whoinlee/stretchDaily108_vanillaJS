@@ -45,12 +45,12 @@ body {
       letter-spacing: $spacing;
       text-transform: capitalize;
 
-      .alert-danger {
+      &.alert-danger {
         color: #721c24;
         background: #f8d7da;
       }
 
-      .alert-success {
+      &.alert-success {
         color: #155724;
         background: #d4edda;
       }
@@ -196,8 +196,4 @@ body {
   }
 }
 
-//---
-.article {
-  border: 1px red solid;
-}
 @import "media";
