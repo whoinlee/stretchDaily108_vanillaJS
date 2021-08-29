@@ -16,18 +16,34 @@ window.addEventListener("DOMContentLoaded", setupItems);
 form.addEventListener("submit", addItem);
 clearBtn.addEventListener("click", clearItems);
 
+
+
+
+function setBackToDefault() {
+    console.log("setBackToDefault");
+}
+
+
+function displayAlert(text, action) {
+    console.log("displayAlert");
+}
+
+////////////////////////////////
+//-- Grocery Item Handlers
+////////////////////////////////
 function setupItems(e) {
     console.log('DOM fully loaded and parsed');
     console.log("setupItems, ever???");
-    // let items = getLocalStorage();
+    let items = getLocalStorage();
   
-    // if (items.length > 0) {
-    //   items.forEach(function (item) {
-    //     createListItem(item.id, item.value);
-    //   });
-    //   container.classList.add("show-container");
-    // }
-  }
+    if (items.length > 0) {
+      items.forEach(function (item) {
+        createListItem(item.id, item.value);
+      });
+      container.classList.add("show-container");
+    }
+}
+
 function addItem(e) {
     console.log("addItem");
     e.preventDefault();
@@ -53,27 +69,20 @@ function addItem(e) {
                     </button>
                 </div>
             `;
-        // add event listeners to both buttons;
+        //-- add event listeners to both buttons;
         const deleteBtn = element.querySelector(".delete-btn");
-        deleteBtn.addEventListener("click", deleteItem);
         const editBtn = element.querySelector(".edit-btn");
+        deleteBtn.addEventListener("click", deleteItem);
         editBtn.addEventListener("click", editItem);
 
-        // append child
         list.appendChild(element);
-        // display alert
         displayAlert("item added to the list", "success");
-        // show container
         container.classList.add("show-container");
-        // set local storage
         addToLocalStorage(id, value);
-        // set back to default
         setBackToDefault();
     } else if (value !== "" && editFlag) {
         editElement.innerHTML = value;
         displayAlert("value changed", "success");
-
-        // edit  local storage
         editLocalStorage(editID, value);
         setBackToDefault();
     } else {
@@ -81,9 +90,34 @@ function addItem(e) {
     }
 };
 
+function deleteItem(e) {
+    console.log("deleteItem");
+}
+// edit item
+function editItem(e) {
+    console.log("editItem");
+}
+
 function clearItems(e) {
     console.log("clearItems");
     e.preventDefault();
 };
+
+////////////////////////////////
+//-- LocalStorage Handlers
+////////////////////////////////
+function getLocalStorage() {
+    console.log("getLocalStorage");
+}
+
+function addToLocalStorage(id, value) {
+    console.log("addToLocalStorage");
+  }
+
+function editLocalStorage(id, value) {
+    console.log("editLocalStorage");
+}
+////////////////////////////////
+
 
 console.log("ever??? =======>");
