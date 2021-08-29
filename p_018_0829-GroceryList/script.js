@@ -10,6 +10,7 @@ const clearBtn = document.querySelector(".clear-btn");
 let editElement;
 let editFlag = false;
 let editID = "";
+let displayAlertID;
 
 //-- display items from localStorage on load
 setupItems();
@@ -30,10 +31,14 @@ function displayAlert(text, action) {
     alert.classList.add(`alert-${action}`);
 
     //-- remove alert after 2 secs
-    setTimeout(() => {
+    if (displayAlertID) {
+        clearTimeout(displayAlertID);
+    }
+    displayAlertID = setTimeout(() => {
         alert.textContent = "";
         alert.classList.remove(`alert-${action}`);
-    }, 2000);
+    }, 1000);
+    
 }
 
 ////////////////////////////////
@@ -42,7 +47,7 @@ function displayAlert(text, action) {
 function setupItems(e) {
     // console.log('DOM fully loaded and parsed'); //async & defer in index.html
     let items = getLocalStorage();
-    if (items.length > 0) {
+    if (items != null && items.length > 0) {
       items.forEach(item => createListItem(item.id, item.value));
       container.classList.add("show-container");
     }
@@ -77,7 +82,7 @@ function createListItem(id, value) {
 }
 
 function addItem(e) {
-    console.log("submit, addItem");
+    // console.log("submit, addItem");
     e.preventDefault();
 
     const value = grocery.value;
@@ -129,29 +134,22 @@ function deleteItem(e) {
 
     const element = e.currentTarget.parentElement.parentElement;
     const id = element.dataset.id;
-    console.log("b length?? " + list.children.length)
     list.removeChild(element);
-    console.log("a length?? " + list.children.length)
-    console.log("list.querySelectorAll('.grocery-item')?? " + list.querySelectorAll('.grocery-item'))
-
-    if (list.querySelectorAll('.grocery-item').length === 0) {   //.grocery-item
+    if (list.children.length === 0) {    //.grocery-item
         container.classList.remove("show-container");
-        // displayAlert("empty list", "danger");
-        // setBackToDefault();
+        displayAlert("empty list", "danger");
         // localStorage.removeItem("list");
-        // return;
+    } else {
+        displayAlert("item removed", "danger");
+        
     }
-    displayAlert("item removed", "danger");
     setBackToDefault();
     removeFromLocalStorage(id);
 }
 
 function editItem(e) {
-    console.log("editItem ======>>>>>");
-
+    // console.log("editItem ======>>>>>");
     const element = e.currentTarget.parentElement.parentElement;
-    console.log("e.currentTarget?? " + e.currentTarget);
-    console.log("element?? " + element);
     //-- set edit item
     editElement = e.currentTarget.parentElement.previousElementSibling;
     console.log("editElement?? " + editElement);
@@ -181,7 +179,7 @@ function clearItems(e) {
 //-- LocalStorage Handlers
 ////////////////////////////////
 function getLocalStorage() {
-    console.log("getLocalStorage");
+    // console.log("getLocalStorage");
     return (
         localStorage.getItem("list") ? 
         JSON.parse(localStorage.getItem("list")) : []
@@ -189,7 +187,7 @@ function getLocalStorage() {
 }
 
 function addToLocalStorage(id, value) {
-    console.log("addToLocalStorage");
+    // console.log("addToLocalStorage");
     const grocery = { id, value };
     let items = getLocalStorage();
     items.push(grocery);
@@ -197,7 +195,7 @@ function addToLocalStorage(id, value) {
 }
 
 function editLocalStorage(id, value) {
-    console.log("editLocalStorage");
+    // console.log("editLocalStorage");
     let items = getLocalStorage();
     items = items.map(item => {
         (item.id === id) ? 
@@ -207,7 +205,7 @@ function editLocalStorage(id, value) {
 }
 
 function removeFromLocalStorage(id) {
-    console.log("removeFromLocalStorage");
+    // console.log("removeFromLocalStorage");
     let items = getLocalStorage();
     items = items.filter(item => (item.id !== id));
     localStorage.setItem("list", JSON.stringify(items));
