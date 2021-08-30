@@ -34,6 +34,48 @@ h1 {
   overflow: hidden;
   transition: $transition;
 
+  &.active {
+    background-color: white;
+    box-shadow: $active-shadow;
+
+    &::before,
+    &::after {
+      content: "\f075";
+      font-family: "Font Awesome 5 Free";
+      color: #2ecc71;
+      font-size: 7rem;
+      position: absolute;
+      opacity: 0.2;
+      top: 20px;
+      left: 20px;
+      z-index: 0;
+    }
+
+    &::before {
+      color: #3498db;
+      top: -10px;
+      left: -35px;
+      @include transform(rotateY(180deg)); //-- y axix flip
+    }
+
+    .faq-answer {
+      display: block;
+    }
+
+    .faq-toggle-btn .fa-times {
+      color: #fff;
+      display: block;
+    }
+
+    .faq-toggle-btn .fa-chevron-down {
+      display: none;
+    }
+
+    .faq-toggle-btn {
+      background-color: #9fa4a8;
+    }
+  }
+
   &:hover {
     box-shadow: $dark-shadow;
     background-color: rgba(white, 0.9);
@@ -65,53 +107,11 @@ h1 {
     width: 30px;
   }
 
-  .fa-times {
-    display: none;
-  }
-
-  &.active {
-    background-color: white;
-    box-shadow: $active-shadow;
-
-    &::before,
-    &::after {
-      content: "\f075";
-      font-family: "Font Awesome 5 Free";
-      color: #2ecc71;
-      font-size: 7rem;
-      position: absolute;
-      opacity: 0.2;
-      top: 20px;
-      left: 20px;
-      z-index: 0;
-    }
-
-    &::before {
-      color: #3498db;
-      top: -10px;
-      left: -35px;
-      @include transform(rotateY(180deg)); //-- y axix flip
-    }
-
-    .faq-question {
-      display: block;
-    }
-
-    .faq-toggle-btn .fa-times {
-      color: #fff;
-      display: block;
-    }
-
-    .faq-toggle-btn .fa-chevron-down {
-      display: none;
-    }
-
-    .faq-toggle-btn {
-      background-color: #9fa4a8;
-    }
-  }
-
   &:focus {
     outline: 0;
+  }
+
+  .fa-times {
+    display: none;
   }
 }
