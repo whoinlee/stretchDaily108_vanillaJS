@@ -38,4 +38,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **18.** Grocery List
 
-**19.** FAQ
+**19.** [FAQ](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_019_0830-FAQ)
