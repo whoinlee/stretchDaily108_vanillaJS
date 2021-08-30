@@ -13,10 +13,105 @@ h1 {
   color: rgba(179, 131, 226, 0.8);
   margin: 50px 0 30px;
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: $font-stack;
+  font-weight: bold;
 }
 
 .faq-container {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.faq {
+  background-color: rgba(white, 0.5);
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  box-shadow: $light-shadow;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: $dark-shadow;
+    background-color: rgba(white, 0.9);
+  }
+
+  .faq-question {
+    margin: 0 35px 0 0;
+  }
+
+  .faq-answer {
+    display: none;
+    margin: 30px 0 0;
+  }
+
+  .faq-toggle-btn {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .fa-times {
+    display: none;
+  }
+
+  &.active {
+    background-color: white;
+    box-shadow: $active-shadow;
+
+    &::before,
+    &::after {
+      content: "\f075";
+      font-family: "Font Awesome 5 Free";
+      color: #2ecc71;
+      font-size: 7rem;
+      position: absolute;
+      opacity: 0.2;
+      top: 20px;
+      left: 20px;
+      z-index: 0;
+    }
+
+    &::before {
+      color: #3498db;
+      top: -10px;
+      left: -35px;
+      @include transform(rotateY(180deg)); //-- y axix flip
+    }
+
+    .faq-question {
+      display: block;
+    }
+
+    .faq-toggle-btn .fa-times {
+      color: #fff;
+      display: block;
+    }
+
+    .faq-toggle-btn .fa-chevron-down {
+      display: none;
+    }
+
+    .faq-toggle-btn {
+      background-color: #9fa4a8;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
 }
