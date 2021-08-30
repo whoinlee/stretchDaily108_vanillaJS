@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+$font-stack: "Muli", sans-serif;
+$transition: all 0.3s ease-out;
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}

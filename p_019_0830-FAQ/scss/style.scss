@@ -1,0 +1,22 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  color: rgba(179, 131, 226, 0.8);
+  margin: 50px 0 30px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
