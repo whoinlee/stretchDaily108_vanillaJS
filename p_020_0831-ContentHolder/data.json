@@ -1,0 +1,27 @@
+[
+    {  
+        "question": "Why shouldn't we trust atoms?",   
+        "answer": "They make up everything.",
+        "id":"0"
+    },
+    {  
+        "question": "What do you call someone with no body and no nose?",   
+        "answer": "Nobody Knows.",
+        "id":"1"
+    },
+    {  
+        "question": "What's the object-oriented way to become wealthy?",   
+        "answer": "Inheritance",
+        "id":"2"
+    },
+    {  
+        "question": "How many tickles does it take to tickle an octopus?",   
+        "answer": "Ten tickles!",
+        "id":"3"
+    },
+    {  
+        "question": "What is: 1 + 1?",   
+        "answer": "Depends on who are you asking.",
+        "id":"4"
+    }
+]

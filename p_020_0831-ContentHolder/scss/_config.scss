@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+$font-stack: "Muli", sans-serif;
+$light-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+$active-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2);
+$transition: all 0.3s ease-out;
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
