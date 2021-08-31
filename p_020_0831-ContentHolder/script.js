@@ -1,55 +1,28 @@
-const container = document.querySelector(".faq-container");
-let selectedFaq;
+const header = document.getElementById('header')
+const title = document.getElementById('title')
+const excerpt = document.getElementById('excerpt')
+const profile_img = document.getElementById('profile_img')
+const author_name = document.getElementById('author_name')
+const date = document.getElementById('date')
 
-const setupFAQs = async() => {
-    // console.log("setupFAQs");
+const animated_bgs = document.querySelectorAll('.animated-bg')
+const animated_bg_texts = document.querySelectorAll('.animated-bg-text')
 
-    //-- get data
-    const res = await fetch('./data.json');  
-    const faqData = await res.json();  //-- an array of objects
-    if (faqData != null && faqData.length > 0) {
-        faqData.forEach(item => {
-            const faqElt = document.createElement("div");
-            let attr = document.createAttribute("data-id");
-            attr.value = item.id;
-            faqElt.setAttributeNode(attr);
-            faqElt.classList.add("faq");
-            faqElt.innerHTML = `
-                <!-- .faq-question -->
-                <h3 class="faq-question">
-                    ${item.question}
-                </h3>
-                <!-- .faq-answer -->
-                <p class="faq-answer">
-                    ${item.answer}
-                </p>
-                <!-- .faq-toggle-btn -->
-                <button class="faq-toggle-btn">
-                    <i class="fas fa-chevron-down"></i>
-                    <i class="fas fa-times"></i>
-                </button>
-            `;
-            const toggleBtn = faqElt.querySelector(".faq-toggle-btn");
-            toggleBtn.addEventListener("click", toggleFAQ);
-            container.appendChild(faqElt);
-        });
-      }
-};
+//-- show bg animation, then displays content in 2.5 sec.
+setTimeout(getData, 2500);
 
-const toggleFAQ = (e) => {
-    // console.log("toggleFAQ");
-    e.preventDefault();
-    
-    const element = e.currentTarget.parentElement;  //-- .faq div
-    //element.classList.toggle('active');
-
-    if (element.classList.contains("active")) {
-        element.classList.remove("active");
-        selectedFaq = null;
-    } else {
-        element.classList.add("active");
-        if (selectedFaq) selectedFaq.classList.remove("active");
-        selectedFaq = element;
-    }
+function getData() {
+    header.innerHTML =
+      '<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="" />';
+    title.innerHTML = 'Lorem ipsum dolor sit amet';
+    excerpt.innerHTML =
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore perferendis';
+    profile_img.innerHTML =
+      '<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="" />';
+    author_name.innerHTML = 'John Doe'
+    date.innerHTML = 'Oct 08, 2020'
+  
+    //-- infinite animate stops here!!
+    animated_bgs.forEach((bg) => bg.classList.remove('animated-bg'));
+    animated_bg_texts.forEach((bg) => bg.classList.remove('animated-bg-text'));
 }
-setupFAQs();

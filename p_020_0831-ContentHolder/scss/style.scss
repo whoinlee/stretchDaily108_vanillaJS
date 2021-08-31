@@ -6,112 +6,94 @@
 
 body {
   font-family: $font-stack;
-  background-color: #f0f0f0;
-}
-
-h1 {
-  color: rgba(179, 131, 226, 0.8);
-  margin: 50px 0 30px;
-  text-align: center;
-  font-size: 4rem;
-  font-family: $font-stack;
-  font-weight: bold;
-}
-
-.faq-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.faq {
-  background-color: rgba(white, 0.5);
-  border: 1px solid #9fa4a8;
-  border-radius: 10px;
-  box-shadow: $light-shadow;
-  margin: 20px 0;
-  padding: 30px;
-  position: relative;
+  background-color: $bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   overflow: hidden;
-  transition: $transition;
+  margin: 0;
+}
 
-  &.active {
-    background-color: white;
-    box-shadow: $active-shadow;
+img {
+  max-width: 100%;
+}
 
-    &::before,
-    &::after {
-      content: "\f075";
-      font-family: "Font Awesome 5 Free";
-      color: #2ecc71;
-      font-size: 7rem;
-      position: absolute;
-      opacity: 0.2;
-      top: 20px;
-      left: 20px;
-      z-index: 0;
-    }
+.card {
+  box-shadow: $box-shadow;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 350px;
+}
 
-    &::before {
-      color: #3498db;
-      top: -10px;
-      left: -35px;
-      @include transform(rotateY(180deg)); //-- y axix flip
-    }
+.card-header {
+  height: 200px;
 
-    .faq-answer {
-      display: block;
-    }
-
-    .faq-toggle-btn .fa-times {
-      color: #fff;
-      display: block;
-    }
-
-    .faq-toggle-btn .fa-chevron-down {
-      display: none;
-    }
-
-    .faq-toggle-btn {
-      background-color: #9fa4a8;
-    }
-  }
-
-  &:hover {
-    box-shadow: $dark-shadow;
-    background-color: rgba(white, 0.9);
-  }
-
-  .faq-question {
-    margin: 0 35px 0 0;
-  }
-
-  .faq-answer {
-    display: none;
-    margin: 30px 0 0;
-  }
-
-  .faq-toggle-btn {
-    background-color: transparent;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    padding: 0;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    height: 30px;
-    width: 30px;
-  }
-
-  &:focus {
-    outline: 0;
-  }
-
-  .fa-times {
-    display: none;
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 }
+
+.card-content {
+  background-color: white;
+  padding: 30px;
+
+  .title {
+    height: 20px;
+    margin: 0;
+  }
+
+  .excerpt {
+    color: $dark-grey;
+    margin: 10px 0 20px;
+  }
+
+  .author {
+    display: flex;
+
+    .profile-img {
+      border-radius: 50%;
+      overflow: hidden;
+      height: 40px;
+      width: 40px;
+    }
+
+    .author-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-left: 10px;
+      width: 100px;
+
+      small {
+        color: $light-grey;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+/**********/
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPosAnim 1s linear infinite;
+}
+
+.animated-bg-text {
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0;
+  height: 10px;
+  width: 100%;
+}
+
+@import "motion";

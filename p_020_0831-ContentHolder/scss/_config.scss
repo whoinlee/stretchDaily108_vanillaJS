@@ -1,13 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-$font-stack: "Muli", sans-serif;
-$light-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-$dark-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
-$active-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2);
-$transition: all 0.3s ease-out;
-
-@mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
-}
+$font-stack: "Roboto", sans-serif;
+$bg-color: #ecf0f1;
+$box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+$dark-grey: #777;
+$light-grey: #aaa;
