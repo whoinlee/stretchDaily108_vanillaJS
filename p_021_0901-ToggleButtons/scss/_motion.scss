@@ -1,9 +1,23 @@
-@keyframes bgPosAnim {
+@keyframes slideOn {
   0% {
-    background-position: 50% 0;
+    transform: translateX(0) scale(1);
   }
-
+  50% {
+    transform: translateX(15px) scale(1.1);
+  }
   100% {
-    background-position: -150% 0;
+    transform: translateX(29px) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    transform: translateX(29px) scale(1);
+  }
+  50% {
+    transform: translateX(15px) scale(1.1);
+  }
+  100% {
+    transform: translateX(0) scale(1);
   }
 }

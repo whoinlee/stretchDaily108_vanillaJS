@@ -2,24 +2,80 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: $font-stack;
   background-color: $bg-color;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
-  margin: 0;
 }
 
 .container {
+  width: 500px;
+  height: 500px;
   box-shadow: $box-shadow;
+  background-color: black;
   border-radius: 10px;
-  overflow: hidden;
-  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@import "motion";
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: $switch-unit;
+  margin: 2px;
+
+  input {
+    // opacity: 0;
+    // width: 0;
+    // height: 0;
+
+    &:checked + .slider {
+      background-color: yellow;
+    }
+
+    &:checked + .slider:before {
+      background-color: #333;
+      @include transform(translateX(29px));
+    }
+  }
+
+  .slider {
+    // position: absolute;
+    // cursor: pointer;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    background-color: #333;
+
+    &:before {
+      //-- handle
+      position: absolute;
+      content: "";
+      height: 28px;
+      width: 28px;
+      left: 2px;
+      bottom: 3px;
+      background-color: white;
+      @include transition($property);
+    }
+
+    &.round {
+      border-radius: $switch-unit;
+    }
+
+    &.round:before {
+      //--  round handle
+      border-radius: 50%;
+    }
+  }
+}
