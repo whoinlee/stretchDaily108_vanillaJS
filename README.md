@@ -41,3 +41,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **19.** [FAQ](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_019_0830-FAQ)
 
 **20.** [ContentHolder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_020_0831-ContentHolder)
+
+**20.** [ToggleButtons](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_021_0901-ToggleButtons)
