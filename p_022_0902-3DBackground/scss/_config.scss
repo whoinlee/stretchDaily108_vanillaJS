@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-$font-stack: "Roboto", sans-serif;
+$btn-font: "Poppins", sans-serif;
 $bg-color: #ecf0f1;
 $box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-$dark-grey: #777;
-$light-grey: #aaa;
-$switch-unit: 34px;
+$darker-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+$transition: 0.4s ease;
 
 @mixin transform($property) {
   -webkit-transform: $property;

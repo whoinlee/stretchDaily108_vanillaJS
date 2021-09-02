@@ -9,19 +9,90 @@
 body {
   background-color: $bg-color;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  overflow: hidden;
+}
+
+.magic-btn {
+  background-color: #f9ca24;
+  color: #fff;
+  font-family: $btn-font;
+  border: 0;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 12px 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  letter-spacing: 1px;
+  box-shadow: $box-shadow;
+  z-index: 100;
+
+  &:hover {
+    box-shadow: $darker-shadow;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: none;
+    @include transform(translateY(2px));
+  }
 }
 
 .container {
   width: 500px;
   height: 500px;
-  box-shadow: $box-shadow;
-  background-color: black;
-  border-radius: 10px;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @include transition($transition);
+
+  &.big {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.container.big .box {
+  // @include transform(rotateZ(360deg));
+  transform: rotateZ(360deg);
+}
+
+.box {
+  background-image: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  position: relative;
+  height: 125px;
+  width: 125px;
+  @include transition($transition);
+
+  &::after {
+    content: "";
+    background-color: #f6e58d;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    @include transform(skewY(45deg));
+  }
+
+  &::before {
+    content: "";
+    background-color: #f9ca24;
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    height: 15px;
+    width: 100%;
+    @include transform(skewX(45deg));
+  }
 }
