@@ -11,8 +11,3 @@ $transition: 0.4s ease;
   -ms-transform: $property;
   transform: $property;
 }
-
-@mixin transition($property) {
-  -webkit-transition: property;
-  transition: property;
-}

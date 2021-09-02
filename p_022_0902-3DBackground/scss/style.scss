@@ -52,7 +52,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  @include transition($transition);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 
   &.big {
     width: 600px;
@@ -61,7 +62,6 @@ body {
 }
 
 .container.big .box {
-  // @include transform(rotateZ(360deg));
   transform: rotateZ(360deg);
 }
 
@@ -72,7 +72,8 @@ body {
   position: relative;
   height: 125px;
   width: 125px;
-  @include transition($transition);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 
   &::after {
     content: "";
@@ -80,9 +81,9 @@ body {
     position: absolute;
     top: 8px;
     right: -15px;
-    height: 100%;
     width: 15px;
-    @include transform(skewY(45deg));
+    height: 100%;
+    @include transform(skewY(45deg)); //***
   }
 
   &::before {
@@ -93,6 +94,6 @@ body {
     left: 8px;
     height: 15px;
     width: 100%;
-    @include transform(skewX(45deg));
+    @include transform(skewX(45deg)); //***
   }
 }
