@@ -45,3 +45,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **20.** [ON/OFF](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_021_0901-OnOff)
 
 **21.** [3DBackground](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_022_0902-3DBackground)
+
+**22.** [HoverBoard](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard)
