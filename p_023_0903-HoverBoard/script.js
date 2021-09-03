@@ -6,6 +6,7 @@ const canvasW = 450;
 const canvasH = 625;
 const rowNum = Math.floor(canvasH/squareUnit); 
 const colNum = Math.floor(canvasW/squareUnit);
+let timeOutID;
 
 
 for (let i = 0; i < rowNum; i++) {
@@ -22,11 +23,25 @@ for (let i = 0; i < rowNum; i++) {
     square.style.setProperty('--pseueo-after-opacity', opacity);
     square.style.backgroundPosition = `${-j * squareUnit}px ${-i * squareUnit}px`; 
     // square.addEventListener('mouseover', () => setColor(square));
-    // square.addEventListener('mouseout', () => removeColor(square));
+    // square.addEventListener('mouseout', () => resetBoard());
 
     container.appendChild(square);
   }
 }
+
+function resetBoard() {
+  // console.log("resetBoard :: " + timeOutID)
+  if (timeOutID!=undefined) clearTimeout(timeOutID);
+  timeOutID = setTimeout(clearBoard, 7000);
+}
+
+function clearBoard() {
+  console.log("clearBoard!!!");
+  const squares = document.querySelectorAll('square');
+  squares.forEach(square => square.style.setProperty('--pseueo-after-opacity', 0));
+}
+
+
 
 function setColor(element) {
   const color = getRandomColor();

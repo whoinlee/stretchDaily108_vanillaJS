@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #101010;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,12 +33,12 @@ body {
   width: 23px;
   margin: 1px;
   transition: 3s ease;
-  box-shadow: 0 0 2px #000;
-  --pseueo-after-opacity: 0.85;
+  box-shadow: 0 0 2px #101010;
+  // --pseueo-after-opacity: 0.85;
 
   &::after {
     content: "";
-    // background-color: #1d1d1d;
+    // background-color: #101010;
     background-color: black;
     position: absolute;
     width: 100%;
@@ -46,7 +46,7 @@ body {
     top: 0;
     left: 0;
     opacity: var(--pseueo-after-opacity);
-    border: 1px solid rgba(124, 252, 124, 0.25);
+    border: 1px solid rgba(124, 252, 124, 0.15);
     transition: 5s ease;
   }
 
