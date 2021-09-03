@@ -13,8 +13,12 @@ for (let i = 0; i < rowNum; i++) {
     const square = document.createElement('div');
     // const squareAfter = 
     square.classList.add('square');
-    let opacity = .85 + Math.random()*.5;
-    opacity = (opacity > 1) ? 1: opacity;
+    // let opacity = (Math.random()<.1)?  Math.random()*.75 : (.85 + Math.random()*.5);
+    // let opacity = .85 + Math.random()*.5;
+    let opacity = (1 - (i + j)/(rowNum + colNum)) + .25 + Math.random();
+    // let opacity = (i + j)/(rowNum + colNum) + .15 + Math.random();
+    // opacity = (opacity > 1) ? 1: opacity;
+    
     square.style.setProperty('--pseueo-after-opacity', opacity);
     square.style.backgroundPosition = `${-j * squareUnit}px ${-i * squareUnit}px`; 
     // square.addEventListener('mouseover', () => setColor(square));
