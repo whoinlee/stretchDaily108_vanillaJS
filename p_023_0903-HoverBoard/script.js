@@ -1,22 +1,33 @@
 const container = document.getElementById('container');
 const colors = ['#e6bf10', '#e7cd3c', '#ab4ad4', '#287eb8', '#e67e22', '#34e07c', '#e67e22', '#e74c3c'];
-const numOfSquares = 500; //20x25 (25 rows and 20 columns)
+// const numOfSquares = 500; //20x25 (25 rows and 20 columns)
+const squareUnit = 25;
+const canvasW = 450;
+const canvasH = 625;
+const rowNum = Math.floor(canvasH/squareUnit); 
+const colNum = Math.floor(canvasW/squareUnit);
 
 
-for(let i = 0; i < numOfSquares; i++) {  //-- using 'flex-wrap: wrap;'
-  const square = document.createElement('div');
-  square.classList.add('square');
+for (let i = 0; i < rowNum; i++) {
+  for (let j = 0; j < colNum; j++) {
+    const square = document.createElement('div');
+    // const squareAfter = 
+    square.classList.add('square');
+    let opacity = .85 + Math.random()*.5;
+    opacity = (opacity > 1) ? 1: opacity;
+    square.style.setProperty('--pseueo-after-opacity', opacity);
+    square.style.backgroundPosition = `${-j * squareUnit}px ${-i * squareUnit}px`; 
+    // square.addEventListener('mouseover', () => setColor(square));
+    // square.addEventListener('mouseout', () => removeColor(square));
 
-  square.addEventListener('mouseover', () => setColor(square));
-  square.addEventListener('mouseout', () => removeColor(square));
-
-  container.appendChild(square);
+    container.appendChild(square);
+  }
 }
 
 function setColor(element) {
   const color = getRandomColor();
   element.style.background = color;
-  element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`; //****/
+  element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`; //** glowing **/
 }
 
 function removeColor(element) {
