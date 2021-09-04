@@ -1,0 +1,25 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: $bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 450px;
+  position: relative;
+}
