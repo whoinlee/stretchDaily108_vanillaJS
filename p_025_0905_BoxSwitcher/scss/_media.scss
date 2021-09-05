@@ -1,10 +1,10 @@
-@media (max-width: 500px) {
-  .card {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 30px;
   }
 
-  .user-form {
-    max-width: 400px;
+  .fa-quote {
+    //-- hide quotes
+    display: none;
   }
 }
