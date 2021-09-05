@@ -60,6 +60,10 @@ body {
   padding: 3rem;
   padding-bottom: 2.5rem;
   margin: 0 1.5rem;
+
+  h1 {
+    margin-bottom: 15px; //-- error message
+  }
 }
 
 .avatar {
@@ -103,7 +107,7 @@ body {
 
 .repos {
   margin-top: 10px;
-  left: -2px;
+  left: -12px;
 }
 .repo {
   text-decoration: none;
