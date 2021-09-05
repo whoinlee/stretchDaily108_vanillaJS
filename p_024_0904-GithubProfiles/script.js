@@ -1,28 +1,83 @@
-const header = document.getElementById('header')
-const title = document.getElementById('title')
-const excerpt = document.getElementById('excerpt')
-const profile_img = document.getElementById('profile_img')
-const author_name = document.getElementById('author_name')
-const date = document.getElementById('date')
+const API_URL = 'https://api.github.com/users/'
 
-const animated_bgs = document.querySelectorAll('.animated-bg')
-const animated_bg_texts = document.querySelectorAll('.animated-bg-text')
+const form = document.getElementById('form')
+const search = document.getElementById('search')
+const main = document.getElementById('main')
 
-//-- show bg animation, then displays content in 2.5 sec.
-setTimeout(getData, 2500);
-
-function getData() {
-    header.innerHTML =
-      '<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="" />';
-    title.innerHTML = 'Lorem ipsum dolor sit amet';
-    excerpt.innerHTML =
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore perferendis';
-    profile_img.innerHTML =
-      '<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="" />';
-    author_name.innerHTML = 'John Doe'
-    date.innerHTML = 'Oct 08, 2020'
-  
-    //-- infinite animate stops here!!
-    animated_bgs.forEach((bg) => bg.classList.remove('animated-bg'));
-    animated_bg_texts.forEach((bg) => bg.classList.remove('animated-bg-text'));
+async function getUser(username) {
+  try {
+      const { data } = await axios(API_URL + username)
+      createUserCard(data)
+      getRepos(username)
+  } catch(err) {
+      if(err.response.status == 404) {
+          createErrorCard('No profile with this username')
+      }
+  }
 }
+
+async function getRepos(username) {
+    try {
+        const { data } = await axios(API_URL + username + '/repos?sort=created');//order by 'created'
+        addReposToCard(data)
+    } catch(err) {
+        createErrorCard('Problem fetching repos')
+    }
+}
+
+function createUserCard(user) {
+    const userID = user.name || user.login;
+    const userBio = user.bio ? `<p>${user.bio}</p>` : ''
+    const cardHTML = `
+    <div class="card">
+      <div>
+        <img src="${user.avatar_url}" alt="${user.name}" class="avatar">
+      </div>
+      <div class="user-info">
+        <h2>${userID}</h2>
+        ${userBio}
+        <ul>
+          <li>${user.followers} <strong>Followers</strong></li>
+          <li>${user.following} <strong>Following</strong></li>
+          <li>${user.public_repos} <strong>Repos</strong></li>
+        </ul>
+        <div id="repos"></div>
+      </div>
+    </div>
+    `
+    main.innerHTML = cardHTML;
+}
+
+function createErrorCard(msg) {
+    const cardHTML = `
+        <div class="card">
+            <h1>${msg}</h1>
+        </div>
+    `
+
+    main.innerHTML = cardHTML
+}
+
+function addReposToCard(repos) {
+    const reposEl = document.getElementById('repos');
+    repos
+        .slice(0, 5)
+        .forEach(repo => {
+            const repoEl = document.createElement('a')
+            repoEl.classList.add('repo')
+            repoEl.href = repo.html_url
+            repoEl.target = '_blank'
+            repoEl.innerText = repo.name
+            reposEl.appendChild(repoEl)
+        })
+}
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const username = search.value;
+    if(username) {
+        getUser(username);
+        search.value = ''
+    }
+})

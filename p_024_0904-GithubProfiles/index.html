@@ -7,17 +7,32 @@
       content="js/jsx/typescript & css/sass daily practice for 108 days"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Github Profiles :: [StretchDaily108]</title>
   </head>
 
   <body>
-    <!-- .container -->
-    <div class="container">
-
-    </div>
-    <!-- end .container -->
+    <form id="form" class="user-form" >
+      <input id="search" type="text"  placeholder="Search a Github User w. a Username">
+    </form>
+    <main id="main">
+      <!-- <div class="card">
+        <div>
+          <img src="${user.avatar_url}" alt="${user.name}" class="avatar">
+        </div>
+        <div class="user-info">
+          <h2>${userID}</h2>
+          ${userBio}
+          <ul>
+            <li>${user.followers} <strong>Followers</strong></li>
+            <li>${user.following} <strong>Following</strong></li>
+            <li>${user.public_repos} <strong>Repos</strong></li>
+          </ul>
+          <div id="repos"></div>
+        </div>
+      </div> -->
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
     <script src="script.js" async defer></script>
   </body>
   <!-- original source from here: https://github.com/bradtraversy/50projects50days/tree/master/github-profiles -->

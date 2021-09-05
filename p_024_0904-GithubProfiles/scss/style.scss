@@ -2,24 +2,118 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: $font-stack;
   background-color: $bg-color;
+  color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 450px;
-  position: relative;
+.user-form {
+  width: 100%;
+  max-width: 700px;
+
+  input {
+    width: 100%;
+    display: block;
+    background-color: rgba(#4c2885, 0.25);
+    border: none;
+    border-radius: 10px;
+    color: rgb(36, 0, 36);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+      0 15px 20px rgba(0, 0, 0, 0.1);
+
+    &::placeholder {
+      color: #333;
+    }
+
+    &:hover {
+      box-shadow: $dark-shadow;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
+
+.card {
+  max-width: 800px;
+  background-color: #391e64;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 3rem;
+  padding-bottom: 2.5rem;
+  margin: 0 1.5rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 5px solid #6972b6;
+  height: 160px;
+  width: 160px;
+}
+
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+
+  h2 {
+    //-- userID
+    margin-top: 0;
+  }
+
+  ul {
+    background-color: rgba(white, 0.2);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    list-style-type: none;
+    display: flex; //--row
+    justify-content: space-around;
+    padding: 0;
+    max-width: 400px;
+  }
+
+  ul li {
+    display: flex;
+    align-items: center;
+  }
+
+  ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.repos {
+  margin-top: 10px;
+  left: -2px;
+}
+.repo {
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(#384079, 0.95);
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+@import "media";
