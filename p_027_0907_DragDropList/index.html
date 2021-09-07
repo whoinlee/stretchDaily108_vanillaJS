@@ -20,14 +20,21 @@
   <body>
     <h1>10 Richest People</h1>
     <small>Drag and drop the items into their corresponding spots</small>
-
     <!-- start .draggable-list -->
-    <ul class="draggable-list" id="draggable-list"></ul>
+    <ul class="draggable-list" id="draggable-list">
+      <!-- <li data-index=${index}>
+        <span class="number">${index + 1}</span>
+        <div class="draggable" draggable="true">
+          <p class="person-name">${person}</p>
+          <i class="fas fa-grip-lines"></i>
+        </div>
+      </li> -->
+    </ul>
     <!-- end .draggable-list -->
-
-    <button class="check-btn" id="check">
+    <button class="check-btn" id="check-btn">
       Check Order<i class="fas fa-paper-plane"></i>
     </button>
+    <!-- script -->
     <script src="script.js" async defer></script>
   </body>
   <!-- original source from here: https://github.com/bradtraversy/vanillawebprojects/tree/master/sortable-list -->

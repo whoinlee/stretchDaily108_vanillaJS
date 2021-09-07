@@ -9,46 +9,29 @@
 body {
   font-family: $font-stack;
   background-color: white;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100vh;
 }
 
 h1 {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 0;
   text-align: center;
 }
 
 small {
   display: block;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  // margin-top: 5px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.check-btn {
-  background-color: $bg-color;
-  color: $text-color;
-  border: none;
-  font-size: 16px;
-  padding: 10px 20px;
-  cursor: pointer;
-
-  &:active {
-    transform: scale(0.98); //***
-  }
-
-  &:focus {
-    outline: none;
-  }
-}
-
 .draggable-list {
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
+  border: 1px solid $border-color; //-- the whole container border
+  color: $text-color;
   padding: 0;
   list-style-type: none;
 
@@ -57,13 +40,16 @@ small {
     display: flex;
     flex: 1;
 
+    //-- except the last one
     &:not(:last-of-type) {
-      border-bottom: 1px solid var(--border-color);
+      //******
+      border-bottom: 1px solid $border-color;
     }
   }
 
   .number {
-    background-color: var(--background-color);
+    //-- span
+    background-color: $bg-color;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,6 +62,7 @@ small {
     margin: 0 20px 0 0;
   }
 
+  //-- li.over
   li.over .draggable {
     background-color: #eaeaea;
   }
@@ -93,7 +80,25 @@ small {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; //-- left and right end aligned
   padding: 15px;
   flex: 1;
+}
+
+.check-btn {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.98); //***
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
