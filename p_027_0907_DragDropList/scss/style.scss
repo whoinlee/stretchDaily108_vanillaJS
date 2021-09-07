@@ -1,0 +1,99 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+small {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.check-btn {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.98); //***
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.draggable-list {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    background-color: #fff;
+    display: flex;
+    flex: 1;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
+
+  .number {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .person-name {
+    margin: 0 20px 0 0;
+  }
+
+  li.over .draggable {
+    background-color: #eaeaea;
+  }
+
+  li.right .person-name {
+    color: #3ae374;
+  }
+
+  li.wrong .person-name {
+    color: #ff3838;
+  }
+}
+
+.draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  flex: 1;
+}
