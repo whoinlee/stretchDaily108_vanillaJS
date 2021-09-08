@@ -55,3 +55,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **26.** [Like Heart](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_026_0906_LikeHeart)
 
 **27.** [Drag and Drop List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_027_0907_DragDropList)
+
+**28.** [Rotating Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_028_0908-RotatingNav)
