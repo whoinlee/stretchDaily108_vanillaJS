@@ -29,12 +29,6 @@ body {
     & .circle {
       transform: rotate(-70deg);
     }
-
-    & + nav li {
-      //+ : immediately after
-      transform: translateX(0);
-      transition-delay: 0.3s;
-    }
   }
 }
 
@@ -58,22 +52,23 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 100px;
+    height: 94px;
     background: transparent;
     border: 0;
     font-size: 26px;
     color: #fff;
+    padding: 0px 6px;
 
     &:focus {
       outline: none;
     }
 
     &#open {
-      left: 60%;
+      left: 60%; //***
     }
 
     &#close {
-      top: 60%;
+      top: 60%; //***
       transform: rotate(90deg);
       transform-origin: top left;
     }
@@ -96,6 +91,11 @@ body {
   p {
     color: #333;
     line-height: 1.5;
+    margin: 20px auto;
+  }
+
+  h3 {
+    margin-bottom: 20px;
   }
 
   img {
@@ -129,7 +129,8 @@ nav {
       color: #fff;
       margin: 40px 0;
       transform: translateX(-100%);
-      transition: transform 0.4s ease-in;
+      opacity: 0;
+      transition: transform 0.4s ease-in, opacity 0.5s ease-out 0.1s;
 
       i {
         font-size: 20px;
@@ -137,14 +138,30 @@ nav {
       }
 
       & + li {
-        margin-left: 15px;
-        // transform: translateX(-150%);
+        // margin-left: 15px;
+        transform: translateX(-150%);
 
         & + li {
-          margin-left: 30px;
-          // transform: translateX(-200%);
+          // margin-left: 30px;
+          transform: translateX(-200%);
         }
       }
+    }
+  }
+}
+
+.container.show-nav + nav li {
+  //+ : immediately after
+  transform: translateX(0);
+  transition-delay: 0.1s;
+  transition-timing-function: ease-out;
+  opacity: 1;
+
+  & + li {
+    transition-delay: 0.3s;
+
+    & + li {
+      transition-delay: 0.5s;
     }
   }
 }
