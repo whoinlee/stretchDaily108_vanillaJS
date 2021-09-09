@@ -57,3 +57,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **27.** [Drag and Drop List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_027_0907-DragDropList)
 
 **28.** [Rotating Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_028_0908-RotatingNav)
+
+**29.** [Landing Page (Side Menu and Modal)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_029_0909-LandingPage)
