@@ -2,20 +2,21 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
 }
 
 body {
   font-family: $font-stack;
   transition: transform 0.3s ease;
+  margin: 0;
 }
 
 body.show-nav {
-  /* Width of nav */
-  transform: translateX(200px);
+  transform: translateX(200px); //-- width of nav
 }
 
+//-- sidebar
 nav {
   background-color: $primary-color;
   border-right: 2px solid rgba($border-color, 0.1);
@@ -27,46 +28,50 @@ nav {
   height: 100%;
   z-index: 100;
   transform: translateX(-100%);
+  // border: 4px solid red;
 
   .logo {
+    //-- div
     padding: 30px 0;
+    padding-bottom: 25px;
     text-align: center;
-  }
 
-  .logo img {
-    height: 75px;
-    width: 75px;
-    border-radius: 50%;
+    img {
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+    }
   }
 
   ul {
     padding: 0;
     list-style-type: none;
     margin: 0;
-  }
 
-  ul li {
-    border-bottom: 2px solid rgba($border-color, 0.1);
-    padding: 20px;
+    li {
+      border-bottom: 2px solid rgba($border-color, 0.1);
+      padding: 20px;
 
-    &:first-of-type {
-      border-top: 2px solid rgba($border-color, 0.1);
-    }
+      &:first-of-type {
+        border-top: 2px solid rgba($border-color, 0.1);
+      }
 
-    a {
-      color: #fff;
-      text-decoration: none;
+      a {
+        color: $text-color;
+        text-decoration: none;
 
-      &:hover {
-        text-decoration: underline;
+        &:hover {
+          // text-decoration: underline;
+          color: $secondary-color;
+        }
       }
     }
   }
 }
 
 header {
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: $primary-color;
+  color: $text-color;
   font-size: 130%;
   position: relative;
   padding: 40px 15px;
@@ -80,3 +85,123 @@ header {
     margin: 30px 0;
   }
 }
+
+button,
+input[type="submit"] {
+  background-color: $secondary-color;
+  border: 0;
+  border-radius: 5px;
+  color: $text-color;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.toggle {
+  //-- menu open/close
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+}
+
+.cta-btn {
+  //--sign up
+  padding: 12px 30px;
+  font-size: 20px;
+  &:hover {
+    background-color: rgba($secondary-color, 0.5);
+  }
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &.show-modal {
+    display: block;
+  }
+
+  .modal {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+    animation-name: modalopen;
+    animation-duration: $modal-duration;
+
+    .modal-header {
+      background: $primary-color;
+      color: $text-color;
+      padding: 15px;
+
+      h3 {
+        margin: 0;
+        border-bottom: 1px solid #333;
+      }
+    }
+
+    .modal-content {
+      padding: 20px;
+
+      .modal-form div {
+        margin: 15px 0;
+      }
+
+      .modal-form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .modal-form .form-input {
+        padding: 8px;
+        width: 100%;
+      }
+
+      .submit-btn {
+        margin-top: 2px;
+        &:hover {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+@import "motion";
