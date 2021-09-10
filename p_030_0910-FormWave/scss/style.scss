@@ -1,0 +1,25 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: $bg-color;
+  color: $text-color;
+  margin: 0;
+  //
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
