@@ -51,12 +51,14 @@ body {
 
     &:focus,
     &:valid {
+      background-color: transparent;
       outline: 0;
       border-bottom-color: lightblue;
     }
 
     &:focus + label span,
     &:valid + label span {
+      background-color: transparent;
       color: lightblue;
       transform: translateY(-30px);
     }
@@ -106,4 +108,9 @@ body {
 //-- <p>
 .text {
   margin-top: 30px;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: transparent;
+  transition: background-color 5000s ease-in-out 0s;
 }
