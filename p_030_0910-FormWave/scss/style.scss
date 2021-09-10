@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(8, 65, 92);
   padding: 20px 40px;
   border-radius: 5px;
 
@@ -41,6 +41,7 @@ body {
 
   input {
     background-color: transparent;
+    background-color: rgb(8, 65, 92);
     color: $text-color;
     border: 0;
     border-bottom: 2px #fff solid;
@@ -48,6 +49,7 @@ body {
     width: 100%;
     padding: 15px 0;
     font-size: 18px;
+    transition: background-color 5000s ease-in-out 0s, color 5000s linear 0s;
 
     &:focus,
     &:valid {
@@ -110,7 +112,7 @@ body {
   margin-top: 30px;
 }
 
-input:-webkit-autofill {
-  -webkit-text-fill-color: transparent;
-  transition: background-color 5000s ease-in-out 0s;
-}
+// input:-webkit-autofill {
+//   -webkit-text-fill-color: white;
+//   transition: background-color 5000s ease-in-out 0s; //-- delay?? to fill the bgcolor??
+// }
