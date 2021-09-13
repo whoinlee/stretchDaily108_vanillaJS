@@ -63,3 +63,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **30.** [Form Wave](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_030_0910-FormWave)
 
 **31.** [Sound Board](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_031_0912-SoundBoard)
+
+**32.** [Joke Board](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_032_0913-JokeBoard)
