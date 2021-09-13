@@ -11,7 +11,7 @@ body {
   margin: 0;
   //
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; //***
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -32,6 +32,10 @@ body {
 
   &:hover {
     background-color: rgb(69, 34, 104);
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 
   &:focus {
