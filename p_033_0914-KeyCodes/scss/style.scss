@@ -1,0 +1,45 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: $bg-color;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.key {
+  border: 1px solid #999;
+  background-color: #eee;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  margin: 10px;
+  //***
+  display: inline-flex; //flex container display inline
+  align-items: center;
+  flex-direction: column; //with .key small
+  min-width: 150px;
+  position: relative;
+}
+
+.key small {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #555;
+  font-size: 14px;
+}
+
+@import "media";
