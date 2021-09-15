@@ -1,0 +1,32 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: $bg-color;
+  color: $text-color;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 50px;
+}
+
+.counter {
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+@import "media";

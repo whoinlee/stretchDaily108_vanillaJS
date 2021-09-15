@@ -67,3 +67,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **32.** [Joke Board](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_032_0913-JokeBoard)
 
 **33.** [Key Codes](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_033_0914-KeyCodes)
+
+**34.** [Incrementing Counter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_034_0915-IncrementingCounter)
