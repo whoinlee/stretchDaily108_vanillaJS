@@ -70,7 +70,7 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex: 1;
+  flex: 1; //???
   transition: 0.3s ease;
 }
 
@@ -84,13 +84,13 @@ h3 {
 }
 
 .percentage {
-  background-color: var(--fill-color);
+  background-color: $fill-color;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   font-size: 30px;
-  height: 0;
+  height: 0; //***
   transition: 0.3s ease;
 }
 
