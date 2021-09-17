@@ -1,0 +1,118 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-stack;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  width: 100%;
+}
+
+form {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $secondary-color;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: $text-color;
+
+  &::placeholder {
+    color: #7378c5;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $primary-color;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap; //***
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: $secondary-color;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative; //***
+  overflow: hidden;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.movie img {
+  width: 100%; //300px;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; //***
+  gap: 0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+
+  span.green {
+    color: lightgreen;
+  }
+
+  span.orange {
+    color: orange;
+  }
+
+  span.red {
+    color: red;
+  }
+}
+
+.overview {
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%; //*** whole content w. a scrollbar
+  transform: translateY(101%); //***  (located under the bottom of the image)
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+//*****
+.movie:hover .overview {
+  transform: translateY(0); //*** (move to the top of the image)
+}

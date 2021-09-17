@@ -71,3 +71,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **34.** [Incrementing Counter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_034_0915-IncrementingCounter)
 
 **35.** [Drink Water](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_035_0916-DrinkWater)
+
+**36.** [Movie App](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_036_0917-MovieApp)
