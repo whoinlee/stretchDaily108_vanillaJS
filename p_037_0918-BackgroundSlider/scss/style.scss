@@ -1,0 +1,15 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-stack;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
