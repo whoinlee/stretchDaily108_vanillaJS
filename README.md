@@ -34,7 +34,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **16.** [Theme Clock 1](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_016_0827-Clock1)
 
-**17.** [Analog Clock 2](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_017_0828-Clock2)
+**17.** [Analog Clock 2](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_017_0828-Clock2) ==> [**Live Demo**](http://www.whoin.net/demo/analogClock/index.html)
 
 **18.** [Grocery List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_018_0829-GroceryList)
 
@@ -46,7 +46,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **22.** [3DBackground](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_022_0902-3DBackground)
 
-**23.** [HoverBoard(A butterfly and a flower)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard) => [**Live Demo**](http://www.whoin.net/demo/hoverBoard/index.html)
+**23.** [HoverBoard(A butterfly and a flower)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard) ==> [**Live Demo**](http://www.whoin.net/demo/hoverBoard/index.html)
 
 **24.** [Github Profiles](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_024_0904-GithubProfiles)
 
