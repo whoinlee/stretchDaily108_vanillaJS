@@ -1,4 +1,4 @@
-# stretchEveryday108
+# stretchDaily108
 
 Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and JavaScript Skills.
 
@@ -46,7 +46,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **22.** [3DBackground](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_022_0902-3DBackground)
 
-**23.** [HoverBoard(A butterfly and a flower)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard) ==> [**Live Demo**](http://www.whoin.net/demo/hoverBoard/index.html)
+**23.** [HoverBoard (A butterfly and a flower)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard) ==> [**Live Demo**](http://www.whoin.net/demo/hoverBoard/index.html)
 
 **24.** [Github Profiles](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_024_0904-GithubProfiles)
 
@@ -58,7 +58,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **28.** [Rotating Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_028_0908-RotatingNav)
 
-**29.** [Landing Page (Sidebar Menu and Modal)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_029_0909-LandingPage)
+**29.** [Landing Page (Sidebar Menu and Modal)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_029_0909-LandingPage) ==> [**Live Demo**](http://www.whoin.net/demo/landingPage/index.html)
 
 **30.** [Form Wave](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_030_0910-FormWave)
 
