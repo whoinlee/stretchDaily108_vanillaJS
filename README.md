@@ -79,3 +79,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **38.** [Drawing App](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_038_0919-BackgroundSlider)
 
 **39.** [Kinetic Loader](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_039_0920-KineticLoader)
+
+**40.** [Sticky Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_040_0921-StickyNavigation)
