@@ -4,7 +4,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **1.** [Blurry Loading](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_001_081221)
 
-**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSA)
+**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSA) ==> [**Live Demo**](http://www.whoin.net/demo/rsp/)
 
 **3.** [Vertical Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_003_081321)
 
@@ -32,7 +32,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **15.** [ToDo List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_015_0826-ToDoList)
 
-**16.** [Theme Clock 1](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_016_0827-Clock1)
+**16.** [Theme Clock 1](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_016_0827-Clock1) ==> [**Live Demo**](http://www.whoin.net/demo/themeClock/)
 
 **17.** [Analog Clock 2](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_017_0828-Clock2) ==> [**Live Demo**](http://www.whoin.net/demo/analogClock/index.html)
 
