@@ -80,4 +80,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **39.** [Kinetic Loader](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_039_0920-KineticLoader)
 
-**40.** [Sticky Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_040_0921-StickyNavigation)
+**40.** [Sticky Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_040_0921-StickyNavigation) ==> [**Live Demo**](http://www.whoin.net/demo/stickyNav/index.html)
