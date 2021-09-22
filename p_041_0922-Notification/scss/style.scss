@@ -2,13 +2,11 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  background-color: rebeccapurple;
   font-family: "Poppins", sans-serif;
-  color: #639;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +18,7 @@ body {
 
 .btn {
   background-color: #ffffff;
-  color: #663399;
+  color: rebeccapurple;
   font-family: inherit;
   font-weight: bold;
   padding: 1rem;
@@ -50,15 +48,12 @@ body {
     border-radius: 5px;
     padding: 1rem 2rem;
     margin: 0.5rem;
-
     &.info {
       color: rebeccapurple;
     }
-
     &.success {
       color: green;
     }
-
     &.error {
       color: red;
     }
