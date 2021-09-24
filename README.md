@@ -85,3 +85,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **41.** [Notification](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_041_0922-Notification)
 
 **42.** [Text Effect](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_042_0923-TextEffect)
+
+**43.** [Password Generator](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_043_0924-PasswordGenerator)
