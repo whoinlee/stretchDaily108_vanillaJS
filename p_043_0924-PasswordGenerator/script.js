@@ -10,15 +10,15 @@ const generateBtn = document.getElementById('generate');
 const clipboardBtn = document.getElementById('clipboard');
 
 const randomFunc = {
-    lower: getRandomLower,
     upper: getRandomUpper,
+    lower: getRandomLower,
     number: getRandomNumber,
     symbol: getRandomSymbol
 }
 
 generateBtn.addEventListener('click', () => {
-    const length = +lengthSetting.value;
-    const hasUpper = uppercaseSetting.checked;
+    const length = +lengthSetting.value;    //-- to number
+    const hasUpper = uppercaseSetting.checked;  //-- 1 or 0
     const hasLower = lowercaseSetting.checked;
     const hasNumber = numbersSetting.checked;
     const hasSymbol = symbolsSetting.checked;
@@ -43,21 +43,21 @@ clipboardBtn.addEventListener('click', () => {
 function generatePassword(length, upper, lower, number, symbol) {
     let generatedPassword = '';
     const typesCount = lower + upper + number + symbol;
-    const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+    // console.log("typesCount:", typesCount)
+    //-- filtering only the true category
+    const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]); //***********/
     
-    if(typesCount === 0) {
-        return ''
-    };
+    if(typesCount === 0) return '';
 
     for(let i = 0; i < length; i += typesCount) {
+        shuffle(typesArr);
         typesArr.forEach(type => {
-            const funcName = Object.keys(type)[0]
+            const funcName = Object.keys(type)[0];//***********/
+            console.log("funcName?? ", funcName)
             generatedPassword += randomFunc[funcName]()
         });
     }
-
     const finalPassword = generatedPassword.slice(0, length);
-
     return finalPassword;
 }
 
@@ -73,4 +73,22 @@ function getRandomNumber() {
 function getRandomSymbol() {
     const symbols = '!@#$%^&*(){}[]=<>/,.';
     return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
 }
