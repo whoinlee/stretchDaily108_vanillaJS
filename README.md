@@ -91,3 +91,5 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **44.** [Notes App](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_044_0925-NotesApp)
 
 **45.** [Countdown](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_045_0926-CountDown) ==> [**Live Demo**](http://www.whoin.net/demo/countdown/index.html)
+
+**46.** [Image Carousel](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_046_0926-ImageCarousel) ==> [**Live Demo**](http://www.whoin.net/demo/imageCarousel/index.html)
