@@ -29,22 +29,29 @@ img {
 }
 
 .image-container {
+  width: 500px;
   height: 500px;
-  // width: 500px;
   position: relative;
   overflow: hidden;
+  // -- for non-circular way
   // transform: translateX(0);
   // transition: transform 0.5s ease-in-out;
 
   ul {
     position: absolute;
+    width: 300%; //***
     margin: 0;
     padding: 0;
+    top: 0;
+    left: 0;
     height: 500px;
     list-style-type: none;
 
     li {
       padding: 0;
+      position: relative;
+      float: left;
+      margin-left: 0px;
     }
   }
 }
