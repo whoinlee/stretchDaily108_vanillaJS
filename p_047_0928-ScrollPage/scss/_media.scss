@@ -14,12 +14,6 @@
   }
 }
 
-// @media screen and (min-width: 992px) {
-//   .section-center {
-//     width: 95vw;
-//   }
-// }
-
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
@@ -39,6 +33,20 @@
       .nav-toggle {
         display: none;
       }
+
+      // a {
+      //   color: $text-color;
+      //   span {
+      //     color: white;
+      //   }
+      // }
+
+      // a:hover {
+      //   color: white;
+      //   span {
+      //     color: $text-color;
+      //   }
+      // }
     }
   }
 
@@ -50,7 +58,7 @@
 
       a {
         background: transparent;
-        color: white;
+        color: $text-color;
         font-size: 1.1rem;
         text-transform: capitalize;
         letter-spacing: $letter-spacing;
@@ -61,7 +69,8 @@
         padding: 0;
 
         &:hover {
-          color: white;
+          // color: white;
+          color: $color-secondary;
         }
       }
     }

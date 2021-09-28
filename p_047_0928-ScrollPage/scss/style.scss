@@ -95,36 +95,34 @@ nav {
 }
 .logo {
   position: absolute;
-  top: 25px;
+  top: 24px;
   left: 50;
-}
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  box-shadow: $light-shadow;
-
-  .links a {
-    color: $link-color;
-    text-decoration: none;
-    &:hover {
-      color: $color-secondary;
-    }
-  }
+  color: $text-color;
 }
 .nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  span {
-    // color: white;
-    color: $color-secondary;
+  a {
+    color: $text-color;
+    span {
+      color: white;
+    }
+  }
+
+  a:hover {
+    color: white;
+    span {
+      color: $text-color;
+    }
   }
 }
+
 .nav-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   font-size: 1.5rem;
   color: $link-color;
   background: transparent;
@@ -135,13 +133,11 @@ nav {
     color: $hover-color;
   }
 }
+
 .links-container {
   height: 0;
   overflow: hidden;
   transition: $transition;
-}
-.show-links {
-  height: 200px;
 }
 .links a {
   background: white;
@@ -155,9 +151,10 @@ nav {
   padding: 0.75rem 0;
 }
 .links a:hover {
-  // color: $link-color;
-  color: $color-secondary;
+  // color: $color-secondary;
+  color: $text-color;
 }
+
 /* end nav =========================== */
 
 /* banner ======================== */
@@ -180,6 +177,8 @@ nav {
     margin-bottom: 1.25rem;
   }
 }
+
+@import "media";
 
 /* section ======================= */
 .section {
@@ -207,7 +206,7 @@ nav {
 /* footer ======================= */
 footer {
   background: $text-color;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 footer p {
   color: white;
@@ -217,10 +216,10 @@ footer p {
   margin-bottom: 0;
 }
 .top-link {
-  font-size: 1.25rem;
   position: fixed;
   bottom: 3rem;
   right: 3rem;
+  font-size: 1.25rem;
   background: $color-secondary;
   width: 2rem;
   height: 2rem;
@@ -237,5 +236,34 @@ footer p {
   z-index: 100;
 }
 
-@import "media";
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: $light-shadow;
+}
+.fixed-nav .links a {
+  color: $link-color;
+}
+.fixed-nav .links a:hover {
+  color: $color-secondary;
+}
+
+.fixed-nav .nav-header {
+  a {
+    color: $text-color;
+    span {
+      color: $color-secondary;
+    }
+  }
+
+  a:hover {
+    color: $color-secondary;
+    span {
+      color: $text-color;
+    }
+  }
+}
 @import "motion";
