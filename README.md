@@ -92,6 +92,6 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **45.** [Countdown](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_045_0926-CountDown) ==> [**Live Demo**](http://www.whoin.net/demo/countdown/index.html)
 
-**46.** [Image Carousel](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_046_0926-ImageCarousel) ==> [**Live Demo**](http://www.whoin.net/demo/imageCarousel/index.html)
+**46.** [Image Carousel](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_046_0927-ImageCarousel) ==> [**Live Demo**](http://www.whoin.net/demo/imageCarousel/index.html)
 
-**47.** [Scroll Page](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_047_0927-ScrollPage)
+**47.** [Scroll Page](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_047_0928-ScrollPage)
