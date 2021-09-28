@@ -1,4 +1,8 @@
 @media screen and (min-width: 800px) {
+  h1,
+  h2 {
+    line-height: 1;
+  }
   h1 {
     font-size: 4rem;
   }
@@ -8,22 +12,19 @@
   body {
     font-size: 1rem;
   }
-  h1,
-  h2 {
-    line-height: 1;
-  }
 }
 
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
-}
+// @media screen and (min-width: 992px) {
+//   .section-center {
+//     width: 95vw;
+//   }
+// }
 
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
   }
+
   .nav-center {
     width: 90vw;
     max-width: 1170px;
@@ -31,38 +32,44 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .nav-header {
+      padding: 0;
+
+      .nav-toggle {
+        display: none;
+      }
+    }
   }
-  .nav-header {
-    padding: 0;
-  }
-  .nav-toggle {
-    display: none;
-  }
+
   .links-container {
     height: auto !important;
-  }
-  .links {
-    display: flex;
-  }
-  .links a {
-    background: transparent;
-    color: white;
-    font-size: 1.1rem;
-    text-transform: capitalize;
-    letter-spacing: $letter-spacing;
-    display: block;
-    transition: transition;
-    margin: 0 1rem;
-    font-weight: bold;
-    padding: 0;
-  }
-  .links a:hover {
-    color: white;
+
+    .links {
+      display: flex;
+
+      a {
+        background: transparent;
+        color: white;
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        letter-spacing: $letter-spacing;
+        display: block;
+        transition: transition;
+        margin: 0 1rem;
+        font-weight: bold;
+        padding: 0;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container p {
+  .banner-container p {
     max-width: 40rem;
   }
 }
