@@ -86,7 +86,11 @@ header {
 /* nav =========================== */
 nav {
   background: white;
-  padding: 1rem 1.5rem;
+  // padding: 1rem 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 .nav-header {
@@ -137,7 +141,7 @@ nav {
 .links-container {
   // background-color: yellow;
   height: 0;
-  // overflow: hidden;
+  overflow: hidden;
   transition: $transition;
   z-index: 20;
   // border: 1px solid red;
@@ -160,9 +164,18 @@ nav {
   }
 }
 
+// .nav-header {
+//   padding: 0;
+// }
+
+// .nav-center {
+//   margin: 0 auto;
+// }
+
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
+    padding: 1rem 1.5rem;
   }
 
   .nav-center {
