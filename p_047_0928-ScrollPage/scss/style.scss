@@ -138,23 +138,25 @@ nav {
   height: 0;
   overflow: hidden;
   transition: $transition;
-}
-.links a {
-  background: white;
-  color: $p-color;
-  font-size: 1.1rem;
-  text-transform: capitalize;
-  letter-spacing: $letter-spacing;
-  display: block;
-  transition: $transition;
-  font-weight: bold;
-  padding: 0.75rem 0;
-}
-.links a:hover {
-  // color: $color-secondary;
-  color: $text-color;
-}
+  // border: 1px solid red;
 
+  .links a {
+    background: white;
+    // color: $p-color;
+    color: $text-color;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: $letter-spacing;
+    display: block;
+    transition: $transition;
+    font-weight: bold;
+    padding: 0.75rem 0;
+  }
+  .links a:hover {
+    // color: $color-secondary;
+    color: white;
+  }
+}
 /* end nav =========================== */
 
 /* banner ======================== */

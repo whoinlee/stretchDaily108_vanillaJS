@@ -33,20 +33,6 @@
       .nav-toggle {
         display: none;
       }
-
-      // a {
-      //   color: $text-color;
-      //   span {
-      //     color: white;
-      //   }
-      // }
-
-      // a:hover {
-      //   color: white;
-      //   span {
-      //     color: $text-color;
-      //   }
-      // }
     }
   }
 
@@ -74,6 +60,21 @@
         }
       }
     }
+  }
+
+  .links a {
+    // color: orange;
+  }
+
+  .links a:hover {
+    // color: red;
+  }
+
+  .fixed-nav .links a {
+    color: $link-color;
+  }
+  .fixed-nav .links a:hover {
+    color: $color-secondary;
   }
 }
 
