@@ -96,4 +96,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **47.** [Scroll Page](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_047_0928-ScrollPage) ==> [**Live Demo**](http://www.whoin.net/demo/scrollPage/index.html)
 
-**48.** [Custom Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_048_0929-CustomSlider) ==> [**Live Demo**](http://www.whoin.net/demo/customSlider/index.html)
+**48.** [Custom Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_048_0929-CustomSlider)
