@@ -15,3 +15,93 @@ body {
   overflow: hidden;
   margin: 0;
 }
+
+h2 {
+  position: absolute;
+  top: 20px;
+}
+
+.slider-container {
+  position: relative;
+
+  input[type="range"] {
+    width: 300px;
+    margin: 18px 0;
+    -webkit-appearance: none;
+    &:focus {
+      outline: none;
+    }
+
+    & + label {
+      background-color: #fff;
+      position: absolute;
+      top: -25px;
+      left: 110px;
+      width: 80px;
+      padding: 5px 0;
+      text-align: center;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Chrome & Safari */
+    &::-webkit-slider-runnable-track {
+      background: purple;
+      border-radius: 4px;
+      width: 100%;
+      height: 10px;
+      cursor: pointer;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 24px;
+      width: 24px;
+      background: #fff;
+      border-radius: 50%;
+      border: 1px solid purple;
+      margin-top: -7px;
+      cursor: pointer;
+    }
+
+    /* Firefox */
+    &::-moz-range-track {
+      background: purple;
+      border-radius: 4px;
+      width: 100%;
+      height: 13px;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      height: 24px;
+      width: 24px;
+      background: #fff;
+      border-radius: 50%;
+      border: 1px solid purple;
+      margin-top: -7px;
+      cursor: pointer;
+    }
+
+    /* IE */
+    &::-ms-track {
+      background: purple;
+      border-radius: 4px;
+      width: 100%;
+      height: 13px;
+      cursor: pointer;
+    }
+
+    &::-ms-thumb {
+      -webkit-appearance: none;
+      height: 24px;
+      width: 24px;
+      background: #fff;
+      border-radius: 50%;
+      border: 1px solid purple;
+      margin-top: -7px;
+      cursor: pointer;
+    }
+  }
+}
