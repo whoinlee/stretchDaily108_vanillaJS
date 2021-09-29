@@ -139,7 +139,6 @@ nav {
 
 //-- when the hambur menu displays
 .links-container {
-  // background-color: yellow;
   height: 0;
   overflow: hidden;
   transition: $transition;
@@ -189,7 +188,6 @@ nav {
 
   .links-container {
     height: auto !important;
-    // background-color: red;//check
 
     .links {
       display: flex;
@@ -239,7 +237,6 @@ nav {
   }
 
   .links-container {
-    // background-color: grey;
     .links a {
       color: $text-color-dark;
 
