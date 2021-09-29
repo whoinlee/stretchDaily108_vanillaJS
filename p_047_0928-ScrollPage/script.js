@@ -5,6 +5,8 @@ date.innerHTML = new Date().getFullYear();
 //-- nav menu
 const linksContainer = document.querySelector(".links-container");
 const links = document.querySelector(".links"); // ul.links
+// const linksHeight = links.getBoundingClientRect().height;
+// const containerHeight = linksContainer.getBoundingClientRect().height;
 //-- hamburger menu
 const navToggle = document.querySelector(".nav-toggle");
 navToggle.addEventListener("click", function () {

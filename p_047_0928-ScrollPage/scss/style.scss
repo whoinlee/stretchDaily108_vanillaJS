@@ -1,7 +1,7 @@
 @import "config";
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; //**********//
 }
 
 * {
@@ -27,10 +27,10 @@ a {
 }
 
 img {
+  // img:not(.logo) {   width: 100%; }
   display: block;
   width: 100%;
 }
-// img:not(.logo) {   width: 100%; }
 
 h1,
 h2,
@@ -48,44 +48,39 @@ h1 {
 h2 {
   font-size: 2rem;
 }
+h3 {
+  font-size: 1.25rem;
+}
 p {
   margin-bottom: 1.25rem;
   color: $p-color;
 }
 
+//-- begin header --------------------------------//
+//-- nav & banner
 header {
   min-height: 100vh;
   background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
     url(../hero.jpeg) center/cover no-repeat;
 }
-
+//-- 'explore projects'
 .btn {
-  text-transform: uppercase;
   background: transparent;
-  color: #222;
-  padding: 0.375rem 0.75rem;
+  color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
   letter-spacing: $letter-spacing;
   display: inline-block;
-  transition: $transition;
-  font-size: 0.875rem;
-  border: 2px solid #222;
+  border: 2px solid white;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
-}
-.btn:hover {
-  color: white;
-  background: #222;
-}
-.btn-white {
-  color: white;
-  border-color: white;
-  border-radius: 0;
-  padding: 0.5rem 1rem;
-}
-.btn:hover {
-  background: white;
-  color: $color-secondary;
+  transition: $transition;
+
+  &:hover {
+    background: white;
+    color: $hover-color;
+  }
 }
 
 /* nav =========================== */
@@ -93,56 +88,63 @@ nav {
   background: white;
   padding: 1rem 1.5rem;
 }
-.logo {
-  position: absolute;
-  top: 24px;
-  left: 50;
-  color: $text-color;
-}
+
 .nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  a {
-    color: $text-color;
-    span {
-      color: white;
-    }
-  }
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 50;
+    z-index: 10;
 
-  a:hover {
-    color: white;
-    span {
+    a {
       color: $text-color;
+      span {
+        color: $text-color-light;
+      }
+
+      &:hover {
+        color: $text-color-light;
+        span {
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  //-- button : hamburger menu
+  .nav-toggle {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    font-size: 1.5rem;
+    color: $text-color;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      color: $hover-color;
     }
   }
 }
 
-.nav-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 1.5rem;
-  color: $link-color;
-  background: transparent;
-  border-color: transparent;
-  transition: $transition;
-  cursor: pointer;
-  &:hover {
-    color: $hover-color;
-  }
-}
-
+//-- when the hambur menu displays
 .links-container {
+  // background-color: yellow;
   height: 0;
-  overflow: hidden;
+  // overflow: hidden;
   transition: $transition;
+  z-index: 20;
   // border: 1px solid red;
 
+  //-- when the hambur menu displays
   .links a {
     background: white;
-    // color: $p-color;
     color: $text-color;
     font-size: 1.1rem;
     text-transform: capitalize;
@@ -151,13 +153,99 @@ nav {
     transition: $transition;
     font-weight: bold;
     padding: 0.75rem 0;
-  }
-  .links a:hover {
-    // color: $color-secondary;
-    color: white;
+
+    &:hover {
+      color: $hover-color;
+    }
   }
 }
-/* end nav =========================== */
+
+@media screen and (min-width: 800px) {
+  nav {
+    background: transparent;
+  }
+
+  .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-header {
+    padding: 0;
+
+    .nav-toggle {
+      display: none;
+    }
+  }
+
+  .links-container {
+    height: auto !important;
+    // background-color: red;//check
+
+    .links {
+      display: flex;
+
+      a {
+        background: transparent;
+        color: white;
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        letter-spacing: $letter-spacing;
+        display: block;
+        transition: transition;
+        margin: 0 1rem;
+        font-weight: bold;
+        padding: 0;
+
+        &:hover {
+          color: $text-color-dark;
+        }
+      }
+    }
+  }
+} //media (min-width >= 800px)
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: $light-shadow;
+
+  .logo {
+    a {
+      color: $text-color;
+      span {
+        color: $color-secondary;
+      }
+
+      &:hover {
+        color: $color-secondary;
+        span {
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  .links-container {
+    // background-color: grey;
+    .links a {
+      color: $text-color-dark;
+
+      &:hover {
+        color: $text-color-light;
+      }
+    }
+  }
+}
+
+/* end nav ======================= */
 
 /* banner ======================== */
 .banner {
@@ -179,8 +267,9 @@ nav {
     margin-bottom: 1.25rem;
   }
 }
+//-- end header ----------------------------------//
 
-@import "media";
+@import "media"; //**** import location!!
 
 /* section ======================= */
 .section {
@@ -203,9 +292,9 @@ nav {
 #services {
   background: white;
 }
-/* end section ======================= */
+/* end section =================== */
 
-/* footer ======================= */
+/* footer ======================== */
 footer {
   background: $text-color;
   padding: 3rem 1rem;
@@ -217,6 +306,9 @@ footer p {
   letter-spacing: $letter-spacing;
   margin-bottom: 0;
 }
+/* end footer ==================== */
+
+/* top-link arrow ================ */
 .top-link {
   position: fixed;
   bottom: 3rem;
@@ -237,35 +329,6 @@ footer p {
   visibility: visible;
   z-index: 100;
 }
+/* end top-link arrow ============ */
 
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  box-shadow: $light-shadow;
-}
-.fixed-nav .links a {
-  color: $link-color;
-}
-.fixed-nav .links a:hover {
-  color: $color-secondary;
-}
-
-.fixed-nav .nav-header {
-  a {
-    color: $text-color;
-    span {
-      color: $color-secondary;
-    }
-  }
-
-  a:hover {
-    color: $color-secondary;
-    span {
-      color: $text-color;
-    }
-  }
-}
 @import "motion";

@@ -3,14 +3,17 @@
 
 $font-stack: "Roboto", sans-serif;
 $font-secondary: "Open Sans", sans-serif;
-//
-$bg-color: hsl(210, 36%, 96%);
-$text-color: hsl(209, 61%, 16%);
+
+$bg-color: hsl(210, 36%, 96%); //near white
+$text-color: hsl(209, 61%, 16%); //dark blue black
+$color-secondary: hsl(182, 63%, 54%); //light blue cyan(aqua)
 $p-color: hsl(210, 22%, 49%);
-$color-secondary: hsl(182, 63%, 54%);
-$link-color: $text-color;
-$hover-color: $color-secondary;
 //
+$link-color: $text-color; //dark
+$hover-color: $color-secondary; //light
+$text-color-dark: $text-color; //dark
+$text-color-light: $color-secondary; //light
+
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $letter-spacing: 0.25rem;
 $transition: all 0.3s linear;
