@@ -25,7 +25,7 @@ h2 {
   position: relative;
 
   input[type="range"] {
-    width: 300px;
+    width: 300px; //***
     margin: 18px 0;
     -webkit-appearance: none;
     &:focus {
@@ -36,8 +36,10 @@ h2 {
       background-color: #fff;
       position: absolute;
       top: -25px;
-      left: 110px;
-      width: 80px;
+      left: 110px; //300/2(center of the slider==sliderWidth/2) - 80/2(labelWidth/2) = 110
+      // left: -28px; //left-end
+      // left: 248px; //right-end
+      width: 80px; //***
       padding: 5px 0;
       text-align: center;
       border-radius: 4px;
