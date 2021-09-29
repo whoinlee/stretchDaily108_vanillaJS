@@ -2,12 +2,12 @@ const slider = document.getElementById('slider');
 const label = document.getElementById('slider-label');
 const range_width = getComputedStyle(slider).getPropertyValue('width'); //300
 const label_width = getComputedStyle(label).getPropertyValue('width');  //80
-const num_range_width = +range_width.substring(0, range_width.length - 2);    //number only (w/o 'px')
+const num_range_width = +range_width.substring(0, range_width.length - 2); //number only (w/o 'px')
 const num_label_width = +label_width.substring(0, label_width.length - 2);
 const max = +slider.max;
 const min = +slider.min;
 //0: slider left location
-const label_left_min = 0 - num_label_width/2 + 12;    //12 = thumb_width/2
+const label_left_min = 0 - num_label_width/2 + 12; //12 = thumb_width/2
 const label_left_max = 0 + num_range_width - num_label_width/2 - 12;
 // console.log("max, min", max)
 // console.log("max, min", min)
