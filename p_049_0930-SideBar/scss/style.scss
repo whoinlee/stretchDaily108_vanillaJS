@@ -1,0 +1,113 @@
+@import "global";
+@import "config";
+
+button.sidebar-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2.5rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: $light-blue;
+  cursor: pointer;
+  transition: $transition;
+  animation: bounce 1.5s ease-in-out infinite;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  box-shadow: $dark-red;
+  transition: $transition;
+  transform: translate(-100%);
+
+  .sidebar-header {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+
+    h3 a {
+      color: $black;
+      span {
+        color: $light-blue;
+      }
+      &:hover {
+        // filter: brightness(1.3);
+        color: $light-blue;
+        span {
+          color: $black;
+        }
+      }
+    }
+
+    .close-btn {
+      margin-top: -13px;
+      font-size: 1.75rem;
+      background: transparent;
+      border-color: transparent;
+      transition: $transition;
+      cursor: pointer;
+      color: $dark-red;
+      &:hover {
+        // color: $light-red;
+        filter: brightness(1.2);
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .links {
+    margin-top: -10px;
+    a {
+      display: block;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      padding: 1rem 1.5rem;
+      color: $dark-blue;
+      transition: $transition;
+      &:hover {
+        // background: $light-blue;
+        background: $clr-primary-8;
+        color: $white;
+        padding-left: 1.75rem;
+      }
+    }
+  }
+
+  .social-icons {
+    justify-self: center;
+    display: flex;
+    padding-bottom: 2rem;
+
+    a {
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      color: $light-blue;
+      transition: $transition;
+
+      &:hover {
+        color: $dark-blue;
+      }
+    }
+  }
+}
+
+.show-sidebar {
+  transform: translate(0);
+}
+
+@import "media";
+@import "motion";
