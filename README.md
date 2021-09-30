@@ -98,6 +98,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **48.** [Custom Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_048_0929-CustomSlider) ==> [**Live Demo**](http://www.whoin.net/demo/customSlider/index.html)
 
-**49.** [Side Bar](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_049_0930-SideBar) ==> [**Live Demo**](http://www.whoin.net/demo/sideBar/index.html)
+**49.** [Side Bar](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_049_0930-SideBar)
 
-**50.** [Modal](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_050_1001-Modal) ==> [**Live Demo**](http://www.whoin.net/demo/modal/index.html)
+<!-- ==> [**Live Demo**](http://www.whoin.net/demo/sideBar/index.html) -->
+
+<!-- **50.** [Modal](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_050_1001-Modal) ==> [**Live Demo**](http://www.whoin.net/demo/modal/index.html) -->
