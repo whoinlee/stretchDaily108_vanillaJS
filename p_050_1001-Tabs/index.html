@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="js/jsx/typescript & css/sass daily practice for 108 days" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tabs :: [StretchDaily108]</title>
+  </head>
+
+  <body>
+  <section>
+    <div class="title">
+      <h2>Prospect Park</h2>
+      <p>
+        Prospect Park is the flagship park of Brooklyn, New York City.
+      </p>
+    </div>
+
+    <div class="park-center section-center">
+      <article class="park-img">
+        <img src="./hero.jpeg" alt="" />
+      </article>
+      <article class="park">
+        <!-- btn container -->
+        <div class="btn-container">
+          <button class="tab-btn active" data-id="visit">Visit</button>
+          <button class="tab-btn" data-id="involved">Get Involved</button>
+          <button class="tab-btn" data-id="more">Learn More</button>
+        </div>
+        <div class="park-content">
+          <!-- #visit -->
+          <div class="content active" id="visit">
+            <h4>Visit The Park</h4>
+            <p>
+              Prospect Park is a world unto itself: a 585-acre oasis of scenic beauty for relaxation and recreation. We hope this section inspires and informs your visit.
+              <br>
+              Prospect Park is open daily from 6 am–1 am. Woodlands, playgrounds and the Parade Ground close at sunset. Park attractions have varying hours.
+              <br>
+              Looking to explore more of Prospect Park? Sign up for our eNews to stay in the know about all the latest news and events.
+            </p>
+          </div>
+          <!-- #involved -->
+          <div class="content" id="involved">
+            <h4>Get Involved</h4>
+            <p>
+              Love Prospect Park? Support Prospect Park Alliance, the non-profit organization that sustains, restores and advances Brooklyn's Backyard. Thanks to your support, the Alliance provides critical staff and resources that keep Prospect Park green and vibrant for the diverse communities that call Brooklyn home.
+              <br>
+              Become a member, make a tax-deductible contribution or volunteer your time in your favorite park.
+            </p>
+            <ul>
+              <li>Become a Member</li>
+              <li>Take Action for Your Park</li>
+              <li>Volunteer in the Park</li>
+            </ul>
+          </div>
+          <!-- #more -->
+          <div class="content" id="more">
+            <h4>Learn More</h4>
+            <p>
+              Designed by Frederick Law Olmsted and Calvert Vaux in the mid-19th century, Prospect Park is Brooklyn’s flagship park, welcoming more than 10 million visits each year.
+              <br>
+              Prospect Park Alliance is the non-profit organization that sustains "Brooklyn's Backyard," working in partnership with the City of New York. The Alliance was founded in 1987 to help restore Prospect Park after a long period of deterioration and decline. Today, the Alliance provides critical staff and resources that keep the park green and vibrant for the diverse communities that call Brooklyn home. The Alliance cares for the woodlands and natural areas, restores the park's buildings and landscapes, creates innovative park destinations, and provides free or low-cost volunteer, education and recreation programs.
+              <br>
+              Today, Prospect Park is an international model for the care of urban parks, and one of the premier green spaces in the United States.
+            </p>
+          </div>
+        </div><!-- end .park-content -->
+      </article>
+    </div>
+  </section>
+    
+    <script src="script.js" async defer></script>
+  </body>
+  <!-- original source from here:https://vannilla-js-basic-project-11-tabs.netlify.app/ -->
+</html>
