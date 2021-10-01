@@ -1,6 +1,76 @@
 @import "global";
 @import "config";
 
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  p {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.park-img {
+  margin-bottom: 2rem;
+  img {
+    border-radius: $border-radius;
+    object-fit: cover;
+    height: 20rem;
+  }
+}
+
+.park {
+  background: $white;
+  border-radius: $border-radius;
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  .btn-container {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .tab-btn {
+      padding: 1rem 0;
+      border: none;
+      text-transform: capitalize;
+      font-size: 1rem;
+      display: block;
+      background: $clr-grey-9;
+      cursor: pointer;
+      transition: $transition;
+      letter-spacing: $letter-spacing;
+      &:nth-child(1) {
+        border-top-left-radius: $border-radius;
+      }
+      &:nth-child(3) {
+        border-top-right-radius: $border-radius;
+      }
+      &:hover:not(.active) {
+        background: $clr-primary-10;
+        color: $light-blue;
+      }
+      &.active {
+        background: $white;
+      }
+    }
+  }
+
+  .park-content {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    padding: 2rem 1.5rem;
+
+    .content {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
 
 @import "media";
 @import "motion";
