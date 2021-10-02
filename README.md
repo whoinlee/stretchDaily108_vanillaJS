@@ -100,4 +100,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **49.** [Side Bar](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_049_0930-SideBar) ==> [**Live Demo**](http://www.whoin.net/demo/sideBar/index.html)
 
-**50.** [Tabs](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_050_1001-Tabs) <!-- ==>  [**Live Demo**](http://www.whoin.net/demo/tabs/index.html) -->
+**50.** [Tabs](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_050_1001-Tabs) ==> [**Live Demo**](http://www.whoin.net/demo/tabs/index.html)
