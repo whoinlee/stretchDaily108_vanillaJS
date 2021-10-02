@@ -13,20 +13,20 @@ div.phone-container {
   overflow: hidden;
   border: 3px solid $clr-grey-10;
   border-radius: 15px;
-  height: 600px;
   width: 340px;
+  height: 600px;
 
   .content {
-    opacity: 0;
-    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(100% - 60px); //*****//
-    width: 100%;
+    object-fit: cover;
+    width: 100%; //340px
+    height: calc(100% - 60px); //***** nav ul height == 60px, 540px
+    opacity: 0; //**
     transition: $transition;
     &.show {
-      opacity: 1;
+      opacity: 1; //**
     }
   }
 }
@@ -36,19 +36,19 @@ nav {
   bottom: 0;
   left: 0;
   margin-top: -5px;
-  width: 100%;
+  width: 100%; //340px
 
   ul {
     background-color: $white;
     display: flex;
     padding: 0;
     margin: 0;
-    height: 60px;
+    height: 60px; //***
 
     li {
       color: $text-color;
       cursor: pointer;
-      flex: 1;
+      flex: 1; //***
       padding: 10px;
       text-align: center;
       p {

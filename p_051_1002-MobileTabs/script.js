@@ -1,21 +1,20 @@
-const imgs = document.querySelectorAll('.content'); //<img>
-const tabs = document.querySelectorAll('nav ul li');
+const contents = document.querySelectorAll('.content'); //<img>
+const tabs = document.querySelectorAll('nav ul li');//<li>
 
 tabs.forEach((tab, i) => {
   tab.addEventListener('click', () => {
-      hideAllContents()
-      hideAllItems()
+      hideAllContents();
+      hideAllItems();
       //-- then show only the selected
       tab.classList.add('active');
-      imgs[i].classList.add('show');
+      contents[i].classList.add('show');
   })
 });
 
 function hideAllContents() {
-  imgs.forEach(content => content.classList.remove('show'));
+  contents.forEach(content => content.classList.remove('show'));
 }
 
-
 function hideAllItems() {
-  tabs.forEach(item => item.classList.remove('active'));
+  tabs.forEach(tabItem => tabItem.classList.remove('active'));
 }
