@@ -102,4 +102,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **50.** [Tabs](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_050_1001-Tabs) ==> [**Live Demo**](http://www.whoin.net/demo/tabs/index.html)
 
-**51.** [Mobile Tabs](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_051_1002-MobileTabs) ==> [**Live Demo**](http://www.whoin.net/demo/mobileTab/index.html)
+**51.** [Mobile Tabs](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_051_1002-MobileTabs) ==> [**Live Demo**](http://www.whoin.net/demo/mobileTabs/index.html)
