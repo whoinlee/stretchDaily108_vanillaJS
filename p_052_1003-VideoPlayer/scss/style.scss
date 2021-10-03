@@ -14,11 +14,11 @@
   visibility: visible;
   z-index: 999;
   transition: $transition;
-}
 
-.hide-preloader {
-  z-index: -999;
-  visibility: hidden;
+  &.hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+  }
 }
 
 .container {
@@ -26,18 +26,6 @@
   position: relative;
   display: grid;
   place-items: center;
-
-  //-- overlay
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: -1;
-  }
 
   .video-holder {
     position: absolute;
@@ -49,14 +37,36 @@
     z-index: -2;
   }
 
-  h1 {
-    color: $white;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: $transition;
+    z-index: -1;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  .title {
+    color: $text-color;
+    opacity: 1;
+    transition: $transition;
+
+    &.hide {
+      opacity: 0;
+    }
   }
 
   .play-pause {
     position: absolute;
-    bottom: 7%;
-    left: 7%;
+    bottom: 5%;
+    left: 10%;
     width: 7rem;
     height: 2rem;
     display: flex;
@@ -71,7 +81,7 @@
       font-size: 0.85rem;
       cursor: pointer;
       text-transform: capitalize;
-      color: $clr-primary-5;
+      color: $light-blue;
     }
 
     .switch {
