@@ -106,4 +106,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **52.** [Video Player](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_052_1003-VideoPlayer) ==> [**Live Demo**](http://www.whoin.net/demo/videoPlayer/index.html)
 
-**53.** [Music Player](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_053_1004-MusicPlayer)
+**53.** [Audio Player](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_053_1004-AudioPlayer) ==> [**Live Demo**](http://www.whoin.net/demo/audioPlayer/index.html)
