@@ -3,8 +3,8 @@ const musicContainer = document.getElementById('music-container');
 const progress = document.getElementById('progress');
 const title = document.getElementById('title');
 const cover = document.getElementById('cover');
-const currTime = document.querySelector('#currTime');
-const durTime = document.querySelector('#durTime');
+const currTime = document.getElementById('currTime');
+const durTime = document.getElementById('durTime');
 //
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
@@ -13,12 +13,8 @@ const audio = document.getElementById('audio');
 const progressContainer = document.getElementById('progress-container');
 
 playBtn.addEventListener('click', () => {
-  const isPlaying = musicContainer.classList.contains('play');
-  if (isPlaying) {
-    pauseSong();
-  } else {
-    playSong();
-  }
+	if (musicContainer.classList.contains('play')) pauseSong()
+  	else playSong();
 });
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
@@ -76,37 +72,43 @@ function nextSong() {
   playSong();
 };
 
-//-- get duration & currentTime for Time of song
+//-- get duration & currentTime on audio "timeupdate"
 function durationTime (e) {
-	const {duration,currentTime} = e.srcElement;
+	// console.log("e.target::", e.target); //== e.srcElement
+	// console.log("e.srcElement::", e.srcElement);
+	//***********/
+	const {duration,currentTime} = e.target;	//in secs
+	//***********/
+	console.log("duration::", duration);
+	console.log("currentTime::", currentTime);
+
 	var sec;
 	var sec_d;
 
-	// define minutes currentTime
-	let min = (currentTime==null)? 0:
-	 Math.floor(currentTime/60);
-	 min = min <10 ? '0'+min:min;
+	// define currentTime in mins
+	let min = (currentTime)?  Math.floor(currentTime/60) : 0;
+	min = min <10 ? '0'+min : min;
 
-	// define seconds currentTime
-	function get_sec (x) {
-		if(Math.floor(x) >= 60){
+	// define currentTime in secs
+	function get_sec (t) {
+		if(Math.floor(t) >= 60){
 			
 			for (var i = 1; i<=60; i++){
-				if(Math.floor(x)>=(60*i) && Math.floor(x)<(60*(i+1))) {
-					sec = Math.floor(x) - (60*i);
+				if(Math.floor(t)>=(60*i) && Math.floor(t)<(60*(i+1))) {
+					sec = Math.floor(t) - (60*i);
 					sec = sec <10 ? '0'+sec:sec;
 				}
 			}
 		}else{
-		 	sec = Math.floor(x);
+		 	sec = Math.floor(t);
 		 	sec = sec <10 ? '0'+sec:sec;
 		 }
 	} 
 
-	get_sec (currentTime,sec);
+	get_sec (currentTime, sec);
 
 	// change currentTime DOM
-	currTime.innerHTML = min +':'+ sec;
+	if (currTime) currTime.innerHTML = min +':'+ sec;
 
 	// define minutes duration
 	let min_d = (isNaN(duration) === true)? '0':
@@ -132,7 +134,7 @@ function durationTime (e) {
 	get_sec_d (duration);
 
 	// change duration DOM
-	durTime.innerHTML = min_d +':'+ sec_d;
+	if (durTime) durTime.innerHTML = min_d +':'+ sec_d;
 		
 };
 //-- Progress Bar
