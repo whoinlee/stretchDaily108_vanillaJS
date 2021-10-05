@@ -1,32 +1,40 @@
 const main = document.getElementById('main');
-const addUserBtn = document.getElementById('add-user');
-const doubleBtn = document.getElementById('double');
-const showMillionairesBtn = document.getElementById('show-millionaires');
-const sortBtn = document.getElementById('sort');
-const calculateWealthBtn = document.getElementById('calculate-wealth');
+//
+const addUserBtn = document.getElementById('add-user-btn');
+const doubleMoneyBtn = document.getElementById('double-money-btn');
+const showMillionairesBtn = document.getElementById('show-millionaires-btn');
+const sortBtn = document.getElementById('sort-btn');
+const calculateWealthBtn = document.getElementById('calculate-wealth-btn');
+//
+addUserBtn.addEventListener('click', getRandomUsers);
+doubleMoneyBtn.addEventListener('click', doubleMoney);
+sortBtn.addEventListener('click', sortByRichest);
+showMillionairesBtn.addEventListener('click', showMillionaires);
+calculateWealthBtn.addEventListener('click', calculateWealth);
 
-let data = [];
+let data = [];  //-- an array of user object {name, money}
 
-getRandomUser();
-getRandomUser();
-getRandomUser();
+const defaultUserNum = 4;
+getRandomUsers(defaultUserNum);
 
-// Fetch random user and add money
-async function getRandomUser() {
-  const res = await fetch('https://randomuser.me/api');
-  const data = await res.json();
+//-- generate random users w. random amount of money
+async function getRandomUsers(times=1) {
+    // console.log("times?? ", times);
+    const res = await fetch('https://randomuser.me/api' + "?results=" + times);
+    const data = await res.json();
+    const users = data.results;
+    // console.log("users?? ", users);
 
-  const user = data.results[0];
-
-  const newUser = {
-    name: `${user.name.first} ${user.name.last}`,
-    money: Math.floor(Math.random() * 1000000)
-  };
-
-  addData(newUser);
+    users.map( user => {
+        let newUser = {
+            name: `${user.name.first} ${user.name.last}`,
+            money: Math.floor(Math.random() * 1000000)
+        };
+        addData(newUser);
+    });
 }
 
-// Double eveyones money
+//-- double eveyones money <map>
 function doubleMoney() {
   data = data.map(user => {
     return { ...user, money: user.money * 2 };
@@ -35,42 +43,39 @@ function doubleMoney() {
   updateDOM();
 }
 
-// Sort users by richest
+//-- sort by richest <sort>
 function sortByRichest() {
-  console.log(123);
   data.sort((a, b) => b.money - a.money);
 
   updateDOM();
 }
 
-// Filter only millionaires
+//-- filter only millionaires <filter>
 function showMillionaires() {
-  data = data.filter(user => user.money > 1000000);
+  data = data.filter(user => user.money >= 1000000);
 
   updateDOM();
 }
 
-// Calculate the total wealth
+//-- calculate the total wealth <reduce>
 function calculateWealth() {
   const wealth = data.reduce((acc, user) => (acc += user.money), 0);
 
   const wealthEl = document.createElement('div');
-  wealthEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(
-    wealth
-  )}</strong></h3>`;
+  wealthEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(wealth)}</strong></h3>`;
   main.appendChild(wealthEl);
 }
 
-// Add new obj to data arr
+//-- add a new user object to data arr
 function addData(obj) {
   data.push(obj);
 
   updateDOM();
 }
 
-// Update DOM
+//-- update DOM
 function updateDOM(providedData = data) {
-  // Clear main div
+  //-- clear the main div
   main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
 
   providedData.forEach(item => {
@@ -83,14 +88,9 @@ function updateDOM(providedData = data) {
   });
 }
 
-// Format number as money - https://stackoverflow.com/questions/149055/how-to-format-numbers-as-currency-string
+//-- format number as money - https://stackoverflow.com/questions/149055/how-to-format-numbers-as-currency-string
 function formatMoney(number) {
   return '$' + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
 
-// Event listeners
-addUserBtn.addEventListener('click', getRandomUser);
-doubleBtn.addEventListener('click', doubleMoney);
-sortBtn.addEventListener('click', sortByRichest);
-showMillionairesBtn.addEventListener('click', showMillionaires);
-calculateWealthBtn.addEventListener('click', calculateWealth);
+

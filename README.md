@@ -108,4 +108,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **53.** [Audio Player](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_053_1004-AudioPlayer) ==> [**Demo**](http://www.whoin.net/demo/audioPlayer/index.html)
 
-**54.** [Array Methods](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_054_1005-ArrayMethods)
+**54.** [Array Methods](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_054_1005-ArrayMethods)==> [**Demo**](http://www.whoin.net/demo/arrayMethods/)
