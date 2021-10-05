@@ -4,11 +4,11 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **1.** [Blurry Loading](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_001_081221)
 
-**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSA) ==> [**Live Demo**](http://www.whoin.net/demo/rsp/)
+**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSA) ==> [**Demo**](http://www.whoin.net/demo/rsp/)
 
 **3.** [Vertical Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_003_081321)
 
-**4.** [Live User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_004_081421)
+**4.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_004_081421)
 
 **5.** [Content Place Holder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_005_081521)
 
@@ -32,9 +32,9 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **15.** [ToDo List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_015_0826-ToDoList)
 
-**16.** [Theme Clock 1](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_016_0827-Clock1) ==> [**Live Demo**](http://www.whoin.net/demo/themeClock/)
+**16.** [Theme Clock 1](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_016_0827-Clock1) ==> [**Demo**](http://www.whoin.net/demo/themeClock/)
 
-**17.** [Analog Clock 2](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_017_0828-Clock2) ==> [**Live Demo**](http://www.whoin.net/demo/analogClock/index.html)
+**17.** [Analog Clock 2](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_017_0828-Clock2) ==> [**Demo**](http://www.whoin.net/demo/analogClock/index.html)
 
 **18.** [Grocery List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_018_0829-GroceryList)
 
@@ -46,7 +46,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **22.** [3DBackground](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_022_0902-3DBackground)
 
-**23.** [HoverBoard (A butterfly and a flower)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard) ==> [**Live Demo**](http://www.whoin.net/demo/hoverBoard/index.html)
+**23.** [HoverBoard (A butterfly and a flower)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard) ==> [**Demo**](http://www.whoin.net/demo/hoverBoard/index.html)
 
 **24.** [Github Profiles](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_024_0904-GithubProfiles)
 
@@ -58,7 +58,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **28.** [Rotating Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_028_0908-RotatingNav)
 
-**29.** [Landing Page (Sidebar Menu and Modal)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_029_0909-LandingPage) ==> [**Live Demo**](http://www.whoin.net/demo/landingPage/index.html)
+**29.** [Landing Page (Sidebar Menu and Modal)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_029_0909-LandingPage) ==> [**Demo**](http://www.whoin.net/demo/landingPage/index.html)
 
 **30.** [Form Wave](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_030_0910-FormWave)
 
@@ -80,7 +80,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **39.** [Kinetic Loader](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_039_0920-KineticLoader)
 
-**40.** [Sticky Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_040_0921-StickyNavigation) ==> [**Live Demo**](http://www.whoin.net/demo/stickyNav/index.html)
+**40.** [Sticky Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_040_0921-StickyNavigation) ==> [**Demo**](http://www.whoin.net/demo/stickyNav/index.html)
 
 **41.** [Notification](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_041_0922-Notification)
 
@@ -90,20 +90,22 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **44.** [Notes App](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_044_0925-NotesApp)
 
-**45.** [Countdown](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_045_0926-CountDown) ==> [**Live Demo**](http://www.whoin.net/demo/countdown/index.html)
+**45.** [Countdown](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_045_0926-CountDown) ==> [**Demo**](http://www.whoin.net/demo/countdown/index.html)
 
-**46.** [Image Carousel](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_046_0927-ImageCarousel) ==> [**Live Demo**](http://www.whoin.net/demo/imageCarousel/index.html)
+**46.** [Image Carousel](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_046_0927-ImageCarousel) ==> [**Demo**](http://www.whoin.net/demo/imageCarousel/index.html)
 
-**47.** [Scroll Page](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_047_0928-ScrollPage) ==> [**Live Demo**](http://www.whoin.net/demo/scrollPage/index.html)
+**47.** [Scroll Page](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_047_0928-ScrollPage) ==> [**Demo**](http://www.whoin.net/demo/scrollPage/index.html)
 
-**48.** [Custom Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_048_0929-CustomSlider) ==> [**Live Demo**](http://www.whoin.net/demo/customSlider/index.html)
+**48.** [Custom Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_048_0929-CustomSlider) ==> [**Demo**](http://www.whoin.net/demo/customSlider/index.html)
 
-**49.** [Side Bar](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_049_0930-SideBar) ==> [**Live Demo**](http://www.whoin.net/demo/sideBar/index.html)
+**49.** [Side Bar](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_049_0930-SideBar) ==> [**Demo**](http://www.whoin.net/demo/sideBar/index.html)
 
-**50.** [Tabs](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_050_1001-Tabs) ==> [**Live Demo**](http://www.whoin.net/demo/tabs/index.html)
+**50.** [Tabs](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_050_1001-Tabs) ==> [**Demo**](http://www.whoin.net/demo/tabs/index.html)
 
-**51.** [Mobile Tabs](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_051_1002-MobileTabs) ==> [**Live Demo**](http://www.whoin.net/demo/mobileTabs/index.html)
+**51.** [Mobile Tabs](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_051_1002-MobileTabs) ==> [**Demo**](http://www.whoin.net/demo/mobileTabs/index.html)
 
-**52.** [Video Player](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_052_1003-VideoPlayer) ==> [**Live Demo**](http://www.whoin.net/demo/videoPlayer/index.html)
+**52.** [Video Player](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_052_1003-VideoPlayer) ==> [**Demo**](http://www.whoin.net/demo/videoPlayer/index.html)
 
-**53.** [Audio Player](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_053_1004-AudioPlayer) ==> [**Live Demo**](http://www.whoin.net/demo/audioPlayer/index.html)
+**53.** [Audio Player](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_053_1004-AudioPlayer) ==> [**Demo**](http://www.whoin.net/demo/audioPlayer/index.html)
+
+**54.** [Array Methods](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_054_1005-ArrayMethods)

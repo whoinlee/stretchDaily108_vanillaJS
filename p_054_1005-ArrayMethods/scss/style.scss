@@ -1,0 +1,34 @@
+@import "global";
+@import "config";
+
+body {
+  //-- bottom to top gradient
+  background-image: $bg-color;
+  color: $black;
+  font-family: $font-stack;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+
+  aside {
+    padding: 10px 20px;
+    width: 250px;
+    border-right: 1px solid #111;
+  }
+
+  main {
+    flex: 1;
+    padding: 10px 20px;
+  }
+}
+
+// @import "motion";
