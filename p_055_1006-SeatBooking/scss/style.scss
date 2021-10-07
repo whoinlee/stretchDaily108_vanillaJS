@@ -70,6 +70,10 @@ ul.showcase {
 
   .row {
     display: flex;
+
+    &:nth-of-type(4) {
+      margin-bottom: 18px; //-- between the 2nd and the 3rd column
+    }
   }
 }
 
