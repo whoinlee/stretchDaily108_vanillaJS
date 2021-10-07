@@ -108,6 +108,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **53.** [Audio Player](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_053_1004-AudioPlayer) ==> [**Demo**](http://www.whoin.net/demo/audioPlayer/index.html)
 
-**54.** [Array Methods](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_054_1005-ArrayMethods)==> [**Demo**](http://www.whoin.net/demo/arrayMethods/)
+**54.** [Array Methods](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_054_1005-ArrayMethods) ==> [**Demo**](http://www.whoin.net/demo/arrayMethods/)
 
-**55.** [Seat Booking](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_055_1006-SeatBooking)==> [**Demo**](http://www.whoin.net/demo/seatBooking/)
+**55.** [Seat Booking](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_055_1006-SeatBooking) ==> [**Demo**](http://www.whoin.net/demo/seatBooking/)
+
+**56.** [Seat Booking](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_056_1007-Pagination)

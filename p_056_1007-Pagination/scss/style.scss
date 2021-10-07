@@ -1,0 +1,109 @@
+@import "global";
+@import "config";
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-stack;
+}
+//  border: solid 1px red;
+
+//-- _global.scss
+// main {
+//   min-height: 100vh;
+//   display: grid;
+//   place-items: center;
+// }
+
+div.section-title {
+  text-align: center;
+  margin: 4rem 0 6rem 0;
+}
+
+// .underline {
+//   width: 8rem;
+//   height: 0.25rem;
+//   background: $light-blue;
+//   margin: 0 auto;
+// }
+
+section.followers {
+  width: 90vw;
+  max-width: $max-width;
+  margin: 5rem auto;
+
+  .container {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: $light-shadow;
+  padding: 2rem 3.5rem;
+  text-align: center;
+
+  img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+  }
+
+  h4 {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: $clr-grey-5;
+  }
+}
+
+.btn {
+  padding: 0.35rem 0.75rem;
+  letter-spacing: 1.6px;
+  font-size: 0.75rem;
+  color: $white;
+  background: $light-blue;
+  border-radius: $border-radius;
+  border-color: transparent;
+  text-transform: uppercase;
+  transition: $transition;
+  cursor: pointer;
+}
+
+.page-btn {
+  width: 2rem;
+  height: 2rem;
+  background: $clr-primary-7;
+  border-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: $transition;
+}
+.active-btn {
+  background: $clr-primary-1;
+  color: $clr-white;
+}
+.prev-btn,
+.next-btn {
+  background: transparent;
+  border-color: transparent;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: $spacing;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@import "media";
