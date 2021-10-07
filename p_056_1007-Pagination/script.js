@@ -1,21 +1,4 @@
-const title = document.querySelector('.section-title h1')
-const btnContainer = document.querySelector('.btn-container')
-
-let index = 0
-let pages = []
-
-const setupUI = () => {
-  displayFollowers(pages[index])
-  displayButtons(btnContainer, pages, index)
-}
-
-const init = async () => {
-  const followers = await fetchFollowers()
-  title.textContent = 'pagination'
-  pages = paginate(followers)
-  setupUI()
-}
-
+const btnContainer = document.querySelector('.btn-container');
 btnContainer.addEventListener('click', function (e) {
   if (e.target.classList.contains('btn-container')) return
   if (e.target.classList.contains('page-btn')) {
@@ -34,6 +17,74 @@ btnContainer.addEventListener('click', function (e) {
     }
   }
   setupUI()
-})
+});
 
-window.addEventListener('load', init)
+
+let index = 0;
+let pages = [];
+
+//-- fetchFollowers
+const url = 'https://api.github.com/users/john-smilga/followers?per_page=100';
+const fetchFollowers = async () => {
+  const data = await (await fetch(url)).json();
+  // console.log("script.js :: fetchFollowers, data??\n", data);// an array of 100 objects
+  return data
+}
+
+//-- paginate
+const paginate = (followers) => {
+  const itemsPerPage = 10;
+  const numberOfPages = Math.ceil(followers.length / itemsPerPage);
+  //????????? CHECK
+  const newFollowers = Array.from({ length: numberOfPages }, (_, index) => {
+    const start = index * itemsPerPage;
+    return followers.slice(start, start + itemsPerPage);
+  });
+  //?????????
+  return newFollowers;
+}
+
+//-- init
+const title = document.getElementById('title');
+const init = async () => {
+  const followers = await fetchFollowers();
+  // console.log("init, followers\n", followers);
+  title.innerHTML = 'pagination';
+  pages = paginate(followers);
+  setupUI();
+};
+
+//-- displayFollowers, //?????????
+const container = document.querySelector('.container');
+const displayFollowers = (followers) => {
+  const followersElts = followers
+    .map((person) => {
+      const { avatar_url, login, html_url } = person;
+      return `<article class='card'>
+                <img src="${avatar_url}" alt='person' />
+                  <h4>${login}</h4>
+                <a href="${html_url}" target="_blank" class="btn">view profile</a>
+              </article>`;
+    }).join('');//***.JOIN***
+  container.innerHTML = followersElts;
+};
+
+//-- displayButtons
+const displayButtons = (container, pages, activeIndex) => {
+  let btns = pages.map((_, pageIndex) => {
+    return `<button class="page-btn${activeIndex === pageIndex ? ' active-btn' : ''}" 
+                    data-index="${pageIndex}">${pageIndex + 1}</button>`
+  })
+  btns.push(`<button class="next-btn">next</button>`);  //tail
+  btns.unshift(`<button class="prev-btn">prev</button>`); //head
+  container.innerHTML = btns.join('')
+};
+
+const setupUI = () => {
+  displayFollowers(pages[index]);
+  displayButtons(btnContainer, pages, index);
+};
+
+window.addEventListener('load', init);
+
+

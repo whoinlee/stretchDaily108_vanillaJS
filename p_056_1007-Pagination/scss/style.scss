@@ -6,7 +6,6 @@ body {
   color: $text-color;
   font-family: $font-stack;
 }
-//  border: solid 1px red;
 
 //-- _global.scss
 // main {
@@ -17,20 +16,16 @@ body {
 
 div.section-title {
   text-align: center;
-  margin: 4rem 0 6rem 0;
+  margin: 4rem 0 1rem 0;
+  h1 {
+    font-size: 3rem;
+  }
 }
 
-// .underline {
-//   width: 8rem;
-//   height: 0.25rem;
-//   background: $light-blue;
-//   margin: 0 auto;
-// }
-
 section.followers {
-  width: 90vw;
+  width: 95vw;
   max-width: $max-width;
-  margin: 5rem auto;
+  margin: 4rem auto;
 
   .container {
     display: grid;
@@ -39,9 +34,9 @@ section.followers {
   }
 
   .btn-container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
   }
 }
 
@@ -51,6 +46,10 @@ section.followers {
   box-shadow: $light-shadow;
   padding: 2rem 3.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   img {
     width: 130px;
@@ -75,32 +74,46 @@ section.followers {
   background: $light-blue;
   border-radius: $border-radius;
   border-color: transparent;
+  width: 160px;
   text-transform: uppercase;
   transition: $transition;
   cursor: pointer;
+  &:hover {
+    color: $black;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 .page-btn {
   width: 2rem;
   height: 2rem;
-  background: $clr-primary-7;
+  background: $light-blue;
   border-color: transparent;
   border-radius: 5px;
   cursor: pointer;
   margin: 0.5rem;
   transition: $transition;
+  &:hover {
+    background: $dark-blue;
+    color: $white;
+  }
 }
+
 .active-btn {
-  background: $clr-primary-1;
-  color: $clr-white;
+  background: $dark-blue;
+  color: $white;
+  cursor: default;
 }
+
 .prev-btn,
 .next-btn {
   background: transparent;
   border-color: transparent;
   font-weight: bold;
   text-transform: capitalize;
-  letter-spacing: $spacing;
+  letter-spacing: $letter-spacing;
   margin: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
