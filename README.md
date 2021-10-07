@@ -112,4 +112,4 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **55.** [Seat Booking](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_055_1006-SeatBooking) ==> [**Demo**](http://www.whoin.net/demo/seatBooking/)
 
-**56.** [Seat Booking](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_056_1007-Pagination) ==> [**Demo**](http://www.whoin.net/demo/pagination/)
+**56.** [Pagination](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_056_1007-Pagination) ==> [**Demo**](http://www.whoin.net/demo/pagination/)
