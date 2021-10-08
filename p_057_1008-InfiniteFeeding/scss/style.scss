@@ -1,9 +1,8 @@
-@import "global";
 @import "config";
 
 body {
   background-color: $bg-color;
-  color: $text-color;
+  color: $dark-blue;
   font-family: $font-stack;
   display: flex;
   flex-direction: column;
@@ -12,9 +11,8 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3rem;
-  margin: 4rem 0 1rem 0;
+.title {
+  margin: 30px 0 75px;
   text-align: center;
 }
 
@@ -23,9 +21,12 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 1000px; //1000px
+  margin-bottom: 100px;
+  // max-width: $max-width; //1000px
 
   img {
+    // keeps aspect ratio and clipped to fill the dimension
     object-fit: cover;
     margin: 10px;
     height: 300px;
@@ -35,18 +36,18 @@ h1 {
 }
 
 .loader {
-  // opacity: 0;
+  opacity: 0;
   display: flex;
   position: fixed;
   bottom: 50px;
-  transition: opacity 0.3s ease-in;
+  transition: $transition; //opacity
   &.show {
     opacity: 1;
   }
 }
 
 .circle {
-  background-color: $dark-blue;
+  background-color: $light-blue;
   width: 10px;
   height: 10px;
   border-radius: 50%;

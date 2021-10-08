@@ -2,9 +2,10 @@
 
 $font-stack: "Lato", sans-serif;
 //
-$bg-color: $clr-grey-10; //-- light grey, near white
-$text-color: $clr-grey-1; //-- darkest grey
-$light-blue: $clr-primary-6;
-$dark-blue: $clr-primary-1;
+$bg-color: hsl(206, 33%, 96%); //-- light grey, near white
+$text-color: hsl(209, 61%, 16%); //-- darkest grey
+$light-blue: hsl(205, 93%, 71%); //hsl(205, 89%, 70%)
+$dark-blue: hsl(205, 86%, 22%);
 $black: #111;
 $border-radius: 15px;
+$transition: all 0.3s ease-in;
