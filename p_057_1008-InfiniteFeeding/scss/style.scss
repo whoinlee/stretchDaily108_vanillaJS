@@ -1,0 +1,65 @@
+@import "global";
+@import "config";
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-stack;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 4rem 0 1rem 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+
+  img {
+    object-fit: cover;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
+  }
+}
+
+.loader {
+  // opacity: 0;
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  transition: opacity 0.3s ease-in;
+  &.show {
+    opacity: 1;
+  }
+}
+
+.circle {
+  background-color: $dark-blue;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  animation: bounce 0.5s ease-in infinite;
+
+  &:nth-of-type(2) {
+    animation-delay: 0.1s;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: 0.2s;
+  }
+}
+
+@import "motion";
