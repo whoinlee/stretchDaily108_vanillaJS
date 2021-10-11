@@ -4,6 +4,7 @@ const randomBtn = document.getElementById('random-btn');
 const searchResult = document.getElementById('search-result');
 const resultHeading = document.getElementById('result-heading');
 const randomMeal = document.getElementById('random-meal');
+const mealDbUrl = "https://www.themealdb.com/api/json/v1/1/";
 
 // search meal and fetch from API
 function searchMeal(e) {
@@ -17,7 +18,7 @@ function searchMeal(e) {
 
   // Check for empty
   if (term.trim()) {
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
+    fetch(`${mealDbUrl}search.php?s=${term}`)
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -32,7 +33,7 @@ function searchMeal(e) {
             <div class="meal">
               <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
               <div class="meal-info" data-mealID="${meal.idMeal}">
-                <h3>${meal.strMeal}</h3>
+                <h4>${meal.strMeal}</h4>
               </div>
             </div>
           `
@@ -49,7 +50,7 @@ function searchMeal(e) {
 
 // Fetch meal by ID
 function getMealById(mealID) {
-  fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
+  fetch(`${mealDbUrl}lookup.php?i=${mealID}`)
     .then(res => res.json())
     .then(data => {
       const meal = data.meals[0];
@@ -87,13 +88,15 @@ function addMealToDOM(meal) {
     }
   }
 
+  /*    // <div class="single-meal"></div> */
+
   randomMeal.innerHTML = `
-    <div class="single-meal">
+
       <h1>${meal.strMeal}</h1>
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-      <div class="single-meal-info">
-        ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ''}
-        ${meal.strArea ? `<p>${meal.strArea}</p>` : ''}
+      <div class="random-meal-info">
+        ${meal.strCategory ? `<p class='category'>${meal.strCategory}</p>` : ''}
+        ${meal.strArea ? `<p class='area'>${meal.strArea}</p>` : ''}
       </div>
       <div class="main">
         <p>${meal.strInstructions}</p>
@@ -102,7 +105,6 @@ function addMealToDOM(meal) {
           ${ingredients.map(ing => `<li>${ing}</li>`).join('')}
         </ul>
       </div>
-    </div>
   `;
 }
 
