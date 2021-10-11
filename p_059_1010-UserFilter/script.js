@@ -13,7 +13,7 @@ const fetchUsers = async () => {
 
 const init = async () => {
     const users = await fetchUsers(); //-- an array of [numOfUsers] objects
-    result.innerHTML = users.map(user => {
+    users.forEach(user => {
         const li = document.createElement('li');
         listItems.push(li);
         li.innerHTML = `
@@ -21,9 +21,9 @@ const init = async () => {
             <div class="user-info">
                 <h4>${user.name.first} ${user.name.last}</h4>
                 <p>${user.location.city}, ${user.location.country}</p>
-            </div>`
-        return li;
-    }).join(''); 
+            </div>`;
+        result.appendChild(li)
+    });
 };
 
 function filterData(searchTerm) {
