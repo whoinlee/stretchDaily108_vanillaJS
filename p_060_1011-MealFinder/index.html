@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="js/jsx/typescript & css/sass daily practice for 108 days" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Meal Finder :: [StretchDaily108]</title>
+  </head>
+
+  <body>
+    <!-- container -->
+    <div class="container">
+      <h1>Meal Finder</h1>
+
+      <div class="search-section">
+        <form class="search-form" id="submit-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search for meals or keywords"
+          />
+          <button class="search-btn" id="search-btn" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <button class="random-btn" id="random-btn">
+          <i class="fas fa-random"></i>
+        </button>
+      </div>
+
+      <div id="result-heading"></div>
+      <div id="search-result" class="meals"></div>
+      <div id="random-meal"></div>
+    </div>
+    <!-- end container -->
+    <script src="script.js" async defer></script>
+  </body>
+  <!-- original source from here:https://github.com/bradtraversy/vanillawebprojects/tree/master/meal-finder
+ -->
+</html>
