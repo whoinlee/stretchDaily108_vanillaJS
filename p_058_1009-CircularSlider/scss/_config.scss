@@ -1,11 +1,18 @@
-// @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import "global";
 
-$font-stack: "Roboto", sans-serif;
-//
+$font-stack: "Open Sans", sans-serif;
+$font-stack2: "Roboto", sans-serif;
+$white: #fff;
+$black: #111;
 $bg-color: hsl(206, 33%, 96%); //-- light grey, near white
 $text-color: hsl(209, 61%, 16%); //-- darkest grey
-$light-blue: hsl(205, 93%, 71%); //hsl(205, 89%, 70%)
+$light-blue: hsl(205, 78%, 60%); //hsl(205, 89%, 70%)
+$medium-grey: hsl(210, 22%, 49%);
 $dark-blue: hsl(205, 86%, 22%);
-$black: #111;
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$max-width: 1170px;
+$fixed-width: 620px;
 $border-radius: 15px;
+$letter-spacing: 0.1rem;
 $transition: all 0.3s ease-in-out;
