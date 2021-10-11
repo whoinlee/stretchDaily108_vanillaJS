@@ -116,4 +116,6 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **57.** [Infinite Feeding](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_057_1008-InfiniteFeeding) ==> [**Demo**](http://www.whoin.net/demo/infiniteFeeding/)
 
-**58.** [Circular Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_058_1009-CircularSlider) ==> [**Demo**](http://www.whoin.net/demo/circularSlider/)
+**58.** [Circular Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_058_1009-CircularSlider)
+
+<!-- ==> [**Demo**](http://www.whoin.net/demo/circularSlider/) -->
