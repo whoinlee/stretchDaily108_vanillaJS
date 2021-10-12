@@ -6,9 +6,6 @@ import menu from './menu.js';
 const btnContainer = document.querySelector(".btn-container");
 const menuContainer = document.querySelector(".menu-items");
 
-displayMenuButtons();
-diplayMenuItems(menu);
-
 function displayMenuButtons() {
     // console.log("script.js :: displayMenuButtons")
     const categories = menu.reduce((accValues, item) => {
@@ -28,18 +25,18 @@ function displayMenuButtons() {
         btn.addEventListener("click", (e) => {
             // console.log(e.currentTarget.dataset);
             const selectedCategory = e.currentTarget.dataset.id;
-            const selectedMenu = menu.filter(menuItem => (menuItem.category === selectedCategory));
+            const menuItems = menu.filter(menuItem => (menuItem.category === selectedCategory));
             if (selectedCategory === "all") {
                 diplayMenuItems(menu);
             } else {
-                diplayMenuItems(selectedMenu);
+                diplayMenuItems(menuItems);
             }
         });
     });
 };
 function diplayMenuItems(menuItems) {
-    console.log("script.js :: diplayMenuItems, menuItems ", menuItems)
-    menuContainer.innerHTML = menuItems.map( (item) => 
+    // console.log("script.js :: diplayMenuItems, menuItems ", menuItems)
+    menuContainer.innerHTML = menuItems.map(item => 
         `<article class="menu-item">
             <img src=${item.img} alt=${item.title} class="photo" />
             <div class="item-info">
@@ -47,10 +44,11 @@ function diplayMenuItems(menuItems) {
                 <h4>${item.title}</h4>
                 <h4 class="price">$${item.price}</h4>
               </header>
-              <p class="item-text">
-                ${item.desc}
-              </p>
+              <p class="item-text">${item.desc}</p>
             </div>
-          </article>`
+        </article>`
     ).join("");
 };
+
+displayMenuButtons();
+diplayMenuItems(menu);
