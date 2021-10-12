@@ -124,3 +124,6 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **60.** [Meal Finder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_060_1011-MealFinder)
 ==> [**Demo**](http://www.whoin.net/demo/mealFinder/)
+
+**61.** [Menu Selector](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_061_1012-MenuSelector)
+==> [**Demo**](http://www.whoin.net/demo/menuSelector/)
