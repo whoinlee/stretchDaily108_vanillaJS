@@ -17,7 +17,6 @@ body {
 
 .container {
   border-radius: 5px;
-  // box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   box-shadow: $dark-shadow;
   overflow: hidden;
   width: 300px;
@@ -25,7 +24,7 @@ body {
 
 .header {
   background-color: #3e57db;
-  color: #fff;
+  color: white;
   padding: 30px 20px;
 
   .title {
@@ -42,7 +41,7 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     border: 0;
     border-radius: 50px;
-    color: #fff;
+    color: white;
     font-size: 14px;
     padding: 10px 15px;
     width: 100%;
@@ -54,7 +53,7 @@ body {
 }
 
 .user-list {
-  background-color: #fff;
+  background-color: white;
   list-style-type: none;
   margin: 0;
   padding: 0;

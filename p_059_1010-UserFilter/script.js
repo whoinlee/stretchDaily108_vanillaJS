@@ -4,7 +4,7 @@ const filter = document.getElementById('filter');
 const listItems = [];
 
 const randomUserURL = 'https://randomuser.me/api/';
-const numOfUsers = 50;
+const numOfUsers = 20;
 const fetchUsers = async () => {
   const data = await (await fetch(`${randomUserURL}?results=${numOfUsers}`)).json();
   console.log("script.js :: fetchUsers, data??\n", data);
@@ -13,6 +13,7 @@ const fetchUsers = async () => {
 
 const init = async () => {
     const users = await fetchUsers(); //-- an array of [numOfUsers] objects
+    result.textContent = ''; //-- remove all existing child elts
     users.forEach(user => {
         const li = document.createElement('li');
         listItems.push(li);

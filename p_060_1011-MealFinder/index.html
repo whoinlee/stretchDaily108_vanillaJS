@@ -15,7 +15,7 @@
   <body>
     <!-- container -->
     <div class="container">
-      <h1>Meal Finder</h1>
+      <h1 class="title" >Meal Finder</h1>
 
       <div class="search-section">
         <form class="search-form" id="submit-form">
@@ -25,9 +25,20 @@
         <button class="btn random-btn" id="random-btn"><i class="fas fa-random"></i></button>
       </div>
 
-      <div id="result-heading"></div>
-      <div id="result-meals" class="meals"></div>
-      <div id="random-meal" class="random-meal"></div>
+      <div id="result-heading">
+        <!-- <h2>search results for 'egg':</h2> -->
+      </div>
+      <div id="result-meals" class="meals">
+        <!-- <div class="meal">
+          <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+          <div class="meal-info" data-mealID="${meal.idMeal}">
+              <h4>${meal.strMeal}</h4>
+          </div>
+        </div> -->
+      </div>
+      <div id="random-meal" class="random-meal">
+
+      </div>
     </div>
     <!-- end container -->
     <script src="script.js" async defer></script>
