@@ -38,31 +38,31 @@ const init = async () => {
     let status = 'next';
     if (slideIndex === 0) status = 'active';
     if (users.length > 1 && slideIndex === users.length - 1) status = 'last';
-    return `<article class="slide ${status}">
+    return `<div class="slide ${status}">
                 <img src=${img} class="img" alt="${name}"/>
                 <h4>${name}</h4>
                 <p class="location">${location}</p>
                 <p class="contact">${email}</p>
                 <p class="text">${fakeReview}</p>
-            </article>`
+            </div>`
     }).join('');
-
-    
 };
 
 const startSlider = (type) => {
   const active = document.querySelector('.active');
   const last = document.querySelector('.last');
-  let next = active.nextElementSibling; //***** */
+  let next = active.nextElementSibling; //******/
   if (!next) next = slideContainer.firstElementChild;
 
+  //-- clear current status
   active.classList.remove('active');
   last.classList.remove('last');
   next.classList.remove('next');
+
   if (type === 'prev') {
     active.classList.add('next');
     last.classList.add('active');
-    next = last.previousElementSibling;
+    next = last.previousElementSibling; //******/
     if (!next) next = slideContainer.lastElementChild;
 
     next.classList.remove('next');
@@ -70,9 +70,9 @@ const startSlider = (type) => {
     return;
   };
 
-  active.classList.add('last');
-  last.classList.add('next');
-  next.classList.add('active');
+  active.classList.add('last'); //--prev
+  last.classList.add('next'); //-- next
+  next.classList.add('active'); //-- current
 }
 nextBtn.addEventListener('click', () => startSlider());
 prevBtn.addEventListener('click', () => startSlider('prev'));

@@ -49,13 +49,13 @@ body {
 
         &.active {
           opacity: 1;
-          transform: translateX(0);
+          transform: translateX(0); //***
         }
         &.next {
-          transform: translateX(100%);
+          transform: translateX(100%); //***
         }
         &.last {
-          transform: translateX(-100%);
+          transform: translateX(-100%); //***
         }
 
         .img {
