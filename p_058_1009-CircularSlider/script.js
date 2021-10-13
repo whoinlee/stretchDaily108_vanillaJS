@@ -1,4 +1,4 @@
-const container = document.querySelector('.slide-container');
+const slideContainer = document.querySelector('.slide-container');
 const nextBtn = document.querySelector('.next-btn');
 const prevBtn = document.querySelector('.prev-btn');
 
@@ -29,7 +29,7 @@ const init = async () => {
     registered: {date: '2017-06-02T00:28:07.644Z', age: 4}
   } 
   */
-  container.innerHTML = users.map((user, slideIndex) => {
+  slideContainer.innerHTML = users.map((user, slideIndex) => {
     const { email } = user;
     const name = user.name.first + " " + user.name.last;
     const location = user.location.city + ", " + user.location.country;
@@ -38,13 +38,13 @@ const init = async () => {
     let status = 'next';
     if (slideIndex === 0) status = 'active';
     if (users.length > 1 && slideIndex === users.length - 1) status = 'last';
-    return `<div class="slide ${status}">
+    return `<article class="slide ${status}">
                 <img src=${img} class="img" alt="${name}"/>
                 <h4>${name}</h4>
                 <p class="location">${location}</p>
                 <p class="contact">${email}</p>
                 <p class="text">${fakeReview}</p>
-            </div>`
+            </article>`
     }).join('');
 
     
@@ -54,7 +54,7 @@ const startSlider = (type) => {
   const active = document.querySelector('.active');
   const last = document.querySelector('.last');
   let next = active.nextElementSibling; //***** */
-  if (!next) next = container.firstElementChild;
+  if (!next) next = slideContainer.firstElementChild;
 
   active.classList.remove('active');
   last.classList.remove('last');
@@ -63,7 +63,7 @@ const startSlider = (type) => {
     active.classList.add('next');
     last.classList.add('active');
     next = last.previousElementSibling;
-    if (!next) next = container.lastElementChild;
+    if (!next) next = slideContainer.lastElementChild;
 
     next.classList.remove('next');
     next.classList.add('last');
@@ -74,11 +74,7 @@ const startSlider = (type) => {
   last.classList.add('next');
   next.classList.add('active');
 }
-nextBtn.addEventListener('click', () => {
-  startSlider();
-});
-prevBtn.addEventListener('click', () => {
-  startSlider('prev');
-});
+nextBtn.addEventListener('click', () => startSlider());
+prevBtn.addEventListener('click', () => startSlider('prev'));
 
 init();

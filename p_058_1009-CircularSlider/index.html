@@ -10,28 +10,21 @@
   </head>
 
   <body>
-    <!-- main
-    <main>
+    <!-- start .container -->
+    <div class="container">
+      <h1 class="title">Slider</h1>
 
-      <div class="section-title">
-        <h1 id="title">Loading...</h1>
-      </div>
-
-      <section class="followers">
-        <div class="container"></div>
-        <div class="btn-container"></div>
-      </section>
-    </main> -->
-
-    <main>
-      <div class="section-title">
-        <h1 id="title">Slider</h1>
-      </div>
-
-      <!-- .container -->
-      <section class="container">
-        <!-- slide container -->
-        <div class="slide-container"></div>
+      <!-- .circular-slide -->
+      <div class="slider">
+        <div class="slide-container">
+          <!-- <div class="slide ${status}">
+            <img src=${img} class="img" alt="${name}"/>
+            <h4>${name}</h4>
+            <p class="location">${location}</p>
+            <p class="contact">${email}</p>
+            <p class="text">${fakeReview}</p>
+          </div> -->
+        </div>
         <!-- prev btn -->
         <button class="btn prev-btn">
           <i class="fas fa-chevron-left"></i>
@@ -40,11 +33,12 @@
         <button class="btn next-btn">
           <i class="fas fa-chevron-right"></i>
         </button>
-      </section>
-      <!-- end .container -->
-    </main>
+      </div>
+      <!-- end .slider -->
 
       <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+    </div>
+    <!-- end .container -->
 
     <script src="script.js" async defer></script>
   </body>

@@ -5,53 +5,107 @@
 }
 
 body {
-  font: $font-stack;
+  font-family: $font-stack;
   background-color: $bg-color;
   color: $text-color;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
 }
 
-div.section-title {
-  text-align: center;
-  margin: 6.5rem 0 1rem 0;
-  h1 {
-    font-size: 3rem;
-  }
-}
-
-section.container {
-  font: $font-stack;
-  // border: 1px solid red;
-
+.container {
+  width: 85vw;
   max-width: $fixed-width;
-  border: 1px solid green;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  // border: 1px solid black;
 
-  .slide-container {
-    //width 0 why???
-    display: flex;
-    position: relative;
+  .title {
+    font-size: 2rem;
+    margin-top: 3.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .slider {
     width: 100%;
-    height: 450px;
-    overflow: hidden;
+    // border: 1px solid green;
 
-    .slide {
-      width: 100%;
-      height: 100%;
+    .slide-container {
+      position: relative;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      margin: 0 auto;
+      height: 400px;
+      // overflow: hidden;
+      // border: 1px solid $light-blue;
+
+      .slide {
+        position: absolute;
+        top: 50;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: $transition;
+        opacity: 0;
+        // border: 1px solid red;
+
+        &.active {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        &.next {
+          transform: translateX(100%);
+        }
+        &.last {
+          transform: translateX(-100%);
+        }
+
+        .img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          background: white;
+          padding: 5px;
+          border-radius: 50%;
+          box-shadow: $dark-shadow;
+        }
+
+        h4 {
+          font-family: $font-stack2;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: $light-blue;
+          letter-spacing: $letter-spacing;
+          margin: 0.5rem 0;
+          font-size: 22px;
+        }
+
+        .location {
+          margin-bottom: 1.25rem;
+          letter-spacing: 2px;
+          text-transform: capitalize;
+          font-size: 20px;
+        }
+
+        .contact {
+          padding-top: 0;
+          margin-top: -15px;
+          font-size: 18px;
+        }
+
+        .text {
+          color: $medium-grey;
+          line-height: 1.8;
+          max-width: 35em;
+          margin: 0 auto;
+          letter-spacing: 1px;
+        }
+      }
     }
   }
 }
 
 .btn {
   position: absolute;
-  top: 175px;
+  top: 225px;
   background: $medium-grey;
   color: $white;
   padding: 0.25rem 0.35rem;
@@ -59,9 +113,11 @@ section.container {
   border: transparent;
   cursor: pointer;
 }
+
 .next-btn {
   right: -0.5rem;
 }
+
 .prev-btn {
   left: -0.5rem;
 }
@@ -69,64 +125,8 @@ section.container {
 .quote-icon {
   font-size: 2rem;
   margin: 1rem auto;
+  margin-top: 0;
   color: $light-blue;
-}
-
-.img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  background: white;
-  padding: 5px;
-  border-radius: 50%;
-  box-shadow: $dark-shadow;
-}
-h4 {
-  font: $font-stack2;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: $light-blue;
-  letter-spacing: $letter-spacing;
-  margin: 0.5rem 0;
-}
-.location {
-  margin-bottom: 1.25rem;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-}
-.text {
-  color: $medium-grey;
-  line-height: 1.8;
-  max-width: 35em;
-  margin: 0 auto;
-  letter-spacing: 1px;
-}
-
-// .icon:hover {
-//   transform: scale(1.1);
-//   opacity: 0.8;
-// }
-
-/* MORE CSS FOR JS */
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: $transition;
-  opacity: 0;
-}
-.slide.active {
-  opacity: 1;
-  transform: translateX(0);
-}
-.slide.next {
-  transform: translateX(100%);
-}
-.slide.last {
-  transform: translateX(-100%);
 }
 
 @import "media";
