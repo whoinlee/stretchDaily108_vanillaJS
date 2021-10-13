@@ -3,6 +3,7 @@
 Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and JavaScript Skills.
 
 **1.** [Blurry Loading](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_001_081221)
+==> [**Demo**](http://www.whoin.net/demo/blurryLoading/)
 
 **2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSA) ==> [**Demo**](http://www.whoin.net/demo/rsp/)
 
