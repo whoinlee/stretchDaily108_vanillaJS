@@ -5,7 +5,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **1.** [Blurry Loading](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_001_1003-BlurryLoading)
 ==> [**Demo**](http://www.whoin.net/demo/blurryLoading/)
 
-**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSA) ==> [**Demo**](http://www.whoin.net/demo/rsp/)
+**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSP) ==> [**Demo**](http://www.whoin.net/demo/rsp/)
 
 **3.** [Vertical Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_003_081321)
 
