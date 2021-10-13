@@ -34,7 +34,7 @@ body {
       display: flex;
       margin: 0 auto;
       height: 400px;
-      // overflow: hidden;
+      overflow: hidden;
       // border: 1px solid $light-blue;
 
       .slide {
@@ -105,7 +105,7 @@ body {
 
 .btn {
   position: absolute;
-  top: 225px;
+  top: 190px;
   background: $medium-grey;
   color: $white;
   padding: 0.25rem 0.35rem;

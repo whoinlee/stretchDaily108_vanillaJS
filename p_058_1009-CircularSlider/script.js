@@ -3,7 +3,7 @@ const nextBtn = document.querySelector('.next-btn');
 const prevBtn = document.querySelector('.prev-btn');
 
 const randomUserURL = 'https://randomuser.me/api/';
-const numOfUsers = 1;
+const numOfUsers = 5;
 const fetchUsers = async () => {
   const data = await (await fetch(`${randomUserURL}?results=${numOfUsers}`)).json();
   console.log("script.js :: fetchUsers, data??\n", data);
