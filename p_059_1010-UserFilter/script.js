@@ -1,3 +1,4 @@
+//-- original code from https://github.com/bradtraversy/50projects50days/blob/master/live-user-filter/script.js
 const randomUserURL = 'https://randomuser.me/api/';
 
 const filterInput = document.getElementById('filter');

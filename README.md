@@ -121,6 +121,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 <!-- ==> [**Demo**](http://www.whoin.net/demo/circularSlider/) -->
 
 **59.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_059_1010-UserFilter)
+==> [**Demo**](http://www.whoin.net/demo/userFilter/)
 
 **60.** [Meal Finder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_060_1011-MealFinder)
 ==> [**Demo**](http://www.whoin.net/demo/mealFinder/)
