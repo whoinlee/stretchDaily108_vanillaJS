@@ -128,3 +128,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **61.** [Menu Selector](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_061_1012-MenuSelector)
 ==> [**Demo**](http://www.whoin.net/demo/menuSelector/)
+
+**62.** [Index Chart](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_062_1014-D3-IndexChart)
+
+<!-- ==> [**Demo**](http://www.whoin.net/demo/indexChart/) -->
