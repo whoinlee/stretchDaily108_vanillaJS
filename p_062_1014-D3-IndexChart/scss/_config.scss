@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+$font-stack: "Roboto", sans-serif;
+$font-stack2: "Open Sans", sans-serif;
+//
+$bg-color: hsl(206, 33%, 96%); //-- near white
+$text-color: hsl(209, 61%, 16%); //-- darkest grey
+$light-blue: hsl(201, 76%, 80%);
+$dark-blue: $text-color;
+$blue-grey: hsl(202, 31%, 41%);
+$med-grey: hsl(210, 4%, 55%);
+$white: #fff;
+$black: #111;
+$border-radius: 5px;
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$transition: all 0.3s ease-in;

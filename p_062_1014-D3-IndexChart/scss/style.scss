@@ -1,0 +1,31 @@
+@import "config";
+
+body {
+  background: $bg-color;
+  color: $text-color;
+  font-family: $font-stack;
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  margin: 2rem auto;
+  color: $dark-blue;
+  span {
+    font-size: 26px;
+    font-family: $font-stack2;
+    i {
+      font-size: 34px;
+    }
+  }
+}
+
+@import "media";
