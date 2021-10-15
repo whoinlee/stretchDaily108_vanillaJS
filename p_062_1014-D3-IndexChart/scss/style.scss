@@ -28,4 +28,11 @@ body {
   }
 }
 
+.chart {
+  width: 100%;
+  max-width: $max-width;
+  height: $fixed-height;
+  // border: 1px red solid;
+}
+
 @import "media";
