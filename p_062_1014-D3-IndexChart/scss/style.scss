@@ -17,22 +17,33 @@ body {
 
 .title {
   text-align: center;
-  margin: 2rem auto;
+  margin: 1rem auto;
   color: $dark-blue;
+  line-height: 100%;
   span {
-    font-size: 26px;
+    font-size: 22px;
     font-family: $font-stack2;
     i {
-      font-size: 34px;
+      font-size: 28px;
     }
   }
 }
 
-.chart {
+.chart-container {
+  position: relative;
   width: 100%;
-  max-width: $max-width;
   height: $fixed-height;
+  max-width: $max-width;
+  min-width: $min-width;
   // border: 1px red solid;
+}
+
+.chart {
+  position: absolute;
+  left: 20px;
+  width: calc(100% - 40px); //40px: both end
+  height: 100%;
+  // border: 1px green solid;
 }
 
 @import "media";
