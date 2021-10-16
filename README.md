@@ -7,7 +7,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSP) ==> [**Demo**](http://www.whoin.net/demo/rsp/)
 
-**3.** [Vertical Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_003_081321)
+**3.** [Vertical Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_003_1016-VerticalSlider)
 
 **4.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_004_081421)
 
