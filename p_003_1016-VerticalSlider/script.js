@@ -1,7 +1,6 @@
 import data from './data.js';
 
 const totalSlides = data.length;
-const sliderContainer = document.querySelector('.container');
 const slideLeft = document.querySelector('.left-slide > .slide-container');
 const slideRight = document.querySelector('.right-slide > .slide-container');
 
@@ -31,6 +30,7 @@ slideRight.innerHTML = data.map((item, index) => {
 
 // let activeSlideIndex = 0;
 // slideLeft.style.top = `-${(totalSlides - 1)*100}vh`;
+// const sliderContainer = document.querySelector('.container');
 // const changeSlide = (direction) => {
 //     const sliderHeight = sliderContainer.clientHeight;
 //     if (direction === 'up') {
