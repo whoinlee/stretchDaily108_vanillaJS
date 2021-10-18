@@ -27,25 +27,6 @@ slideRight.innerHTML = data.map((item, index) => {
      </div>`}
 ).join("");
 
-
-// let activeSlideIndex = 0;
-// slideLeft.style.top = `-${(totalSlides - 1)*100}vh`;
-// const sliderContainer = document.querySelector('.container');
-// const changeSlide = (direction) => {
-//     const sliderHeight = sliderContainer.clientHeight;
-//     if (direction === 'up') {
-//         activeSlideIndex++;
-//         if (activeSlideIndex > (totalSlides -1)) activeSlideIndex = 0;
-//         slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`;
-//     } else if (direction === 'down') {
-//         activeSlideIndex--;
-//         if (activeSlideIndex < 0) activeSlideIndex = totalSlides -1;
-//         slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`;
-//     }
-// };
-// upButton.addEventListener('click', (e)=>{e.preventDefault();changeSlide('up')});
-// downButton.addEventListener('click', (e)=>{e.preventDefault();changeSlide('down')});
-
 function changeSlideUp() {
     const activeSlide = slideRight.querySelector('.active');
     const prevSlide = slideRight.querySelector('.prev');
@@ -54,9 +35,9 @@ function changeSlideUp() {
     nextSlide.classList.remove('next');
     prevSlide.classList.remove('prev');
     //
-    activeSlide.style.zIndex = "1000";
-    nextSlide.style.zIndex = "100";
-    prevSlide.style.zIndex = "10";
+    activeSlide.style.zIndex = "90";
+    nextSlide.style.zIndex = "80";
+    prevSlide.style.zIndex = "70";
     activeSlide.classList.add('prev');
     nextSlide.classList.add('active');
     prevSlide.classList.add('next');
@@ -70,9 +51,9 @@ function changeSlideDown() {
     nextSlide.classList.remove('next');
     prevSlide.classList.remove('prev');
     //
-    activeSlide.style.zIndex = "1000";
-    prevSlide.style.zIndex = "100";
-    nextSlide.style.zIndex = "10";
+    activeSlide.style.zIndex = "90";
+    prevSlide.style.zIndex = "80";
+    nextSlide.style.zIndex = "70";
     activeSlide.classList.add('next');
     prevSlide.classList.add('active');
     nextSlide.classList.add('prev');
