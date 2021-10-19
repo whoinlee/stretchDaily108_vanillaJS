@@ -1,19 +1,24 @@
+// <!-- original source from https://github.com/bradtraversy/50projects50days/tree/master/live-user-filter -->
 const result = document.getElementById('result');
-const filter = document.getElementById('filter');
 const listItems = [];
 const RANDOM_USER_API = 'https://randomuser.me/api?results=50';
 
 getData();
 
-filter.addEventListener('input', (e) => filterData(e.target.value));
-
 async function getData() {
     const res = await fetch(RANDOM_USER_API);
     const { results } = await res.json(); 
-    console.log(results);
+    // console.log(results);
 
-    result.innerHTML = '';
-    results.forEach(user => {
+//     <!-- <li>
+//      <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Sara">
+//      <div class="user-info">
+//         <h4>Sara Smith</h4>
+//         <p>Wexfors, Ireland</p>
+//      </div>
+//     </li> -->
+    result.innerHTML = '';  //-- clear
+    results.map(user => {
        const li = document.createElement('li');
        listItems.push(li);
        li.innerHTML = `
@@ -27,9 +32,13 @@ async function getData() {
     });
 }
 
+
+const filter = document.getElementById('filter');
+filter.addEventListener('input', (e) => filterData(e.target.value));
+
 function filterData(val) {
-    console.log('ever??', val);
-    console.log(listItems)
+    // console.log('ever??', val);
+    // console.log(listItems)
     listItems.forEach(item => {
         if (item.innerText.toLowerCase().includes(val.toLowerCase())) {
             item.classList.remove('hide');
@@ -37,5 +46,4 @@ function filterData(val) {
             item.classList.add('hide');
         }
     })
-}
-
+};
