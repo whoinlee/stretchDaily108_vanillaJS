@@ -5,12 +5,14 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **1.** [Blurry Loading](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_001_1003-BlurryLoading)
 ==> [**Demo**](http://www.whoin.net/demo/blurryLoading/)
 
-**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSP) ==> [**Demo**](http://www.whoin.net/demo/rsp/)
+**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSP)
+==> [**Demo**](http://www.whoin.net/demo/rsp/)
 
 **3.** [Vertical Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_003_1016-VerticalSlider)
 ==> [**Demo**](http://www.whoin.net/demo/verticalSlider/)
 
-**4.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_004_081421)
+**4.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_004_1019-UserFilter)
+==> [**Demo**](http://www.whoin.net/demo/userFilter/)
 
 **5.** [Content Place Holder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_005_081521)
 
