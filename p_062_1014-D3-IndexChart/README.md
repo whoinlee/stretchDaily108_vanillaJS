@@ -2,4 +2,4 @@
 
 ## NOTE
 
-The chart is originally sourced from [Observable](https://observablehq.com/@d3/index-chart).
+This chart is originally sourced from [Observable](https://observablehq.com/@d3/index-chart).

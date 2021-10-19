@@ -6,7 +6,7 @@ const randomUserURL = 'https://randomuser.me/api/';
 const numOfUsers = 5;
 const fetchUsers = async () => {
   const data = await (await fetch(`${randomUserURL}?results=${numOfUsers}`)).json();
-  console.log("script.js :: fetchUsers, data??\n", data);
+  // console.log("script.js :: fetchUsers, data??\n", data);
   return data.results;
 }
 
