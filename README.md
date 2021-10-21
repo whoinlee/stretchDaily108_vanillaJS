@@ -14,7 +14,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **4.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_004_1019-UserFilter)
 ==> [**Demo**](http://www.whoin.net/demo/userFilter/)
 
-**5.** [Content Place Holder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_005_081521)
+**5.** [Place Holder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_005_081521)
+==> [**Demo**](http://www.whoin.net/demo/placeHolder/)
 
 **6.** [Random Choice Picker](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_006_081621)
 
