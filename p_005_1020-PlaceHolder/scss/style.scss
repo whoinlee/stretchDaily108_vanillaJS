@@ -7,7 +7,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 img {
@@ -73,7 +73,8 @@ img {
     #f6f7f8 20%,
     #f6f7f8 100%
   );
-  background-size: 200% 100%;
+  //#edeef1 10%, //******// this makes a vertical section
+  background-size: 200% 100%; //******// bgPos moves from 50% to -150%
   animation: bgPos 1s linear infinite;
 }
 
@@ -84,5 +85,10 @@ img {
   height: 10px;
   width: 100%;
 }
+
+// .show {
+//   opacity: 1;
+//   transition: opacity 2s ease-out;
+// }
 
 @import "mobile";
