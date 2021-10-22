@@ -2,19 +2,19 @@
 
 Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and JavaScript Skills.
 
-**1.** [Blurry Loading](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_001_1003-BlurryLoading)
+**1.** [Blurry Loading](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_001_BlurryLoading)
 ==> [**Demo**](http://www.whoin.net/demo/blurryLoading/)
 
-**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_0822-RSP)
+**2.** [Responsive Single Page Web](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_002_ResponsiveSinglePage)
 ==> [**Demo**](http://www.whoin.net/demo/rsp/)
 
-**3.** [Vertical Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_003_1016-VerticalSlider)
+**3.** [Vertical Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_003_VerticalSlider)
 ==> [**Demo**](http://www.whoin.net/demo/verticalSlider/)
 
-**4.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_004_1019-UserFilter)
+**4.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_004_UserFilter)
 ==> [**Demo**](http://www.whoin.net/demo/userFilter/)
 
-**5.** [Place Holder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_005_081521)
+**5.** [Place Holder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_005_PlaceHolder)
 ==> [**Demo**](http://www.whoin.net/demo/placeHolder/)
 
 **6.** [Random Choice Picker](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_006_081621)
