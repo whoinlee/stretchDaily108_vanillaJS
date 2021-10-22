@@ -35,7 +35,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **14.** [Drag and Drop](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_014_082521)
 
-**15.** [ToDo List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_015_0826-ToDoList)
+**15.** [ToDo List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_015_ToDoList)
 ==> [**Demo**](http://www.whoin.net/demo/todoList/)
 
 **16.** [Theme Clock 1](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_016_0827-Clock1) ==> [**Demo**](http://www.whoin.net/demo/themeClock/)
