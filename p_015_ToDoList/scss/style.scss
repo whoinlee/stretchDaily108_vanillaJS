@@ -15,10 +15,11 @@ body {
 }
 
 h1 {
-  color: $light-purple;
-  font-size: 8rem;
+  color: $dark-blue;
+  font-size: 5rem;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.75;
+  margin-top: 50px;
 }
 
 form {
@@ -38,7 +39,7 @@ form {
     color: $lighter-grey;
   }
   &:focus {
-    outline-color: $light-purple;
+    outline-color: $dark-blue;
   }
 }
 
