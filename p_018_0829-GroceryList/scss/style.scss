@@ -1,16 +1,11 @@
 @import "config";
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 body {
-  font-family: $font-primary;
+  font-family: $font-family;
   font-size: 0.875rem;
   line-height: 1.5;
-  background-color: $color-grey-10;
-  color: $color-grey-1;
+  background-color: $bg-color;
+  color: $text-color;
   //
   display: flex;
   flex-direction: column;
@@ -24,7 +19,7 @@ body {
   margin: 0 auto;
   margin-top: 8rem;
   padding: 2rem;
-  background: $color-white;
+  background: white;
   border-radius: $radius;
   transition: $transition;
   box-shadow: $light-shadow;
@@ -46,22 +41,22 @@ body {
       text-transform: capitalize;
 
       &.alert-danger {
-        color: #721c24;
-        background: #f8d7da;
+        color: #721c24; //-- dark-red
+        background: #f8d7da; //light-white-pink
       }
 
       &.alert-success {
-        color: #155724;
-        background: #d4edda;
+        color: #155724; //-- dark-green
+        background: #d4edda; //--light-white-green
       }
     }
 
     h3 {
-      font-family: $font-secondary;
+      font-family: $font-family2;
       font-size: 1.25rem;
       line-height: 1.25;
       letter-spacing: $spacing;
-      color: $color-d-shade1;
+      color: $color-d-shade;
       text-align: center;
       text-transform: capitalize;
       margin-bottom: 0.75rem;
@@ -74,16 +69,16 @@ body {
       #grocery-input {
         padding: 0.25rem;
         padding-left: 1rem;
-        background: $color-grey-10;
+        background: $bg-color;
         border-top-left-radius: $radius;
         border-bottom-left-radius: $radius;
         border-color: transparent;
         font-size: 1rem;
         flex: 1 0 auto;
-        color: $color-grey-5;
+        color: $text-color2;
         &::placeholder {
-          color: $color-grey-5;
-          font-family: $font-primary;
+          color: $text-color2;
+          font-family: $font-family;
         }
       }
     }
@@ -111,17 +106,17 @@ body {
       text-transform: capitalize;
 
       &:hover {
-        color: $color-grey-5;
-        background: $color-grey-10;
+        color: $text-color2;
+        background: $bg-color;
       }
 
       &:hover .title {
-        color: $color-grey-5;
+        color: $text-color2;
       }
 
       .title {
         margin-bottom: 0;
-        color: $color-grey-1;
+        color: $text-color;
         letter-spacing: 2px;
         transition: $transition;
       }
@@ -154,7 +149,7 @@ body {
 }
 
 .submit-btn {
-  background: $color-l-shade8;
+  background: $color-l-shade;
   border-color: transparent;
   flex: 0 0 5rem;
   display: grid;
@@ -165,13 +160,13 @@ body {
   border-top-right-radius: $radius;
   border-bottom-right-radius: $radius;
   cursor: pointer;
-  content: $color-m-primary5;
+  content: $color-blue-light;
   transition: $transition;
   font-size: 0.85rem;
 
   &:hover {
-    background: $color-m-primary5;
-    color: $color-white;
+    background: $color-blue-light;
+    color: white;
   }
 }
 
