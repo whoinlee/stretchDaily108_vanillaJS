@@ -20,8 +20,6 @@ clearBtn.addEventListener("click", clearItems);
 
 //-- reset
 function setBackToDefault() {
-    console.log("setBackToDefault called??????????????\n")
-    // alert("setBackToDefault")
     grocery.value = "";
     editFlag = false;
     editID = "";
@@ -48,7 +46,6 @@ function displayAlert(text, action) {
 //-- Grocery Item Handlers
 ////////////////////////////////
 function setupItems(e) {
-    // console.log('DOM fully loaded and parsed'); //async & defer in index.html
     let items = getLocalStorage();
     if (items != null && items.length > 0) {
       items.forEach(item => createListItem(item.id, item.value));
@@ -74,13 +71,13 @@ function createListItem(id, value) {
                 </button>
                 </div>
             `;
-    // add event listeners to both buttons;
+    //-- add event listeners to both buttons;
     const deleteBtn = element.querySelector(".delete-btn");
     const editBtn = element.querySelector(".edit-btn");
     deleteBtn.addEventListener("click", deleteItem);
     editBtn.addEventListener("click", editItem);
 
-    // append child
+    //-- append child
     list.appendChild(element);
 }
 
@@ -123,7 +120,6 @@ function addItem(e) {
         //-- success
         editElement.innerHTML = value;
         displayAlert("value changed", "success");
-        console.log("case2: editID??, ", editID);
         editLocalStorage(editID, value);
         setBackToDefault();
     } else {
