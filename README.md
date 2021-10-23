@@ -42,7 +42,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **17.** [Analog Clock 2](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_017_0828-Clock2) ==> [**Demo**](http://www.whoin.net/demo/analogClock/index.html)
 
-**18.** [Grocery List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_018_0829-GroceryList)
+**18.** [Grocery List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_018_GroceryList)
+==> [**Demo**](http://www.whoin.net/demo/groceryList/)
 
 **19.** [FAQ](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_019_0830-FAQ)
 

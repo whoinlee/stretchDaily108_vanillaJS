@@ -151,11 +151,9 @@ function deleteItem(e) {
 }
 
 function editItem(e) {
-    console.log("\neditItem ======>>>>>");
     const element = e.currentTarget.parentElement.parentElement;
     //-- set edit item
     editElement = e.currentTarget.parentElement.previousElementSibling;
-    console.log("editElement?? " + editElement);
     //-- set input form value
     grocery.value = editElement.innerHTML;
     editFlag = true;
@@ -199,9 +197,7 @@ function addToLocalStorage(id, value) {
 
 function editLocalStorage(id, value) {
     const items = getLocalStorage();
-    items.forEach(item => {
-        (item.id === id) ? (item.value = value) : item;
-    });
+    items.forEach(item => (item.id === id) ? (item.value = value) : item);
     localStorage.setItem("list", JSON.stringify(items));
 }
 
