@@ -9,11 +9,17 @@ describe(`${Person.name} Class`, () => {
     let model;
 
     beforeEach(() => {
-        model = new Person();
-        console.log("beforeEach!!!")
+        const data ={
+            firstName: 'Whoin',
+            lastName: 'Lee',
+            id:1
+        }
+        model = new Person(data, {});
     });
 
-    describe('full name test', () => {
+    // describe('')
+
+    xdescribe('full name test', () => {
         beforeEach(() => {
             model = new Person({
                 firstName: 'Whoin',
@@ -35,7 +41,7 @@ describe(`${Person.name} Class`, () => {
         });
     });
 
-    describe('default value tests', () => {
+    xdescribe('default value tests', () => {
         it(`1. first name defaults to empty string`, () => {
             // console.log("1 firstName")
             expect(model.firstName).toBe('');
@@ -49,6 +55,46 @@ describe(`${Person.name} Class`, () => {
         it('3. middle name defaults to empty string', () => {
             // console.log("3 middleName")
             expect(model.middleName).toBe('')
+        });
+    });
+
+    xdescribe('say my name', () => {
+        it(`alerts the full name of user`, () => {
+            //-- arrange
+            model.firstName = "WhoIN";
+            model.lastName = 'Lee';
+            spyOn(window, 'alert');
+
+            //-- act
+            model.sayMyName();
+
+            //-- assert
+            expect(window.alert).toHaveBeenCalled();
+            expect(window.alert).toHaveBeenCalledWith(model.fullName);
+        });
+    });
+
+    xdescribe('get code name', () => {
+        it(`when confirmed is a testing god`, () => {
+            //-- arrange
+            spyOn(window, 'confirm').and.returnValue(true);
+
+            //-- act
+            const result = model.getCodeName();
+
+            //-- assert
+            expect(result).toBe('TESTING GOD!');
+        });
+
+        it(`when not confirmed is just another scrub`, () => {
+            //-- arrange
+            spyOn(window, 'confirm').and.returnValue(false);
+
+            //-- act
+            const result = model.getCodeName();
+
+            //-- assert
+            expect(result).toBe(`Scrub skipping tests in his best friend's ride!`);
         });
     });
 })
