@@ -20,6 +20,8 @@ clearBtn.addEventListener("click", clearItems);
 
 //-- reset
 function setBackToDefault() {
+    console.log("setBackToDefault called??????????????\n")
+    // alert("setBackToDefault")
     grocery.value = "";
     editFlag = false;
     editID = "";
@@ -83,7 +85,6 @@ function createListItem(id, value) {
 }
 
 function addItem(e) {
-    // console.log("submit, addItem");
     e.preventDefault();
 
     const value = grocery.value;
@@ -122,6 +123,7 @@ function addItem(e) {
         //-- success
         editElement.innerHTML = value;
         displayAlert("value changed", "success");
+        console.log("case2: editID??, ", editID);
         editLocalStorage(editID, value);
         setBackToDefault();
     } else {
@@ -149,7 +151,7 @@ function deleteItem(e) {
 }
 
 function editItem(e) {
-    // console.log("editItem ======>>>>>");
+    console.log("\neditItem ======>>>>>");
     const element = e.currentTarget.parentElement.parentElement;
     //-- set edit item
     editElement = e.currentTarget.parentElement.previousElementSibling;
@@ -196,17 +198,14 @@ function addToLocalStorage(id, value) {
 }
 
 function editLocalStorage(id, value) {
-    // console.log("editLocalStorage");
-    let items = getLocalStorage();
-    items = items.map(item => {
-        (item.id === id) ? 
-        (item.value = value) : item;
+    const items = getLocalStorage();
+    items.forEach(item => {
+        (item.id === id) ? (item.value = value) : item;
     });
     localStorage.setItem("list", JSON.stringify(items));
 }
 
 function removeFromLocalStorage(id) {
-    // console.log("removeFromLocalStorage");
     let items = getLocalStorage();
     items = items.filter(item => (item.id !== id));
     localStorage.setItem("list", JSON.stringify(items));

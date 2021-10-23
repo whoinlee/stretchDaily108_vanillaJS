@@ -1,12 +1,11 @@
 @import "config";
 
 body {
+  background-color: $bg-color;
+  color: $text-color;
   font-family: $font-family;
   font-size: 0.875rem;
   line-height: 1.5;
-  background-color: $bg-color;
-  color: $text-color;
-  //
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,13 +15,12 @@ body {
 .container {
   width: 90vw;
   max-width: 35rem;
-  margin: 0 auto;
-  margin-top: 8rem;
+  margin-top: 6rem;
   padding: 2rem;
   background: white;
   border-radius: $radius;
-  transition: $transition;
   box-shadow: $light-shadow;
+  transition: $transition;
 
   &:hover {
     box-shadow: $dark-shadow;
@@ -88,40 +86,41 @@ body {
     margin-top: 2rem;
     transition: $transition;
     visibility: hidden;
+
+    .grocery-list {
+      .grocery-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        transition: $transition;
+        padding: 0.25rem 1rem;
+        border-radius: $radius;
+        text-transform: capitalize;
+        border: 1px solid $bg-color;
+
+        &:hover {
+          color: $text-color2;
+          background: $bg-color;
+        }
+
+        &:hover .title {
+          color: $text-color2;
+        }
+
+        .title {
+          margin-bottom: 0;
+          color: $text-color;
+          letter-spacing: 2px;
+          transition: $transition;
+        }
+      }
+    } //-- .grocery-list
   } //-- .grocery-container
 
   .show-container {
     visibility: visible;
   }
-
-  .grocery-list {
-    .grocery-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-      transition: $transition;
-      padding: 0.25rem 1rem;
-      border-radius: $radius;
-      text-transform: capitalize;
-
-      &:hover {
-        color: $text-color2;
-        background: $bg-color;
-      }
-
-      &:hover .title {
-        color: $text-color2;
-      }
-
-      .title {
-        margin-bottom: 0;
-        color: $text-color;
-        letter-spacing: 2px;
-        transition: $transition;
-      }
-    }
-  } //-- .grocery-list
 } //.container
 
 .edit-btn,
@@ -131,6 +130,7 @@ body {
   cursor: pointer;
   font-size: 0.7rem;
   margin: 0 0.15rem;
+  padding-bottom: 5px;
   transition: $transition;
 }
 
