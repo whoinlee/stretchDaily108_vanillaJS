@@ -14,7 +14,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **60.** [Meal Finder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_060_1011-MealFinder)
 ==> [**Demo**](http://www.whoin.net/demo/mealFinder/)
 
-**59.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_059_1010-UserFilter)
+**59.** [User Filter](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_059_UserFilter)
 ==> [**Demo**](http://www.whoin.net/demo/userFilter/)
 
 **58.** [Circular Slider](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_058_1009-CircularSlider)
