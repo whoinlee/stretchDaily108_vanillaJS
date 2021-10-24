@@ -4,7 +4,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **63.** [Unit Testing - Jasmine](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_063_UnitTesting-Jasmine)
 
-**62.** [Index Chart](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_062_1014-D3-IndexChart)
+**62.** [Index Chart](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_062_1014-D3-IndexChart) (Work in Progress)
 
 <!-- ==> [**Demo**](http://www.whoin.net/demo/indexChart/) -->
 
