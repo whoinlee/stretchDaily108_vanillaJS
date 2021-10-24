@@ -97,6 +97,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **20.** [ContentHolder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_020_0831-ContentHolder)
 
 **19.** [FAQ](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_019_FAQ)
+==> [**Demo**](http://www.whoin.net/demo/faq/)
 
 **18.** [Grocery List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_018_GroceryList)
 ==> [**Demo**](http://www.whoin.net/demo/groceryList/)
