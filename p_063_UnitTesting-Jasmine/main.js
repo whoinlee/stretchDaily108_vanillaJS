@@ -1,23 +1,44 @@
-// describe('Modal Component', () => {
-//     it('opens on click', () => {
-//         expect(true).toBe(true)
-//     })
-// })
-
-
+//-- Unit Testing: Mocks
 describe(`${Person.name} Class`, () => {
     let model;
+    let mockPersonService;
 
     beforeEach(() => {
-        const data ={
+        const data = {
             firstName: 'Whoin',
+            middleName: 'N/A',
             lastName: 'Lee',
             id:1
         }
-        model = new Person(data, {});
+        mockPersonService = {
+            lastId: null,
+            user: {},
+            getUserById(id) {
+                this.lastId = id;
+                return this.user;
+            }
+        }
+        model = new Person(data, mockPersonService);
     });
 
-    // describe('')
+    describe('getMyFullUserData', () => {
+        it('gets user data by id', async () => {
+            //arrange
+            mockPersonService.lastId = null;
+            mockPersonService.user = {
+                firstName: 'Whoin',
+                middleName: 'N/A',
+                lastName: 'Lee',
+                id:1
+            }
+
+            //act
+            const result = await model.getMyFullUserData();
+
+            //assert
+            expect(mockPersonService.lastId).toBe(1);
+        });
+    });
 
     xdescribe('full name test', () => {
         beforeEach(() => {
