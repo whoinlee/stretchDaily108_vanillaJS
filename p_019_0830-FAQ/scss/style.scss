@@ -6,16 +6,16 @@
 
 body {
   font-family: $font-stack;
-  background-color: #f0f0f0;
+  background-color: $bg-color;
 }
 
 h1 {
-  color: rgba(179, 131, 226, 0.8);
-  margin: 50px 0 30px;
-  text-align: center;
-  font-size: 4rem;
+  color: $text-color;
+  font-size: 3rem;
   font-family: $font-stack;
   font-weight: bold;
+  margin: 30px 0;
+  text-align: center;
 }
 
 .faq-container {
@@ -25,7 +25,7 @@ h1 {
 
 .faq {
   background-color: rgba(white, 0.5);
-  border: 1px solid #9fa4a8;
+  border: 1px solid $border-color;
   border-radius: 10px;
   box-shadow: $light-shadow;
   margin: 20px 0;
@@ -40,9 +40,10 @@ h1 {
 
     &::before,
     &::after {
+      //*****//
       content: "\f075";
       font-family: "Font Awesome 5 Free";
-      color: #2ecc71;
+      color: $light-green;
       font-size: 7rem;
       position: absolute;
       opacity: 0.2;
@@ -52,7 +53,8 @@ h1 {
     }
 
     &::before {
-      color: #3498db;
+      //*****//
+      color: $light-blue;
       top: -10px;
       left: -35px;
       @include transform(rotateY(180deg)); //-- y axix flip
@@ -62,17 +64,17 @@ h1 {
       display: block;
     }
 
-    .faq-toggle-btn .fa-times {
-      color: #fff;
-      display: block;
-    }
-
-    .faq-toggle-btn .fa-chevron-down {
-      display: none;
-    }
-
     .faq-toggle-btn {
-      background-color: #9fa4a8;
+      background-color: $border-color;
+
+      & .fa-times {
+        color: white;
+        display: block;
+      }
+
+      & .fa-chevron-down {
+        display: none;
+      }
     }
   }
 
@@ -105,13 +107,13 @@ h1 {
     right: 30px;
     height: 30px;
     width: 30px;
+
+    .fa-times {
+      display: none;
+    }
   }
 
   &:focus {
     outline: 0;
-  }
-
-  .fa-times {
-    display: none;
   }
 }
