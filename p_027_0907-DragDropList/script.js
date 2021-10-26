@@ -14,7 +14,7 @@ const richestPeople = [
   'Larry Page'
 ];
 
-const listItems = [];
+let listItems = [];
 let dragStartIndex;
 
 createList();
@@ -22,36 +22,31 @@ createList();
 //   array.sort(() => Math.random() - 0.5);
 // }
 function createList() {
-  richestPeople
+  draggableList.innerHTML = richestPeople
     .map(a => ({ value: a, sort: Math.random() }))  //-- create an array of object
     .sort((a, b) => a.sort - b.sort)  //-- ascending
     .map(a => a.value)                //-- create an array of value (original item)
-    .forEach((person, index) => {
-      const listItem = document.createElement('li');
-      listItem.setAttribute('data-index', index);
-      listItem.innerHTML = `
+    .map((person, index) => `
+      <li data-index=${index}>
         <span class="number">${index + 1}</span>
         <div class="draggable" draggable="true">
           <p class="person-name">${person}</p>
           <i class="fas fa-grip-lines"></i>
         </div>
-      `;
-      listItems.push(listItem);
-      draggableList.appendChild(listItem);
-    });
+      </li>`).join('');
 
   addEventListeners();
 };
 
 function addEventListeners() {
   const draggables = document.querySelectorAll('.draggable');
-  const dragListItems = document.querySelectorAll('.draggable-list li');
+  listItems = document.querySelectorAll('.draggable-list li');
 
   draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', dragStart);
   });
 
-  dragListItems.forEach(item => {
+  listItems.forEach(item => {
     //-- when other draggable item is being "dragovered .... "
     item.addEventListener('dragover', dragOver);
     item.addEventListener('drop', dragDrop);
@@ -71,7 +66,7 @@ function dragStart() {
 }
 
 function dragOver(e) {
-  console.log('Event: ', 'dragover');
+  // console.log('Event: ', 'dragover');
   e.preventDefault();
 }
 
@@ -84,7 +79,7 @@ function dragDrop() {
 }
 
 function dragEnter() {
-  console.log('Event: ', 'dragenter');      //처음은 enter, then stays at over
+  // console.log('Event: ', 'dragenter');      //처음은 enter, then stays at over
   this.classList.add('over');   //bg color changes
 }
 
