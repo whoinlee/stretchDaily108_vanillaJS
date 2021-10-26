@@ -4,10 +4,18 @@ body {
   background-color: $bg-color;
   color: $text-color;
   font-family: $font-family;
+  width: 100vw;
+}
+
+small {
+  text-align: center;
+  display: block;
+  color: $text-color2;
+  margin: 30px auto;
 }
 
 .container {
-  padding-top: 3rem;
+  padding-top: 1rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -38,7 +46,7 @@ body {
 .note {
   background-color: white;
   box-shadow: 0 0 10px 4px rgba(black, 0.1);
-  margin: 30px 20px;
+  margin: 20px 20px;
   height: 350px;
   width: 350px;
 
