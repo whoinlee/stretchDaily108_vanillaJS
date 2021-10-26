@@ -1,13 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
-
-* {
-  box-sizing: border-box;
-  outline: none; //**?? need??
-}
+@import "config";
 
 body {
-  background-color: rgb(245, 243, 220);
-  font-family: "Poppins", sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-family;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -19,15 +15,17 @@ body {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  background-color: #9ec862;
-  color: #fff;
+  background-color: $color-blue-light; //#9ec862;
+  // color: white;
+  color: $text-color;
   border: none;
   border-radius: 3px;
   padding: 0.5rem 1rem;
   cursor: pointer;
 
   &:hover {
-    filter: brightness(1.1);
+    background-color: $color-blue-dark;
+    color: $bg-color;
   }
 
   &:active {
@@ -36,15 +34,14 @@ body {
 }
 
 .note {
-  background-color: #fff;
-  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  box-shadow: 0 0 10px 4px rgba(black, 0.1);
   margin: 30px 20px;
-  height: 400px;
-  width: 400px;
-  overflow-y: scroll;
+  height: 350px;
+  width: 350px;
 
   .tools {
-    background-color: #9ec862;
+    background-color: $color-blue-light; //#9ec862;
     display: flex;
     justify-content: flex-end;
     padding: 0.5rem;
@@ -52,26 +49,33 @@ body {
     button {
       background-color: transparent;
       border: none;
-      color: #fff;
+      color: white;
       cursor: pointer;
       font-size: 1rem;
       margin-left: 0.5rem;
+
+      &:hover {
+        opacity: 0.75;
+      }
     }
   }
 
   textarea {
     outline: none;
     font-family: inherit;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border: none;
-    height: 400px;
+    height: 300px;
     width: 100%;
-    padding: 20px;
+    padding: 15px 20px;
+    resize: none;
+    word-wrap: break-word;
+    word-break: break-all;
   }
 }
 
 .main {
-  padding: 20px;
+  padding: 15px 20px;
 }
 
 .hidden {
