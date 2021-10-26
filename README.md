@@ -80,7 +80,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **28.** [Rotating Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_028_0908-RotatingNav)
 
-**27.** [Drag and Drop List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_027_0907-DragDropList)
+**27.** [Drag and Drop List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_027_DragDropList)
+==> [**Demo**](http://www.whoin.net/demo/dragDrop/index.html)
 
 **26.** [Like Heart](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_026_0906-LikeHeart)
 
@@ -88,7 +89,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **24.** [Github Profiles](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_024_0904-GithubProfiles)
 
-**23.** [HoverBoard (A butterfly and a flower)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard) ==> [**Demo**](http://www.whoin.net/demo/hoverBoard/index.html)
+**23.** [HoverBoard (A butterfly and a flower)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard)
+==> [**Demo**](http://www.whoin.net/demo/hoverBoard/index.html)
 
 **22.** [3DBackground](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_022_0902-3DBackground)
 
