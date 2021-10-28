@@ -7,16 +7,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  //**********//
   overflow: hidden;
   background-position: center center;
   background-size: cover;
   // transition: 0.4s;
   transition: $transition;
-  //**********//
 
   //**********//
-  //overlay
+  //-- overlay
   &::before {
     content: "";
     position: absolute;
@@ -31,7 +29,7 @@ body {
 
 .slider-container {
   box-shadow: 0 3px 6px rgba(black, 0.16), 0 3px 6px rgba(black, 0.23);
-  //-- dynamic sizing
+  //-- dynamic resizing
   height: 70vh;
   width: 70vw;
   //
@@ -39,53 +37,51 @@ body {
   overflow: hidden;
   //--for test
   // border: 1px solid red;
-}
 
-//-- .slide size is constrained by .slider-container size (70% of w&h)
-.slide {
-  opacity: 0;
-  height: 100vh;
-  width: 100vw;
-  background-position: center center;
-  background-size: cover;
-  position: absolute;
-  top: -15vh;
-  left: -15vw;
-  // transition: 0.4s ease;
-  transition: $transition;
-  z-index: 1;
+  //-- .slide size is constrained by .slider-container size (70% of w&h)
+  .container .slide {
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -15vh;
+    left: -15vw;
+    transition: $transition;
+    z-index: 1;
 
-  &.active {
-    opacity: 1;
-  }
-}
-
-.arrow {
-  position: fixed;
-  background-color: transparent;
-  color: white;
-  padding: 20px;
-  font-size: 30px;
-  // border: 1px solid lightblue;
-  border: none;
-  top: 50%;
-  transform: translateY(-50%); //- ycentered
-  cursor: pointer;
-  z-index: 1000;
-
-  &:focus {
-    outline: 0;
+    &.active {
+      opacity: 1;
+    }
   }
 
-  &:hover {
-    color: rgba(113, 200, 247, 0.95);
+  .arrow {
+    position: fixed;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%); //- y-centered
+    cursor: pointer;
+    z-index: 1000;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:hover {
+      color: rgba(113, 200, 247, 0.95);
+    }
+
+    &.left-arrow {
+      left: calc(15vw - 66px);
+    }
+
+    &.right-arrow {
+      right: calc(15vw - 66px);
+    }
   }
-}
-
-.left-arrow {
-  left: calc(15vw - 66px);
-}
-
-.right-arrow {
-  right: calc(15vw - 66px);
 }

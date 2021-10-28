@@ -1,16 +1,33 @@
-// import slides from "./slides.js";
+import slides from "./slides.js";
 
 const body = document.body;
-const slideArr = document.querySelectorAll(".slide");
+const slideContainer = document.querySelector(".container");
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 
+let slideArr;
 let activeSlideIndex = 0;
-setBgToBody();
+setSlides();
 
-function setBgToBody() {
-  //-- copy src
-  body.style.backgroundImage = slideArr[activeSlideIndex].style.backgroundImage;
+function setSlides() {
+  slideContainer.innerHTML = slides
+    .map(
+      (slide) => `
+      <div
+        class="slide"
+        style="background-image: url(${slide.img});">
+      </div>
+    `
+    )
+    .join("");
+  slideArr = slideContainer.querySelectorAll(".slide");
+  setBodyBackground();
+  setActiveSlide();
+}
+
+function setBodyBackground() {
+  //-- copy img src
+  body.style.backgroundImage = `url(${slides[activeSlideIndex].img})`;
 }
 
 function setActiveSlide() {
@@ -23,7 +40,7 @@ rightBtn.addEventListener("click", () => {
   if (activeSlideIndex > slideArr.length - 1) {
     activeSlideIndex = 0;
   }
-  setBgToBody();
+  setBodyBackground();
   setActiveSlide();
 });
 
@@ -32,6 +49,6 @@ leftBtn.addEventListener("click", () => {
   if (activeSlideIndex < 0) {
     activeSlideIndex = slideArr.length - 1;
   }
-  setBgToBody();
+  setBodyBackground();
   setActiveSlide();
 });
