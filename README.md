@@ -83,7 +83,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **28.** [Rotating Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_028_0908-RotatingNav)
 
 **27.** [Drag and Drop List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_027_DragDropList)
-==> [**Demo**](http://www.whoin.net/demo/dragDrop/index.html)
+==> [**Demo**](http://www.whoin.net/demo/dragDropList/index.html)
 
 **26.** [Like Heart](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_026_0906-LikeHeart)
 
@@ -113,7 +113,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **15.** [ToDo List](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_015_ToDoList)
 ==> [**Demo**](http://www.whoin.net/demo/todoList/)
 
-**14.** [Drag and Drop](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_014_082521)
+**14.** [Drag and Drop](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_014_DragAndDrop)
+==> [**Demo**](http://www.whoin.net/demo/dragDropImage/)
 
 **13.** [Button Ripple Effect](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_013_082421)
 
