@@ -15,17 +15,19 @@ body {
   margin: 10px;
   border: solid 3px $border-color;
   background: white;
-}
 
-.fill {
-  background-image: url($image-url);
-  height: 145px;
-  width: 145px;
-  cursor: pointer;
+  .fill {
+    background-image: url($image-url);
+    height: 144px;
+    width: 144px;
+    cursor: pointer;
+  }
 }
 
 .hold {
-  border: solid 5px #ccc;
+  border: solid 4px #ccc;
+  position: relative;
+  transform: translateZ(0);
 }
 
 .hovered {
