@@ -1,15 +1,10 @@
-* {
-  box-sizing: border-box;
-}
+@import "config";
 
 body {
-  margin: 0;
-  //
+  background-color: $bg-color;
   display: flex;
   align-items: center;
   justify-content: center;
-  //
-  background-color: #000;
   overflow: hidden;
   height: 100vh;
 }
@@ -18,12 +13,12 @@ body {
   height: 150px;
   width: 150px;
   margin: 10px;
-  border: solid 3px blue;
+  border: solid 3px $border-color;
   background: white;
 }
 
 .fill {
-  background-image: url("https://source.unsplash.com/random/150x150");
+  background-image: url($image-url);
   height: 145px;
   width: 145px;
   cursor: pointer;
