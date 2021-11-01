@@ -1,49 +1,34 @@
 @import "config";
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: $font-stack;
-  margin: 0;
-  //
   height: 100vh;
   overflow: hidden;
 }
 
 h1 {
   font-size: 4rem;
-  color: #fff;
-  position: absolute; //-- it's not centered case
+  color: white;
+  position: absolute;
   left: 50%;
-  top: 20%; //-- not horizontally centered
+  top: 30%;
   transform: translateX(-50%);
   white-space: nowrap;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #333;
-}
-
 .btn {
   position: absolute;
-  //-- text goes to the center of the button
   display: flex;
   align-items: center;
   justify-content: center;
   //
   left: 50%;
-  top: 40%;
-  transform: translateX(
-    -50%
-  ); //-- registration point is in the center of the button
+  top: 50%;
+  //-- registration point is in the center of the button
+  transform: translateX(-50%) translateY(-50%);
   text-decoration: none;
-  color: #fff;
-  border: #fff solid 0.2rem;
+  color: white;
+  border: white solid 0.2rem;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -51,74 +36,83 @@ h1 {
   padding: 1.5rem;
 }
 
-.split {
-  position: absolute;
-  width: 50%; //-- half for each left and right
+.container {
+  position: relative;
+  width: 100%;
   height: 100%;
-  overflow: hidden;
-}
 
-.left {
-  left: 0;
-  background: url("../img/ps.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  .split {
+    position: absolute;
+    width: 50%; //-- half for each left and right
+    height: 100%;
+    overflow: hidden;
+  }
 
-  .btn:hover {
-    background-color: $left-btn-hover-color;
-    border-color: $left-btn-hover-color;
+  .left {
+    left: 0;
+    background: url("../img/ps.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .btn:hover {
+      background-color: $left-btn-hover-color;
+      border-color: $left-btn-hover-color;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $left-bg-color;
+    }
+  }
+
+  .right {
+    right: 0;
+    background: url("../img/xbox.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .btn:hover {
+      background-color: $right-btn-hover-color;
+      border-color: $right-btn-hover-color;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $right-bg-color;
+    }
+  }
+
+  .left,
+  .right,
+  .left::before,
+  .right::before {
+    transition: $transition;
   }
 }
 
-.left::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: $left-bg-color;
-}
+.hover-left {
+  .left {
+    width: $hover-width;
+  }
 
-.right {
-  right: 0;
-  background: url("../img/xbox.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .btn:hover {
-    background-color: $right-btn-hover-color;
-    border-color: $right-btn-hover-color;
+  .right {
+    width: $other-width;
   }
 }
 
-.right::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: $right-bg-color;
-}
+.hover-right {
+  .left {
+    width: $other-width;
+  }
 
-.right,
-.left,
-.right::before,
-.left::before {
-  transition: all $speed ease-in-out;
-}
-
-.hover-left .left {
-  width: $hover-width;
-}
-
-.hover-left .right {
-  width: $other-width;
-}
-
-.hover-right .right {
-  width: $hover-width;
-}
-
-.hover-right .left {
-  width: $other-width;
+  .right {
+    width: $hover-width;
+  }
 }
 
 @import "media";
