@@ -8,7 +8,7 @@ body {
 
 h1 {
   font-size: 4rem;
-  color: white;
+  color: $white;
   position: absolute;
   left: 50%;
   top: 30%;
@@ -28,7 +28,7 @@ h1 {
   transform: translateX(-50%) translateY(-50%);
   text-decoration: none;
   color: white;
-  border: white solid 0.2rem;
+  border: $white solid 0.2rem;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
