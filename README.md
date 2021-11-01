@@ -120,7 +120,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **12.** [Scroll Animation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_012_082321)
 
-**11.** [Split Landing Page](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_011_082121)
+**11.** [Split Landing Page](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_011_SplitLandingPage)
+==> [**Demo**](http://www.whoin.net/demo/splitLanding/)
 
 **10.** [Animated Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_010_082021)
 
