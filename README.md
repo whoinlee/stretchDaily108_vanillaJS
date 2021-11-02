@@ -98,7 +98,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **21.** [ON/OFF](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_021_0901-OnOff)
 
-**20.** [ContentHolder](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_020_ContentLoading)
+**20.** [ContentLoading](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_020_ContentLoading)
 ==> [**Demo**](http://www.whoin.net/demo/contentLoading/)
 
 **19.** [FAQ](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_019_FAQ)

@@ -1,9 +1,5 @@
 @import "config";
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: $font-stack;
   background-color: $bg-color;
@@ -12,7 +8,6 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
 }
 
 img {
@@ -21,7 +16,7 @@ img {
 
 .card {
   box-shadow: $box-shadow;
-  border-radius: 10px;
+  border-radius: $border-radius;
   overflow: hidden;
   width: 350px;
 }
@@ -84,7 +79,7 @@ img {
     #f6f7f8 20%,
     #f6f7f8 100%
   );
-  background-size: 200% 100%;
+  background-size: 200% 100%; //*****//
   animation: bgPosAnim 1s linear infinite;
 }
 
