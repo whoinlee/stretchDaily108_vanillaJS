@@ -1,11 +1,5 @@
 @import "config";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: $font-stack;
   background-color: $bg-color;
@@ -24,17 +18,16 @@ body {
 
   input {
     width: 100%;
-    display: block;
-    background-color: rgba(#4c2885, 0.25);
     border: none;
     border-radius: 10px;
-    color: rgb(36, 0, 36);
+    background-color: rgba($dark-blue, 0.25);
+    color: $dark-blue;
     padding: 1rem;
     margin-bottom: 2rem;
     font-family: inherit;
     font-size: 1rem;
     box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-      0 15px 20px rgba(0, 0, 0, 0.1);
+      0 15px 20px rgba(black, 0.1);
 
     &::placeholder {
       color: #333;
@@ -52,7 +45,7 @@ body {
 
 .card {
   max-width: 800px;
-  background-color: #391e64;
+  background-color: $dark-blue;
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(0, 0, 0, 0.1);
@@ -68,7 +61,8 @@ body {
 
 .avatar {
   border-radius: 50%;
-  border: 5px solid #6972b6;
+  // border: 5px solid #6972b6;
+  border: 5px solid rgba($light-blue, 0.75);
   height: 160px;
   width: 160px;
 }
@@ -112,7 +106,8 @@ body {
 .repo {
   text-decoration: none;
   color: #fff;
-  background-color: rgba(#384079, 0.95);
+
+  background-color: rgba($light-blue, 0.35);
   font-size: 0.7rem;
   padding: 0.25rem 0.5rem;
   margin-right: 0.5rem;
