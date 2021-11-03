@@ -89,7 +89,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 
 **25.** [Box Switcher](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_025_0905-BoxSwitcher)
 
-**24.** [Github Profiles](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_024_0904-GithubProfiles)
+**24.** [Github Profiles](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_024_GithubProfiles)
+==> [**Demo**](http://www.whoin.net/demo/githubProfiles/index.html)
 
 **23.** [HoverBoard (A butterfly and a flower)](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_023_0903-HoverBoard)
 ==> [**Demo**](http://www.whoin.net/demo/hoverBoard/index.html)
