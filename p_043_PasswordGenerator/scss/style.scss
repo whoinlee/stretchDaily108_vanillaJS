@@ -1,31 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-
-* {
-  box-sizing: border-box;
-}
+@import "config";
 
 body {
-  background-color: rebeccapurple;
-  font-family: "Muli", sans-serif;
+  font-family: $font-stack;
+  background-color: $bg-color;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
-  margin: 0;
   padding: 10px;
-  color: white;
+  overflow: hidden;
 }
 
 h2 {
   margin: 10px 0 20px;
   text-align: center;
+  color: rgba(white, 0.75);
 }
 
 .container {
-  background-color: rgb(72, 34, 107);
-  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+  background-color: rgba($light-blue, 0.25);
+  box-shadow: 0px 2px 10px rgba(black, 0.2);
   padding: 20px; //-- all around
   width: 350px;
   max-width: 100%;
@@ -39,7 +35,7 @@ h2 {
   position: relative;
   font-size: 18px;
   letter-spacing: 1px;
-  padding: 12px 10px;
+  padding: 14px 14px;
   height: 50px;
   width: 100%;
 
@@ -66,14 +62,14 @@ h2 {
 
 .btn {
   border: none;
-  background-color: rebeccapurple;
+  background-color: $bg-color;
   color: #fff;
   font-size: 16px;
   padding: 8px 12px;
   cursor: pointer;
 
   &:hover {
-    background-color: rgb(120, 60, 180);
+    background-color: rgba($light-blue, 0.5);
   }
 
   &:active {
@@ -82,7 +78,6 @@ h2 {
 }
 
 .btn-large {
-  display: block;
   width: 100%;
   margin-top: 30px;
   margin-bottom: 5px;
