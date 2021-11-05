@@ -35,27 +35,25 @@ h2 {
   position: relative;
   font-size: 18px;
   letter-spacing: 1px;
-  padding: 14px 14px;
+  padding: 15px 14px;
   height: 50px;
   width: 100%;
 
   //-- <span>
   #result {
     word-wrap: break-word; //*****
-    max-width: calc(100% - 40px);
-    overflow-y: scroll;
+    max-width: calc(100% - 40px); //*****
+    padding-left: 2px;
+    font-size: 17px;
     height: 100%;
-    &::-webkit-scrollbar {
-      width: 1rem;
-    }
   }
   //-- #clipboard
   .btn {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 40px;
-    height: 40px;
+    top: 4px;
+    right: 4px;
+    width: 42px;
+    height: 42px;
     font-size: 20px;
   }
 }
