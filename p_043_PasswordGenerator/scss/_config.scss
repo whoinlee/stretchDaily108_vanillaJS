@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+$font-stack: "Muli", sans-serif;
+$dark-blue: hsl(209, 61%, 16%);
+$bg-color: $dark-blue; //rebeccapurple;
+$light-blue: hsl(201, 76%, 80%); //hsl(205, 89%, 70%)
+$blue-grey: hsl(201, 31%, 35%); //hsl(205, 89%, 70%)
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
