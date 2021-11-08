@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+// $bg-color: rebeccapurple;
+$font-stack: "Poppins", sans-serif;
+$dark-blue: hsl(209, 61%, 16%);
+$blue-grey: hsl(202, 31%, 41%);
+$bg-color: $dark-blue; //-- dark blue
+$text-color: hsl(206, 33%, 96%); //-- near white
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
