@@ -55,7 +55,8 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **42.** [Text Effect](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_042_TextEffect)
 ==> [**Demo**](http://www.whoin.net/demo/textEffect/index.html)
 
-**41.** [Notification](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_041_0922-Notification)
+**41.** [Notification](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_041_Notification)
+==> [**Demo**](http://www.whoin.net/demo/notification/index.html)
 
 **40.** [Sticky Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_040_0921-StickyNavigation) ==> [**Demo**](http://www.whoin.net/demo/stickyNav/index.html)
 
