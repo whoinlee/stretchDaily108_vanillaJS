@@ -58,9 +58,11 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **41.** [Notification](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_041_Notification)
 ==> [**Demo**](http://www.whoin.net/demo/notification/index.html)
 
-**40.** [Sticky Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_040_0921-StickyNavigation) ==> [**Demo**](http://www.whoin.net/demo/stickyNav/index.html)
+**40.** [Sticky Navigation](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_040_0921-StickyNavigation)
+==> [**Demo**](http://www.whoin.net/demo/stickyNav/index.html)
 
-**39.** [Kinetic Loader](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_039_0920-KineticLoader)
+**39.** [Kinetic Loader](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_039_KineticLoader)
+==> [**Demo**](http://www.whoin.net/demo/kineticLoader/index.html)
 
 **38.** [Drawing App](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_038_0919-BackgroundSlider)
 

@@ -11,8 +11,8 @@ function createNotification(message = null, type = null) {
   const msgType = type ? type : getRandomType();
   notif.classList.add(msgType);
   notif.innerText = message
-    ? message + " " + msgType
-    : getRandomMessage() + " " + msgType;
+    ? msgType + " : " + message
+    : msgType + " : " + getRandomMessage();
   toastHolder.appendChild(notif);
 
   setTimeout(() => {
