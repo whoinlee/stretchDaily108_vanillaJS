@@ -1,12 +1,6 @@
 @import "config";
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
+body {
   font-size: 10px;
   font-family: $font-stack;
   scroll-behavior: smooth;
@@ -14,14 +8,6 @@ html {
 
 a {
   text-decoration: none;
-}
-
-.container {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 img {
@@ -33,10 +19,18 @@ img {
 p {
   color: black;
   font-size: 1.4rem;
-  margin-top: 5px;
-  line-height: 2.5rem;
   font-weight: 300;
+  line-height: 2.5rem;
   letter-spacing: 0.05rem;
+  margin-top: 5px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-title {
@@ -82,7 +76,7 @@ p {
   color: crimson;
 }
 
-/* Start #header Section */
+/* #header Section */
 #header {
   position: fixed;
   z-index: 1000;
@@ -232,9 +226,8 @@ p {
     top: 0;
   }
 }
-/* End #header Section */
 
-/* Start #hero Section */
+/* #hero Section */
 #hero {
   background-image: url(../img/hero-bg.png);
   background-size: cover;
@@ -289,102 +282,22 @@ p {
     padding: 0 50px;
     justify-content: flex-start;
   }
+
+  &::after {
+    //-- overlay
+    content: ""; //*****//
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: -1; //for not covering text
+  }
 } //#hero
 
-#hero::after {
-  //-- overlay
-  content: ""; //*****//
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  opacity: 0.7;
-  z-index: -1; //for not covering text
-}
-/* End #hero Section */
-
-/* Start #services Section */
-#services {
-  .services {
-    //-- overwrite .container style
-    flex-direction: column; //-- service-top & service-column
-    text-align: center;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 100px 0;
-  }
-
-  .service-top {
-    max-width: 500px;
-    margin: 0 auto;
-
-    p {
-      font-size: 1.4rem;
-      margin-top: 5px;
-      line-height: 2.5rem;
-      font-weight: 300;
-      letter-spacing: 0.05rem;
-    }
-  }
-
-  .service-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    .service-item {
-      flex-basis: 80%;
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      padding: 30px;
-      border-radius: 10px;
-      background-image: url(../img/img-1.png);
-      background-size: cover;
-      margin: 10px 5%;
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-
-      .icon {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 20px;
-      }
-
-      h2 {
-        font-size: 2rem;
-        color: white;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-      }
-
-      p {
-        color: white;
-        text-align: left;
-      }
-    } //.service-item
-
-    .service-item::after {
-      //-- overlay
-      content: ""; //*****//
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-      opacity: 0.9;
-      z-index: -1;
-    }
-  } //.service-bottom
-} //#services
-/* End #services Section */
-
-/* Start #projects Section */
+/* #projects Section */
 #projects {
   .projects {
     //-- overwrite .container style
@@ -471,9 +384,8 @@ p {
     transform: scale(1.1);
   }
 } //#projects
-/* End #projects Section */
 
-/* Start #about section */
+/* #about section */
 #about {
   .about {
     flex-direction: column-reverse;
@@ -531,9 +443,8 @@ p {
     }
   }
 }
-/* End #about Section */
 
-/* Start #contact section */
+/* #contact section */
 #contact {
   .contact {
     flex-direction: column;
@@ -582,9 +493,8 @@ p {
     box-shadow: 0px 0px 5px 0 #0000002c;
   }
 }
-/* End #contact Section */
 
-/* Start #footer section */
+/* #footer section */
 #footer {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   .footer {
@@ -626,7 +536,6 @@ p {
     }
   }
 }
-/* End #footer Section */
 
 @import "media";
 @import "mobile";
