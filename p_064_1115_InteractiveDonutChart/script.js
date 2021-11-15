@@ -38,9 +38,7 @@ const path = g
   .enter()
   .append("path")
   //   .attr("class", "piechart")
-  .attr("fill", function (d, i) {
-    return color(i);
-  })
+  .attr("fill", (d, i) => color(i))
   .attr("d", arc)
   .each(function (d) {
     this._current = d;
@@ -49,13 +47,13 @@ const path = g
 //-- Store the displayed angles in _current.
 //-- Then, interpolate from _current to the new angles.
 //-- During the transition, _current is updated in-place by d3.interpolate.
+//-- ******************** --//
 function arcTween(a) {
-  var i = d3.interpolate(this._current, a);
+  const i = d3.interpolate(this._current, a);
   this._current = i(0);
-  return function (t) {
-    return arc(i(t));
-  };
+  return (t) => arc(i(t));
 }
+//-- ******************** --//
 
 function render() {
   // generate new random data
@@ -86,4 +84,4 @@ function render() {
 }
 
 render();
-setInterval(render, 2000);
+setInterval(render, 1500);
