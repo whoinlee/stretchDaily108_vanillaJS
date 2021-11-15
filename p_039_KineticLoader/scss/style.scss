@@ -1,11 +1,7 @@
-* {
-  box-sizing: border-box;
-}
+@import "config";
 
 body {
-  background-color: #2c3e50;
-  font-family: "Roboto", sans-serif;
-  margin: 0;
+  background-color: $bg-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +10,7 @@ body {
 }
 
 .kinetic {
-  position: relative;
+  position: relative; //-- for before and after which are absolute
   height: 80px;
   width: 80px;
 
@@ -24,16 +20,20 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0px; //***
+    width: 0px; //***  ====> each border is a triangle (left, right, bottom, top)
     height: 0px; //***
-    border: 50px solid transparent; //*********
-    border-bottom-color: white; //*********
-    animation: rotateA 2s linear infinite 0.5s;
+    border: 35px solid transparent; //********* 100x100 square with each border is a triangle
+    animation: rotateA $duration linear infinite $delay;
+  }
+
+  &::after {
+    border-bottom-color: rgb(20, 20, 20);
   }
 
   &::before {
+    border-bottom-color: rgb(5, 5, 230);
     transform: rotate(90deg);
-    animation: rotateB 2s linear infinite;
+    animation: rotateB $duration linear infinite;
   }
 }
 
