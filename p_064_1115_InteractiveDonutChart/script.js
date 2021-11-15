@@ -5,12 +5,7 @@ var width = 960,
   height = 500 - 29; // adjust for height of input bar div
 var color = d3.scale.category20();
 // draw and append the container
-var svg = d3
-  //   .select("body")
-  .select("svg")
-  //   .append("svg")
-  .attr("width", width)
-  .attr("height", height);
+var svg = d3.select("svg").attr("width", width).attr("height", height);
 // set the thickness of the inner and outer radii
 var min = Math.min(width, height);
 var oRadius = (min / 2) * 0.9;
