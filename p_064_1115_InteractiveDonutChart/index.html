@@ -7,19 +7,21 @@
       content="js/jsx/typescript & css/sass daily practice for 108 days"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Donut Chart :: [StretchDaily108]</title>
   </head>
 
   <body>
-    <!-- container -->
     <div class="container">
+      Number of data points: 
+      <input id="datacount" onkeyup="render()" value="15" name="datapoints"></input>
+      <div class="chart">
+        
+        <svg></svg>
+      </div>
+    </div>
 
-    <!-- end container -->
-    <script type="module" src="script.js" async defer></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="script.js" async defer></script>
   </body>
 </html>
