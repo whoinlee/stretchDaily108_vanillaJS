@@ -1,18 +1,18 @@
 @import "config";
 
 .container {
-  position: relative; //*****
-  overflow: hidden; //*****
+  position: relative; /**/
+  overflow: hidden; /**/
   width: 100vw;
   height: 100vh;
 }
 
 .left-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 35%;
-  height: 100%;
+  position: absolute; /**/
+  top: 0; /**/
+  left: 0; /**/
+  width: 35%; /**/
+  height: 100%; /**/
 
   .slide {
     display: flex;
@@ -31,10 +31,10 @@
 
 .right-slide {
   position: absolute;
-  top: 0;
-  left: 35%;
-  width: 65%;
-  height: 100%;
+  top: 0; /**/
+  left: 35%; /**/
+  width: 65%; /**/
+  height: 100%; /**/
 
   .slide {
     background-repeat: no-repeat;
@@ -44,7 +44,7 @@
 }
 
 .slide {
-  position: absolute;
+  position: absolute; /**/
   width: 100%;
   height: 100%;
   transition: $transition;
@@ -68,7 +68,6 @@
     left: 35%;
     top: 50%;
     z-index: 100;
-
     background-color: #fff;
     border: none;
     color: #aaa;
@@ -86,13 +85,13 @@
   }
 
   .down-button {
-    transform: translateX(-100%); //***
+    transform: translateX(-100%); //**//
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
 
   .up-button {
-    transform: translateY(-100%); //***
+    transform: translateY(-100%); //**//
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
