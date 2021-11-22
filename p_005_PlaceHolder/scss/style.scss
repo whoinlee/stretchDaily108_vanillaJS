@@ -7,7 +7,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  // overflow: hidden;
 }
 
 img {
@@ -85,10 +84,5 @@ img {
   height: 10px;
   width: 100%;
 }
-
-// .show {
-//   opacity: 1;
-//   transition: opacity 2s ease-out;
-// }
 
 @import "mobile";
