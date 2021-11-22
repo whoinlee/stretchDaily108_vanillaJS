@@ -1,1 +1,1 @@
-[**Demo**](http://www.whoin.net/demo/mealFinder/)
+- [**Demo**](http://www.whoin.net/demo/mealFinder/)
