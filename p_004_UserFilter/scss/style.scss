@@ -21,7 +21,7 @@ body {
     padding: 30px 20px;
 
     small.subtitle {
-      display: inline-block;
+      display: inline-block; /* can have width, height, margin, padding*/
       margin: 5px 0px 20px;
       opacity: 0.8;
     }
@@ -45,7 +45,7 @@ body {
     background-color: white;
     list-style-type: none;
     max-height: 400px;
-    overflow-y: auto; //***
+    overflow-y: auto; //**//
 
     li {
       display: flex;
