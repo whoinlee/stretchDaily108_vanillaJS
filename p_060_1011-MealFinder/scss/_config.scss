@@ -12,3 +12,9 @@ $black: #111;
 $border-radius: 5px;
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 $transition: all 0.3s ease-in;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}

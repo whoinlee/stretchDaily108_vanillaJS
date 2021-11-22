@@ -1,14 +1,9 @@
 @import "config";
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   background: $bg-color;
   color: $text-color;
   font-family: $font-stack;
-  margin: 0;
 }
 
 img {
@@ -57,7 +52,7 @@ input[type="text"] {
 }
 
 .search-btn {
-  border-left: 0; //***
+  border-left: 0; //**//
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -143,7 +138,7 @@ input[type="text"] {
       border: 1px solid $med-grey;
       border-radius: $border-radius;
       background-color: white;
-      display: inline-block;
+      display: inline-block; /**/
       color: $black;
       font-size: 12px;
       font-weight: bold;
