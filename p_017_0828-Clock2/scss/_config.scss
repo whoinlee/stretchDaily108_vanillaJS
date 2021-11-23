@@ -6,3 +6,9 @@ $font-stack: "Heebo", sans-serif;
   -ms-transform: $property;
   transform: $property;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
