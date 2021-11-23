@@ -17,3 +17,9 @@ $switch-unit: 34px;
   -webkit-transition: property;
   transition: property;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

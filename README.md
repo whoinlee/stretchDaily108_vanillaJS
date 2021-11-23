@@ -106,6 +106,7 @@ Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and Ja
 **22.** [3DBackground](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_022_0902-3DBackground)
 
 **21.** [ON/OFF](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_021_0901-OnOff)
+==> [**Demo**](http://www.whoin.net/demo/onOff/)
 
 **20.** [ContentLoading](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_020_ContentLoading)
 ==> [**Demo**](http://www.whoin.net/demo/contentLoading/)
