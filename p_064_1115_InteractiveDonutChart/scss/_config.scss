@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+$font-stack: "Roboto", sans-serif;
+//
+$bg-color: hsl(206, 33%, 96%); //-- light grey, near white
+$text-color: black;
+$white: #fff;
+$black: #111;
+// $transition: all 0.3s ease-in;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
