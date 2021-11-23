@@ -1,12 +1,7 @@
 @import "config";
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: $font-stack;
-  margin: 0;
   //
   display: flex;
   flex-direction: column;
@@ -14,7 +9,6 @@ body {
   justify-content: center;
   //
   background-color: #000;
-  overflow: hidden;
   height: 100vh;
 }
 
@@ -29,6 +23,9 @@ button {
   overflow: hidden;
   margin: 10px 0;
   position: relative;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 button:focus {
@@ -37,7 +34,7 @@ button:focus {
 
 button .circle {
   position: absolute;
-  background-color: #fff;
+  background-color: white;
   width: 100px;
   height: 100px;
   border-radius: 50%; //-- circle
