@@ -24,3 +24,9 @@ $red-color: #e74c3c;
   -ms-transform: $property;
   transform: $property;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

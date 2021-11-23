@@ -1,9 +1,5 @@
 @import "config";
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   @include set-background-text($white-color);
   transition: all 0.5s ease-in;
@@ -19,17 +15,16 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
 }
 
 button.toggle {
+  position: absolute;
+  top: 100px;
   cursor: pointer;
   border: 0;
   border-radius: 4px;
   padding: 8px 12px;
-  position: absolute;
-  top: 100px;
   z-index: 10;
   @include set-background-text($black-color);
 
@@ -61,12 +56,13 @@ button.toggle {
       background-color: $black-color;
       position: absolute;
       //-- center of the clock
-      bottom: 50%;
-      left: 50%;
+      bottom: 50%; /**/
+      left: 50%; /**/
       width: 4px;
-      transform-origin: bottom center;
+      transform-origin: bottom center; /**/
       // transition: all 0.5s ease-in;  //-- causes an error near the 360 deg
-      @include transform(translate(-50%) rotate(calc(var(--rotation) * 1deg)));
+      // @include transform(translate(-50%) rotate(calc(var(--rotation) * 1deg)));
+      transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
 
       &.hour {
         height: 65px;
