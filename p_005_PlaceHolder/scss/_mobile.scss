@@ -1,0 +1,11 @@
+@keyframes bgPos {
+  0% {
+    /*from*/
+    background-position: 50% 0;
+  }
+
+  100% {
+    /*to*/
+    background-position: -150% 0;
+  }
+}
