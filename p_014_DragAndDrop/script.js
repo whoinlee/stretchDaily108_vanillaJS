@@ -11,7 +11,7 @@ fill.addEventListener("dragstart", dragStart);
 fill.addEventListener("dragend", dragEnd);
 
 function dragStart() {
-  this.className += " hold"; //*****/
+  this.className += " hold"; /***/
   setTimeout(() => (this.className = ""), 0); //?????
 }
 
@@ -30,5 +30,5 @@ function dragLeave() {
 
 function dragDrop() {
   this.className = "empty";
-  this.append(fill); //******/
+  this.append(fill); /***/
 }
