@@ -7,8 +7,8 @@ const oRadius = (min / 2) * 0.9; //-- outer
 const iRadius = (min / 2) * 0.85; //-- inner
 const color = d3.scale.category20();
 
-//-- set svg width and height
-const svg = d3.select("svg").attr("width", width).attr("height", height);
+//-- construct arc generator
+const arc = d3.svg.arc().outerRadius(oRadius).innerRadius(iRadius);
 
 //-- construct default pie laoyut
 const pie = d3.layout
@@ -16,19 +16,20 @@ const pie = d3.layout
   .value((d) => d)
   .sort(null);
 
-//-- construct arc generator
-const arc = d3.svg.arc().outerRadius(oRadius).innerRadius(iRadius);
+//-- generate [size] numbers of random numbers between 0 and 100
+const makeData = (size) => d3.range(size).map((item) => Math.random() * 100);
+
+//-- generate random data based on input value (***var***, reset in the render function)
+let data = makeData(+document.getElementById("datacount").value);
+// console.log("data: \n" + data);
+
+//-- set svg width and height
+const svg = d3.select("svg").attr("width", width).attr("height", height);
 
 //-- construct group to hold pie chart and set/transform the location to the center of the screen
 const g = svg
   .append("g")
   .attr("transform", `translate(${width / 2}, ${height / 2})`);
-
-//-- generate [size] numbers of random numbers between 0 and 100
-const makeData = (size) => d3.range(size).map((item) => Math.random() * 100);
-//-- generate random data based on input value (***var***, reset in the render function)
-let data = makeData(+document.getElementById("datacount").value);
-// console.log("data: \n" + data);
 
 //-- enter data and draw pie chart
 const path = g
@@ -37,7 +38,6 @@ const path = g
   .data(pie)
   .enter()
   .append("path")
-  //   .attr("class", "piechart")
   .attr("fill", (d, i) => color(i))
   .attr("d", arc)
   .each(function (d) {
@@ -56,16 +56,18 @@ function arcTween(a) {
 //-- ******************** --//
 
 function render() {
-  // generate new random data
+  //-- generate new random data
   data = makeData(+document.getElementById("datacount").value);
-  // add transition to new path
+
+  //-- add transition to new path
   g.datum(data)
     .selectAll("path")
     .data(pie)
     .transition()
     .duration(1000)
     .attrTween("d", arcTween);
-  // add any new paths
+
+  //-- add any new paths
   g.datum(data)
     .selectAll("path")
     .data(pie)
@@ -79,7 +81,8 @@ function render() {
     .each(function (d) {
       this._current = d;
     });
-  // remove data not being used
+
+  //-- remove data not being used
   g.datum(data).selectAll("path").data(pie).exit().remove();
 }
 

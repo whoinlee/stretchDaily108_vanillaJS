@@ -2,7 +2,9 @@
 
 Implementing mini-projects daily for 108 days, to sharpen HTML, CSS/SASS, and JavaScript Skills.
 
-**64.** [Interactive Donut Chart](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_064_1115_InteractiveDonutChart)
+**65.** [Realtime Chat](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_065_1128-realtimeChat) (in progress)
+
+**64.** [Interactive Donut Chart](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_064_1115-InteractiveDonutChart)
 ==> [**Demo**](http://www.whoin.net/demo/donutChart/)
 
 **63.** [Unit Testing - Jasmine](https://github.com/whoinlee/stretchDaily108_vanillaJS/tree/main/p_063_UnitTesting-Jasmine)

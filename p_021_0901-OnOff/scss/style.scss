@@ -50,7 +50,7 @@ body {
       left: 2px;
       bottom: 3px;
       background-color: white;
-      @include transition($property);
+      // @include transition($property);
     }
 
     &.round {
