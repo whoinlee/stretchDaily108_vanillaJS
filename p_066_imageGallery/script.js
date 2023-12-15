@@ -35,3 +35,5 @@ for (let i=0; i<4; i++) {
     imgs.append(newImg);
 }
 
+console.log([...Array(5).keys()].map(x => x+1))
+console.log(Array.from([1,2,3,4,5]))
