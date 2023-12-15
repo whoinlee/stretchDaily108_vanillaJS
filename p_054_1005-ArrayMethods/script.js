@@ -17,13 +17,53 @@ let data = [];  //-- an array of user object {name, money}
 const defaultUserNum = 4;
 getRandomUsers(defaultUserNum);
 
+/*
+
+cell
+: 
+"(666) 218-7609"
+dob
+: 
+{date: '1981-08-10T22:58:02.972Z', age: 42}
+email
+: 
+"sharlene.garcia@example.com"
+gender
+: 
+"female"
+id
+: 
+{name: 'SSN', value: '141-19-4581'}
+location
+: 
+{street: {…}, city: 'Gainesville', state: 'Delaware', country: 'United States', postcode: 34606, …}
+login
+: 
+{uuid: 'd469c352-4aa5-49b0-9477-93a70c13abea', username: 'heavymeercat277', password: 'jaguar1', salt: 'MPvKSdMp', md5: '82df72a6108b9b77c6ec3ec862db81a5', …}
+name
+: 
+{title: 'Mrs', first: 'Sharlene', last: 'Garcia'}
+nat
+: 
+"US"
+phone
+: 
+"(801) 779-6762"
+picture
+: 
+{large: 'https://randomuser.me/api/portraits/women/2.jpg', medium: 'https://randomuser.me/api/portraits/med/women/2.jpg', thumbnail: 'https://randomuser.me/api/portraits/thumb/women/2.jpg'}
+registered
+: 
+{date: '2011-09-19T18:41:20.777Z', age: 12}
+*/
 //-- generate random users w. random amount of money
 async function getRandomUsers(times=1) {
     // console.log("times?? ", times);
     const res = await fetch('https://randomuser.me/api' + "?results=" + times);
     const data = await res.json();
     const users = data.results;
-    // console.log("users?? ", users);
+    console.log("data?? ", data);
+    console.log("users?? ", users);
 
     users.map( user => {
         let newUser = {
@@ -32,6 +72,7 @@ async function getRandomUsers(times=1) {
         };
         addData(newUser);
     });
+    updateDOM();
 }
 
 //-- double eveyones money <map>
@@ -60,7 +101,6 @@ function showMillionaires() {
 //-- calculate the total wealth <reduce>
 function calculateWealth() {
   const wealth = data.reduce((acc, user) => (acc += user.money), 0);
-
   const wealthEl = document.createElement('div');
   wealthEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(wealth)}</strong></h3>`;
   main.appendChild(wealthEl);
@@ -70,7 +110,7 @@ function calculateWealth() {
 function addData(obj) {
   data.push(obj);
 
-  updateDOM();
+  //updateDOM();
 }
 
 //-- update DOM
