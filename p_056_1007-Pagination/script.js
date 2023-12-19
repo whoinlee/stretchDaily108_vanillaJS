@@ -1,5 +1,5 @@
 let index = 0;
-let pages = [];
+let pages = []; //paginated data
 
 const btnContainer = document.querySelector('.btn-container');
 //********** event listener on the whole .btn-container **********//
@@ -37,6 +37,8 @@ const paginate = (followers) => {
     const start = index * itemsPerPage;
     return followers.slice(start, start + itemsPerPage);
   });
+
+  console.log("newFollowers? ", newFollowers)
   //**********/
   return newFollowers;
 }
