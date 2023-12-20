@@ -49,10 +49,11 @@ const init = async () => {
 };
 
 const startSlider = (type) => {
-  const active = document.querySelector('.active');
-  const last = document.querySelector('.last');
+  //-- current
+  const active = document.querySelector('.active'); //== curr
+  const last = document.querySelector('.last'); //== prev
   let next = active.nextElementSibling; //******/
-  if (!next) next = slideContainer.firstElementChild;
+  if (!next) next = slideContainer.firstElementChild; //******/
 
   //-- clear current status
   active.classList.remove('active');
@@ -60,21 +61,25 @@ const startSlider = (type) => {
   next.classList.remove('next');
 
   if (type === 'prev') {
-    active.classList.add('next');
-    last.classList.add('active');
+    //-- to prev
+    //-- moving to the right, bring the prev one to the front
+    active.classList.add('next'); // active to next
+    last.classList.add('active'); // last(prev) to active
     next = last.previousElementSibling; //******/
     if (!next) next = slideContainer.lastElementChild;
 
     next.classList.remove('next');
     next.classList.add('last');
-    return;
+    return; //******/
   };
 
+  //-- to next
+  //-- moving to the left, bring the next one to the front
   active.classList.add('last'); //--prev
   last.classList.add('next'); //-- next
   next.classList.add('active'); //-- current
 }
-nextBtn.addEventListener('click', () => startSlider());
+nextBtn.addEventListener('click', () => startSlider('next'));
 prevBtn.addEventListener('click', () => startSlider('prev'));
 
 init();

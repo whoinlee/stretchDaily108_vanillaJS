@@ -52,9 +52,11 @@ body {
           transform: translateX(0); //***
         }
         &.next {
+          opacity: 1;
           transform: translateX(100%); //***
         }
         &.last {
+          opacity: 1;
           transform: translateX(-100%); //***
         }
 
