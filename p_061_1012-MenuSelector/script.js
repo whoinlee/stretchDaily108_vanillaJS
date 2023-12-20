@@ -25,10 +25,10 @@ function displayMenuButtons() {
         btn.addEventListener("click", (e) => {
             // console.log(e.currentTarget.dataset);
             const selectedCategory = e.currentTarget.dataset.id;
-            const menuItems = menu.filter(menuItem => (menuItem.category === selectedCategory));
             if (selectedCategory === "all") {
                 diplayMenuItems(menu);
             } else {
+                const menuItems = menu.filter(menuItem => (menuItem.category === selectedCategory));
                 diplayMenuItems(menuItems);
             }
         });

@@ -12,18 +12,20 @@ randomBtn.addEventListener("click", getRandomMeal);
 resultMeals.addEventListener("click", (e) => {
   //*****/
   // console.log("e.target ?? " + e.target);
-  // console.log("e.path ?? " + e.path);
-  const mealInfo = e.path.find((item) => {
-    if (item.classList) {
-      return item.classList.contains("meal-info");
-    } else {
-      return false;
-    }
-  });
+  // console.log("e.path ?? " + e.composedPath);
+  const mealInfo = resultMeals.querySelector(".meal-info");
+  console.log("mealInfo?? " + mealInfo);
+  // const mealInfo = e.composedPath.find((item) => {
+  //   if (item.classList) {
+  //     return item.classList.contains("meal-info");
+  //   } else {
+  //     return false;
+  //   }
+  // });
 
   if (mealInfo) {
     const mealID = mealInfo.dataset.mealid;
-    // console.log("mealID??", mealID);
+    console.log("mealID??", mealID);
     getMealById(mealID);
   }
 });
