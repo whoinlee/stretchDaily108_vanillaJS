@@ -4,7 +4,7 @@ const addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click', () => addNewNote());
 
 const notes = JSON.parse(localStorage.getItem('notes'));
-if(notes) notes.forEach(note => addNewNote(note));
+if (notes) notes.forEach(note => addNewNote(note));
 
 function addNewNote(text = '') {
     const note = document.createElement('div');
